@@ -1,0 +1,10 @@
+res://player/player.tscn
+res://world.tscn
+res://environment/tree.tscn
+res://Scripts/components/health_component.tscn
+res://Scripts/components/hit_box_component.tscn
+res://environment/bed.tscn
+res://ui/progress_bar.tscn
+res://environment/egg.tscn
+res://ui/control.tscn
+res://ui/interaction_progress_bar.tscn

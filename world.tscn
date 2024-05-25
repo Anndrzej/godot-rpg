@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://cevwihm7yr7w0"]
+
+[ext_resource type="PackedScene" uid="uid://0uj3ocwe8x5y" path="res://player/player.tscn" id="1_uw7dq"]
+[ext_resource type="PackedScene" uid="uid://37g5p3l6lmk7" path="res://environment/tree.tscn" id="2_cbrax"]
+[ext_resource type="PackedScene" uid="uid://fxertob7ej2u" path="res://environment/bed.tscn" id="3_pfptf"]
+[ext_resource type="PackedScene" uid="uid://xk4aw7v4ail8" path="res://environment/egg.tscn" id="4_3xa78"]
+
+[node name="world" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_uw7dq")]
+position = Vector2(220, 156)
+
+[node name="Tree" parent="." instance=ExtResource("2_cbrax")]
+position = Vector2(169, 158)
+
+[node name="Bed" parent="." instance=ExtResource("3_pfptf")]
+position = Vector2(258, 160)
+
+[node name="Egg" parent="." instance=ExtResource("4_3xa78")]
+position = Vector2(313, 144)

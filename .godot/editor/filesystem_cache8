@@ -1,0 +1,61 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1716656455
+icon.svg::CompressedTexture2D::8184442486536108973::1704632195::1704632199::1::::<><>::
+world.tscn::PackedScene::5098299122653503885::1705853193::0::1::::<><>::uid://0uj3ocwe8x5y::::res://player/player.tscn<>uid://37g5p3l6lmk7::::res://environment/tree.tscn<>uid://fxertob7ej2u::::res://environment/bed.tscn<>uid://xk4aw7v4ail8::::res://environment/egg.tscn
+::res://Characters/::1704711200
+Basic Charakter Actions.png::CompressedTexture2D::7394151838898174159::1704711200::1704711200::1::::<><>::
+Basic Charakter Spritesheet.png::CompressedTexture2D::5711831196688890925::1704711200::1704711200::1::::<><>::
+Egg_And_Nest.png::CompressedTexture2D::5638797200111874475::1704711200::1704711200::1::::<><>::
+Free Chicken Sprites.png::CompressedTexture2D::2968001914900865015::1704711200::1704711200::1::::<><>::
+Free Cow Sprites.png::CompressedTexture2D::647546095049168508::1704711200::1704711200::1::::<><>::
+Tools.png::CompressedTexture2D::1716694184432395285::1704711200::1704711200::1::::<><>::
+::res://environment/::1705853193
+bed.tscn::PackedScene::398699152660267150::1705853193::0::1::::<><>::uid://xug8nkv1yl6j::::res://environment/Objects/Basic Furniture.png<>uid://dul7fy1qumumw::::res://Scripts/components/health_component.tscn<>uid://d2sgg15q4s84b::::res://Scripts/components/hit_box_component.tscn<>uid://4u5v0umn6svl::::res://ui/progress_bar.tscn
+egg.gd::GDScript::-1::1705757009::0::1::::CollectableResource<>StaticBody2D<>::
+egg.tscn::PackedScene::1636749179945921831::1705853193::0::1::::<><>::uid://cv24awpng3we0::::res://environment/Objects/Egg item.png<>res://environment/egg.gd<>uid://btmioavxvbgm7::::res://ui/interaction_progress_bar.tscn<>uid://dg2hsgfqjfxhw::::res://ui/control.tscn
+ResourceNode.gd::GDScript::-1::1705752883::0::1::::ResourceNode<>StaticBody2D<>::
+tree.gd::GDScript::-1::1705752883::0::1::::<>StaticBody2D<>::
+tree.tscn::PackedScene::2031766417415003724::1705853193::0::1::::<><>::uid://clx2hmogrrdw6::::res://environment/Objects/Basic Grass Biom things 1.png<>res://environment/ResourceNode.gd<>uid://dul7fy1qumumw::::res://Scripts/components/health_component.tscn<>uid://d2sgg15q4s84b::::res://Scripts/components/hit_box_component.tscn<>uid://4u5v0umn6svl::::res://ui/progress_bar.tscn
+::res://environment/Objects/::1705580394
+Basic Furniture.png::CompressedTexture2D::1656054891152842451::1705580394::1705580394::1::::<><>::
+Basic Grass Biom things 1.png::CompressedTexture2D::5594051847313428207::1705580394::1705580394::1::::<><>::
+Basic Plants.png::CompressedTexture2D::8835872284902654814::1705580394::1705580394::1::::<><>::
+Basic tools and meterials.png::CompressedTexture2D::5355796122029739430::1705580394::1705580394::1::::<><>::
+Chest.png::CompressedTexture2D::3483248025541770157::1705580394::1705580394::1::::<><>::
+Egg item.png::CompressedTexture2D::6304307255220297625::1705580394::1705580394::1::::<><>::
+Free_Chicken_House.png::CompressedTexture2D::5583181212416144823::1705580394::1705580394::1::::<><>::
+Paths.png::CompressedTexture2D::2207634731952776263::1705580394::1705580394::1::::<><>::
+Simple Milk and grass item.png::CompressedTexture2D::3923993549237333036::1705580394::1705580394::1::::<><>::
+Wood Bridge.png::CompressedTexture2D::6045079406342271905::1705580394::1705580394::1::::<><>::
+::res://player/::1705853193
+player.gd::GDScript::-1::1705578797::0::1::::<>CharacterBody2D<>::
+player.tscn::PackedScene::1796605840619000568::1705853193::0::1::::<><>::res://player/player.gd<>uid://ddl1uoften65p::::res://Characters/Basic Charakter Actions.png<>uid://cnm4a4in7h5ob::::res://Characters/Basic Charakter Spritesheet.png<>res://Scripts/state/Finite State Machine.gd<>res://Scripts/player/state/playerMove.gd<>res://Scripts/player/state/playerIdle.gd<>res://Scripts/player/state/playerAttack.gd<>res://player/playerInteraction.gd
+playerAttack.gd::GDScript::-1::1705501678::0::1::::<>Node<>::
+playerInteraction.gd::GDScript::-1::1705753674::0::1::::playerIneraction<>State<>::
+::res://Scripts/::1705588366
+::res://Scripts/components/::1705853193
+HealthComponent.gd::GDScript::-1::1705749739::0::1::::HealthComponent<>Node<>::
+health_component.tscn::PackedScene::8587700253352166686::1705853193::0::1::::<><>::res://Scripts/components/HealthComponent.gd
+HitBoxComponent.gd::GDScript::-1::1705588915::0::1::::<>Node<>::
+hit_box_component.tscn::PackedScene::9091896058316985023::1705853193::0::1::::<><>::res://Scripts/components/HitBoxComponent.gd
+::res://Scripts/helper/::1705588393
+Attack.gd::GDScript::-1::1705588393::0::1::::Attack<>Node<>::
+::res://Scripts/player/::1705500768
+::res://Scripts/player/state/::1705751622
+playerAttack.gd::GDScript::-1::1705751454::0::1::::PlayerAttack<>State<>::
+playerIdle.gd::GDScript::-1::1705751622::0::1::::PlayerIdle<>State<>::
+playerMove.gd::GDScript::-1::1705584043::0::1::::PlayerMove<>State<>::
+::res://Scripts/state/::1705752883
+Finite State Machine.gd::GDScript::-1::1705752883::0::1::::<>Node<>::
+State.gd::GDScript::-1::1704715553::0::1::::State<>Node<>::
+::res://singeltons/::1705752014
+game_input_events.gd::GDScript::-1::1705752014::0::1::::GameInputEvents<>Node<>::
+::res://ui/::1705853211
+control.tscn::PackedScene::7636590799110104920::1705853193::0::1::::<><>::
+interaction_progress_bar.gd::GDScript::-1::1705853211::0::1::::<>Control<>::
+interaction_progress_bar.tscn::PackedScene::3745292016435251144::1705853211::0::1::::<><>::res://ui/interaction_progress_bar.gd<>uid://bwq0nss68abv6::::res://ui/assets/progress-bar-circle.png<>uid://5r380s70docu::::res://ui/assets/progress-bar-frame.png
+progress_bar.gd::GDScript::-1::1705752883::0::1::::<>Control<>::
+progress_bar.tscn::PackedScene::2078624376582810725::1705853193::0::1::::<><>::res://ui/progress_bar.gd<>uid://bwq0nss68abv6::::res://ui/assets/progress-bar-circle.png<>uid://5r380s70docu::::res://ui/assets/progress-bar-frame.png
+::res://ui/assets/::1705747049
+progress-bar-circle.png::CompressedTexture2D::3965147402614076381::1705747049::1705747049::1::::<><>::
+progress-bar-frame.png::CompressedTexture2D::2142520080334019512::1705747049::1705747049::1::::<><>::

@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://fxertob7ej2u"]
+
+[ext_resource type="Texture2D" uid="uid://xug8nkv1yl6j" path="res://environment/Objects/Basic Furniture.png" id="1_jw181"]
+[ext_resource type="PackedScene" uid="uid://dul7fy1qumumw" path="res://Scripts/components/health_component.tscn" id="2_qpl1b"]
+[ext_resource type="PackedScene" uid="uid://d2sgg15q4s84b" path="res://Scripts/components/hit_box_component.tscn" id="3_6yfjy"]
+[ext_resource type="PackedScene" uid="uid://4u5v0umn6svl" path="res://ui/progress_bar.tscn" id="4_fjm0h"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4d8v8"]
+size = Vector2(12, 19)
+
+[node name="Bed" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_jw181")
+hframes = 9
+vframes = 4
+frame = 9
+
+[node name="HealthComponent" parent="." instance=ExtResource("2_qpl1b")]
+max_health = 100.0
+
+[node name="HitBoxComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("3_6yfjy")]
+health_component = NodePath("../HealthComponent")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBoxComponent"]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_4d8v8")
+
+[node name="ProgressBar" parent="." instance=ExtResource("4_fjm0h")]
+offset_left = -12.0
+offset_top = -36.0
+offset_right = -12.0
+offset_bottom = -36.0

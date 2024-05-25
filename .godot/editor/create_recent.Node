@@ -1,0 +1,15 @@
+Camera2D
+Timer
+CollisionShape2D
+Area2D
+Node
+Label
+StaticBody2D
+TextureProgressBar
+Sprite2D
+AnimationPlayer
+AnimationTree
+AnimationDirector
+PlayerIdle
+AnimatedSprite2D
+CharacterBody2D

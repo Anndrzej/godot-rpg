@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://4u5v0umn6svl"]
+
+[ext_resource type="Script" path="res://ui/progress_bar.gd" id="1_1m4qx"]
+[ext_resource type="Texture2D" uid="uid://bwq0nss68abv6" path="res://ui/assets/progress-bar-circle.png" id="1_50js7"]
+[ext_resource type="Texture2D" uid="uid://5r380s70docu" path="res://ui/assets/progress-bar-frame.png" id="2_awq5w"]
+
+[node name="ProgressBar" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1152.0
+offset_bottom = -648.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.2, 0.2)
+script = ExtResource("1_1m4qx")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+layout_mode = 0
+offset_right = 128.0
+offset_bottom = 128.0
+fill_mode = 4
+texture_under = ExtResource("1_50js7")
+texture_over = ExtResource("2_awq5w")
+texture_progress = ExtResource("1_50js7")
+tint_under = Color(0, 0, 0, 0.243137)
+tint_progress = Color(0.847059, 0, 0.847059, 1)
