@@ -1,0 +1,9 @@
+Craft_Item
+Item
+Equipment
+Resource
+Attack_Speed
+Attack_Damage
+Upgrades
+ResourceGroup
+Recipe

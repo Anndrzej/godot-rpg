@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="Attack_Speed" load_steps=2 format=3 uid="uid://co80fjamm6p2m"]
+
+[ext_resource type="Script" path="res://scripts/characters/player/upgrades/attack_speed.gd" id="1_73tpo"]
+
+[resource]
+script = ExtResource("1_73tpo")
+upgrade_text = ""

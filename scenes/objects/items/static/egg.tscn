@@ -1,0 +1,51 @@
+[gd_scene load_steps=8 format=3 uid="uid://xk4aw7v4ail8"]
+
+[ext_resource type="Texture2D" uid="uid://cv24awpng3we0" path="res://assets/Objects/Egg item.png" id="1_m3e74"]
+[ext_resource type="Script" path="res://scripts/objects/items/static/egg.gd" id="1_oabvv"]
+[ext_resource type="PackedScene" uid="uid://btmioavxvbgm7" path="res://scenes/ui/progress_bar/interaction_progress_bar.tscn" id="2_iodcg"]
+[ext_resource type="PackedScene" uid="uid://dg2hsgfqjfxhw" path="res://scenes/ui/content/control.tscn" id="3_0v5nh"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_11jrc"]
+radius = 64.0703
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_og4yj"]
+radius = 9.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_f5ogn"]
+radius = 8.0
+
+[node name="Egg" type="StaticBody2D"]
+script = ExtResource("1_oabvv")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_m3e74")
+
+[node name="InteractionProgressBar" parent="." instance=ExtResource("2_iodcg")]
+offset_left = -376.0
+offset_top = -168.0
+offset_right = -376.0
+offset_bottom = -168.0
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_11jrc")
+
+[node name="InteractText" parent="." instance=ExtResource("3_0v5nh")]
+visible = false
+offset_left = -18.0
+offset_top = 7.0
+offset_right = -18.0
+offset_bottom = 7.0
+
+[node name="ResourceArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ResourceArea"]
+shape = SubResource("CircleShape2D_og4yj")
+
+[node name="ResourceShape" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_f5ogn")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="body_exited" from="ResourceArea" to="." method="_on_resource_area_body_exited"]

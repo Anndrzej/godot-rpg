@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://ggkg2pdk24we"]
+
+[ext_resource type="Script" path="res://scripts/ui/inventory/grid_ingredients.gd" id="1_lr864"]
+[ext_resource type="PackedScene" uid="uid://btj2cnj1xfq30" path="res://scenes/ui/craft/craft_ingredient_slot.tscn" id="2_mxjos"]
+
+[node name="GridIngredients" type="GridContainer"]
+columns = 5
+script = ExtResource("1_lr864")
+slot_scene = ExtResource("2_mxjos")

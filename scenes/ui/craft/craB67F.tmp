@@ -1,0 +1,44 @@
+[gd_scene load_steps=3 format=3 uid="uid://btj2cnj1xfq30"]
+
+[ext_resource type="Script" path="res://scripts/ui/craft/craft_item_slot.gd" id="1_460lc"]
+[ext_resource type="Texture2D" uid="uid://bt04c3kam3c2n" path="res://assets/Food/Boar.png" id="2_1q22b"]
+
+[node name="ItemSlot" type="PanelContainer"]
+offset_right = 74.0
+offset_bottom = 76.0
+size_flags_horizontal = 4
+script = ExtResource("1_460lc")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("2_1q22b")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+alignment = 1
+
+[node name="Control" type="Control" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+alignment = 2
+
+[node name="HaveLabel" type="Label" parent="VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.796078, 0, 0, 1)
+text = "0
+"
+
+[node name="NeededLabel" type="Label" parent="VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.796078, 0, 0, 1)
+text = "/ 2
+
+"

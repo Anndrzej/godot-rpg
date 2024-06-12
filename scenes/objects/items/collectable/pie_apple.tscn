@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://c2gq6fq5b2fhj"]
+
+[ext_resource type="Texture2D" uid="uid://bwhbx88icl6n" path="res://assets/Food/PieApple.png" id="1_yab4l"]
+
+[node name="PieApple" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_yab4l")

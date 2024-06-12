@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="Attack_Damage" load_steps=2 format=3 uid="uid://ddy7rfwaj3kgj"]
+
+[ext_resource type="Script" path="res://scripts/characters/player/upgrades/attack_damage.gd" id="1_pilbt"]
+
+[resource]
+script = ExtResource("1_pilbt")
+upgrade_text = ""

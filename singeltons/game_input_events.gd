@@ -11,9 +11,22 @@ static func attack_input() -> bool:
 		return true
 	else: 
 		return false
-		
+
 static func interract_input() -> bool:
 	if Input.is_action_pressed("interract"):
+		return true
+	else:
+		return false
+
+static func inventory_input() -> bool:
+	if Input.is_action_pressed("inventory"):
+		return true
+	else:
+		return false
+
+
+static func crafting_input() -> bool:
+	if Input.is_action_pressed("crafting"):
 		return true
 	else:
 		return false

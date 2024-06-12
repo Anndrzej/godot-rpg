@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://bgvea0xn8bo55"]
+
+[ext_resource type="Script" path="res://scripts/ui/inventory/item_slot.gd" id="1_7ss3q"]
+[ext_resource type="Texture2D" uid="uid://bt04c3kam3c2n" path="res://assets/Food/Boar.png" id="2_81qg6"]
+
+[node name="ItemSlot" type="PanelContainer"]
+size_flags_horizontal = 4
+script = ExtResource("1_7ss3q")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("2_81qg6")
+
+[node name="Label" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+text = "
+"

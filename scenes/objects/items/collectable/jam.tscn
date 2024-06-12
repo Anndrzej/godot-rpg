@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://72fwsmbiil2s"]
+
+[ext_resource type="Texture2D" uid="uid://crgdlfqooehes" path="res://assets/Food/Jam.png" id="1_khmv4"]
+
+[node name="Jam" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_khmv4")

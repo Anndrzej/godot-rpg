@@ -1,61 +1,231 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1716656455
-icon.svg::CompressedTexture2D::8184442486536108973::1704632195::1704632199::1::::<><>::
-world.tscn::PackedScene::5098299122653503885::1705853193::0::1::::<><>::uid://0uj3ocwe8x5y::::res://player/player.tscn<>uid://37g5p3l6lmk7::::res://environment/tree.tscn<>uid://fxertob7ej2u::::res://environment/bed.tscn<>uid://xk4aw7v4ail8::::res://environment/egg.tscn
-::res://Characters/::1704711200
-Basic Charakter Actions.png::CompressedTexture2D::7394151838898174159::1704711200::1704711200::1::::<><>::
-Basic Charakter Spritesheet.png::CompressedTexture2D::5711831196688890925::1704711200::1704711200::1::::<><>::
-Egg_And_Nest.png::CompressedTexture2D::5638797200111874475::1704711200::1704711200::1::::<><>::
-Free Chicken Sprites.png::CompressedTexture2D::2968001914900865015::1704711200::1704711200::1::::<><>::
-Free Cow Sprites.png::CompressedTexture2D::647546095049168508::1704711200::1704711200::1::::<><>::
-Tools.png::CompressedTexture2D::1716694184432395285::1704711200::1704711200::1::::<><>::
-::res://environment/::1705853193
-bed.tscn::PackedScene::398699152660267150::1705853193::0::1::::<><>::uid://xug8nkv1yl6j::::res://environment/Objects/Basic Furniture.png<>uid://dul7fy1qumumw::::res://Scripts/components/health_component.tscn<>uid://d2sgg15q4s84b::::res://Scripts/components/hit_box_component.tscn<>uid://4u5v0umn6svl::::res://ui/progress_bar.tscn
-egg.gd::GDScript::-1::1705757009::0::1::::CollectableResource<>StaticBody2D<>::
-egg.tscn::PackedScene::1636749179945921831::1705853193::0::1::::<><>::uid://cv24awpng3we0::::res://environment/Objects/Egg item.png<>res://environment/egg.gd<>uid://btmioavxvbgm7::::res://ui/interaction_progress_bar.tscn<>uid://dg2hsgfqjfxhw::::res://ui/control.tscn
-ResourceNode.gd::GDScript::-1::1705752883::0::1::::ResourceNode<>StaticBody2D<>::
-tree.gd::GDScript::-1::1705752883::0::1::::<>StaticBody2D<>::
-tree.tscn::PackedScene::2031766417415003724::1705853193::0::1::::<><>::uid://clx2hmogrrdw6::::res://environment/Objects/Basic Grass Biom things 1.png<>res://environment/ResourceNode.gd<>uid://dul7fy1qumumw::::res://Scripts/components/health_component.tscn<>uid://d2sgg15q4s84b::::res://Scripts/components/hit_box_component.tscn<>uid://4u5v0umn6svl::::res://ui/progress_bar.tscn
-::res://environment/Objects/::1705580394
-Basic Furniture.png::CompressedTexture2D::1656054891152842451::1705580394::1705580394::1::::<><>::
-Basic Grass Biom things 1.png::CompressedTexture2D::5594051847313428207::1705580394::1705580394::1::::<><>::
-Basic Plants.png::CompressedTexture2D::8835872284902654814::1705580394::1705580394::1::::<><>::
-Basic tools and meterials.png::CompressedTexture2D::5355796122029739430::1705580394::1705580394::1::::<><>::
-Chest.png::CompressedTexture2D::3483248025541770157::1705580394::1705580394::1::::<><>::
-Egg item.png::CompressedTexture2D::6304307255220297625::1705580394::1705580394::1::::<><>::
-Free_Chicken_House.png::CompressedTexture2D::5583181212416144823::1705580394::1705580394::1::::<><>::
-Paths.png::CompressedTexture2D::2207634731952776263::1705580394::1705580394::1::::<><>::
-Simple Milk and grass item.png::CompressedTexture2D::3923993549237333036::1705580394::1705580394::1::::<><>::
-Wood Bridge.png::CompressedTexture2D::6045079406342271905::1705580394::1705580394::1::::<><>::
-::res://player/::1705853193
-player.gd::GDScript::-1::1705578797::0::1::::<>CharacterBody2D<>::
-player.tscn::PackedScene::1796605840619000568::1705853193::0::1::::<><>::res://player/player.gd<>uid://ddl1uoften65p::::res://Characters/Basic Charakter Actions.png<>uid://cnm4a4in7h5ob::::res://Characters/Basic Charakter Spritesheet.png<>res://Scripts/state/Finite State Machine.gd<>res://Scripts/player/state/playerMove.gd<>res://Scripts/player/state/playerIdle.gd<>res://Scripts/player/state/playerAttack.gd<>res://player/playerInteraction.gd
-playerAttack.gd::GDScript::-1::1705501678::0::1::::<>Node<>::
-playerInteraction.gd::GDScript::-1::1705753674::0::1::::playerIneraction<>State<>::
-::res://Scripts/::1705588366
-::res://Scripts/components/::1705853193
-HealthComponent.gd::GDScript::-1::1705749739::0::1::::HealthComponent<>Node<>::
-health_component.tscn::PackedScene::8587700253352166686::1705853193::0::1::::<><>::res://Scripts/components/HealthComponent.gd
-HitBoxComponent.gd::GDScript::-1::1705588915::0::1::::<>Node<>::
-hit_box_component.tscn::PackedScene::9091896058316985023::1705853193::0::1::::<><>::res://Scripts/components/HitBoxComponent.gd
-::res://Scripts/helper/::1705588393
-Attack.gd::GDScript::-1::1705588393::0::1::::Attack<>Node<>::
-::res://Scripts/player/::1705500768
-::res://Scripts/player/state/::1705751622
-playerAttack.gd::GDScript::-1::1705751454::0::1::::PlayerAttack<>State<>::
-playerIdle.gd::GDScript::-1::1705751622::0::1::::PlayerIdle<>State<>::
-playerMove.gd::GDScript::-1::1705584043::0::1::::PlayerMove<>State<>::
-::res://Scripts/state/::1705752883
-Finite State Machine.gd::GDScript::-1::1705752883::0::1::::<>Node<>::
-State.gd::GDScript::-1::1704715553::0::1::::State<>Node<>::
-::res://singeltons/::1705752014
-game_input_events.gd::GDScript::-1::1705752014::0::1::::GameInputEvents<>Node<>::
-::res://ui/::1705853211
-control.tscn::PackedScene::7636590799110104920::1705853193::0::1::::<><>::
-interaction_progress_bar.gd::GDScript::-1::1705853211::0::1::::<>Control<>::
-interaction_progress_bar.tscn::PackedScene::3745292016435251144::1705853211::0::1::::<><>::res://ui/interaction_progress_bar.gd<>uid://bwq0nss68abv6::::res://ui/assets/progress-bar-circle.png<>uid://5r380s70docu::::res://ui/assets/progress-bar-frame.png
-progress_bar.gd::GDScript::-1::1705752883::0::1::::<>Control<>::
-progress_bar.tscn::PackedScene::2078624376582810725::1705853193::0::1::::<><>::res://ui/progress_bar.gd<>uid://bwq0nss68abv6::::res://ui/assets/progress-bar-circle.png<>uid://5r380s70docu::::res://ui/assets/progress-bar-frame.png
-::res://ui/assets/::1705747049
-progress-bar-circle.png::CompressedTexture2D::3965147402614076381::1705747049::1705747049::1::::<><>::
-progress-bar-frame.png::CompressedTexture2D::2142520080334019512::1705747049::1705747049::1::::<><>::
+::res://::1718225768
+icon.svg::CompressedTexture2D::8184442486536108973::1716658559::1716658559::1::::<><>::
+world.tscn::PackedScene::5098299122653503885::1718225745::0::1::::<><>::uid://0uj3ocwe8x5y::::res://scenes/characters/player/player.tscn<>uid://37g5p3l6lmk7::::res://scenes/objects/items/static/tree.tscn<>uid://fxertob7ej2u::::res://scenes/objects/items/static/bed.tscn<>uid://xk4aw7v4ail8::::res://scenes/objects/items/static/egg.tscn<>uid://bkbcab5xhj4sk::::res://scripts/collect/collect.tscn<>uid://d10nirsa7avri::::res://resources/items/milk.tres<>uid://dtsyc0e3e2oej::::res://scenes/ui/inventory/inventory_dialog.tscn<>uid://b2uqvum5kpa3o::::res://resources/items/apple.tres<>res://scripts/ui/inventory/CanvasLayer.gd<>uid://ddo6b0s0mqihy::::res://resources/items/Jam.tres<>uid://d2iv31eu5eh12::::res://resources/recipes/all_recipes.tres<>uid://c2x6q4bs4x515::::res://scenes/ui/craft/crafting_dialog.tscn<>uid://co44tuyd8gd4h::::res://scenes/characters/enemy/slime.tscn<>uid://50ckk7h6s3k5::::res://scenes/objects/items/upgrades/damage_cookie.tscn<>uid://ddy7rfwaj3kgj::::res://resources/upgrades/damage.tres<>uid://dd11nfrjryedx::::res://scenes/objects/items/upgrades/attack_speed.tscn<>uid://co80fjamm6p2m::::res://resources/upgrades/speed.tres
+::res://addons/::1717186942
+::res://addons/godot_resource_groups/::1717534007
+godot_resource_groups.gd::GDScript::-1::1717186942::0::1::::<>EditorPlugin<>::
+path_verifier.gd::GDScript::-1::1717186942::0::1::::<>RefCounted<>::
+plugin.cfg::TextFile::-1::1717186942::0::1::::<><>::
+resource_group.gd::GDScript::-1::1717534007::0::1::::ResourceGroup<>Resource<>res://addons/godot_resource_groups/resource_group.svg::
+resource_group.svg::CompressedTexture2D::3094005553366319088::1717186942::1717186943::1::::<><>::
+resource_group_background_loader.gd::GDScript::-1::1717186943::0::1::::ResourceGroupBackgroundLoader<>RefCounted<>::
+resource_group_scanner.gd::GDScript::-1::1717186943::0::1::::<>RefCounted<>::
+resource_scanner.gd::GDScript::-1::1717186943::0::1::::<>RefCounted<>::
+::res://addons/godot_resource_groups/csharp/::1717186942
+::res://assets/::1718221295
+progress-bar-circle.png::CompressedTexture2D::3965147402614076381::1716658566::1716985765::1::::<><>::
+progress-bar-frame.png::CompressedTexture2D::2142520080334019512::1716658566::1716985765::1::::<><>::
+::res://assets/Characters/::1717266962
+Basic Charakter Actions.png::CompressedTexture2D::7394151838898174159::1716658564::1716985779::1::::<><>::
+Basic Charakter Spritesheet.png::CompressedTexture2D::5711831196688890925::1716658564::1716985779::1::::<><>::
+Egg_And_Nest.png::CompressedTexture2D::5638797200111874475::1716658564::1716985779::1::::<><>::
+Free Chicken Sprites.png::CompressedTexture2D::2968001914900865015::1716658564::1716985779::1::::<><>::
+Free Cow Sprites.png::CompressedTexture2D::647546095049168508::1716658564::1716985779::1::::<><>::
+slime.png::CompressedTexture2D::1353987344543556613::1717266962::1717266962::1::::<><>::
+Tools.png::CompressedTexture2D::1716694184432395285::1716658564::1716985779::1::::<><>::
+::res://assets/Food/::1717081902
+Apple.png::CompressedTexture2D::3601058817459764811::1717081899::1717081902::1::::<><>::
+AppleWorm.png::CompressedTexture2D::7377492147766418147::1717081899::1717081902::1::::<><>::
+Avocado.png::CompressedTexture2D::3082413248258473678::1717081899::1717081902::1::::<><>::
+Bacon.png::CompressedTexture2D::6242953062579665727::1717081899::1717081902::1::::<><>::
+Beer.png::CompressedTexture2D::1344437734797726087::1717081899::1717081902::1::::<><>::
+Boar.png::CompressedTexture2D::3773384007164235979::1717081899::1717081902::1::::<><>::
+Bread.png::CompressedTexture2D::8349156353897581340::1717081899::1717081902::1::::<><>::
+Brownie.png::CompressedTexture2D::3519507065343592232::1717081899::1717081902::1::::<><>::
+Bug.png::CompressedTexture2D::465668419181231173::1717081899::1717081902::1::::<><>::
+Cheese.png::CompressedTexture2D::1492967993391350952::1717081899::1717081902::1::::<><>::
+Cherry.png::CompressedTexture2D::7325451870384987678::1717081899::1717081902::1::::<><>::
+Chicken.png::CompressedTexture2D::43855040660836575::1717081899::1717081902::1::::<><>::
+ChickenLeg.png::CompressedTexture2D::1872021879094774780::1717081899::1717081902::1::::<><>::
+Cookie.png::CompressedTexture2D::6309049697519571973::1717081899::1717081902::1::::<><>::
+DragonFruit.png::CompressedTexture2D::2604540375803773169::1717081899::1717081902::1::::<><>::
+Eggplant.png::CompressedTexture2D::3387202036802980578::1717081899::1717081902::1::::<><>::
+Eggs.png::CompressedTexture2D::4476079590627865819::1717081899::1717081902::1::::<><>::
+Fish.png::CompressedTexture2D::4185208013505201442::1717081899::1717081902::1::::<><>::
+FishFillet.png::CompressedTexture2D::8413764774603974327::1717081899::1717081902::1::::<><>::
+FishSteak.png::CompressedTexture2D::5533884756351023688::1717081899::1717081902::1::::<><>::
+Grub.png::CompressedTexture2D::3138438257501907550::1717081899::1717081902::1::::<><>::
+Grubs.png::CompressedTexture2D::8649853955349897438::1717081899::1717081902::1::::<><>::
+Honey.png::CompressedTexture2D::2926527883206507909::1717081899::1717081902::1::::<><>::
+Honeycomb.png::CompressedTexture2D::3085819264687340416::1717081899::1717081902::1::::<><>::
+Jam.png::CompressedTexture2D::5978640058456956022::1717081899::1717081902::1::::<><>::
+Jerky.png::CompressedTexture2D::5288486303792234773::1717081899::1717081902::1::::<><>::
+Lemon.png::CompressedTexture2D::888470860581378268::1717081899::1717081902::1::::<><>::
+Marmalade.png::CompressedTexture2D::4174898787126547946::1717081899::1717081902::1::::<><>::
+MelonCantaloupe.png::CompressedTexture2D::868518535390566621::1717081899::1717081902::1::::<><>::
+MelonHoneydew.png::CompressedTexture2D::3195981543516011731::1717081899::1717081902::1::::<><>::
+MelonWater.png::CompressedTexture2D::5606148974676341115::1717081899::1717081902::1::::<><>::
+Moonshine.png::CompressedTexture2D::5859077039799844667::1717081899::1717081902::1::::<><>::
+Olive.png::CompressedTexture2D::4866520951976069603::1717081899::1717081902::1::::<><>::
+Onion.png::CompressedTexture2D::8621560032159785399::1717081899::1717081902::1::::<><>::
+Peach.png::CompressedTexture2D::491075522112604239::1717081899::1717081902::1::::<><>::
+PepperGreen.png::CompressedTexture2D::7323813939268187055::1717081899::1717081902::1::::<><>::
+Pepperoni.png::CompressedTexture2D::7787653065008137903::1717081899::1717081902::1::::<><>::
+PepperRed.png::CompressedTexture2D::4115080952400777959::1717081899::1717081902::1::::<><>::
+Pickle.png::CompressedTexture2D::9019335845099340369::1717081899::1717081902::1::::<><>::
+PickledEggs.png::CompressedTexture2D::7049520952563623149::1717081899::1717081902::1::::<><>::
+PieApple.png::CompressedTexture2D::116033219496368711::1717081899::1717081902::1::::<><>::
+PieLemon.png::CompressedTexture2D::1092524638702793403::1717081899::1717081902::1::::<><>::
+PiePumpkin.png::CompressedTexture2D::8259559522761875987::1717081899::1717081902::1::::<><>::
+Pineapple.png::CompressedTexture2D::2433336923412979174::1717081899::1717081902::1::::<><>::
+Potato.png::CompressedTexture2D::9070209437128047621::1717081899::1717081902::1::::<><>::
+PotatoRed.png::CompressedTexture2D::3849013968935755506::1717081899::1717081902::1::::<><>::
+Pretzel.png::CompressedTexture2D::3064303451459302752::1717081899::1717081902::1::::<><>::
+Ribs.png::CompressedTexture2D::4785543976146747543::1717081899::1717081902::1::::<><>::
+Roll.png::CompressedTexture2D::4158953806966473731::1717081899::1717081902::1::::<><>::
+Saki.png::CompressedTexture2D::4584621806894784106::1717081899::1717081902::1::::<><>::
+Sardines.png::CompressedTexture2D::242188031373865623::1717081899::1717081902::1::::<><>::
+Sashimi.png::CompressedTexture2D::461015213361296260::1717081899::1717081902::1::::<><>::
+Sausages.png::CompressedTexture2D::6471424950533009562::1717081899::1717081902::1::::<><>::
+Shrimp.png::CompressedTexture2D::396761742964401927::1717081899::1717081902::1::::<><>::
+Steak.png::CompressedTexture2D::4601516022793695800::1717081899::1717081902::1::::<><>::
+Stein.png::CompressedTexture2D::2105892609859552240::1717081899::1717081902::1::::<><>::
+Strawberry.png::CompressedTexture2D::6498423908222750630::1717081899::1717081902::1::::<><>::
+Sushi.png::CompressedTexture2D::7993263823828946823::1717081899::1717081902::1::::<><>::
+Tart.png::CompressedTexture2D::2317127440165447032::1717081899::1717081902::1::::<><>::
+Tomato.png::CompressedTexture2D::556737222715638659::1717081899::1717081902::1::::<><>::
+Turnip.png::CompressedTexture2D::3578712224342656475::1717081899::1717081902::1::::<><>::
+Waffles.png::CompressedTexture2D::5616317919074550152::1717081899::1717081902::1::::<><>::
+Whiskey.png::CompressedTexture2D::89032534505618378::1717081899::1717081902::1::::<><>::
+Wine.png::CompressedTexture2D::697412672438331006::1717081899::1717081902::1::::<><>::
+::res://assets/Icons/::1718221295
+Freebies_Full_Icons.png::CompressedTexture2D::4082230730513627267::1718221295::1718221295::1::::<><>::
+Freebies_Icons_Armory.png::CompressedTexture2D::7920118988290538660::1718221295::1718221295::1::::<><>::
+Freebies_Icons_Botany.png::CompressedTexture2D::1352489080260472965::1718221295::1718221295::1::::<><>::
+Freebies_Icons_Emoticons.png::CompressedTexture2D::1473002503353915135::1718221295::1718221295::1::::<><>::
+Freebies_Icons_Fishing.png::CompressedTexture2D::3876739064273376124::1718221295::1718221295::1::::<><>::
+Freebies_Icons_General.png::CompressedTexture2D::6792838402792575551::1718221295::1718221295::1::::<><>::
+Freebies_Icons_Halloween.png::CompressedTexture2D::6261161063479658837::1718221295::1718221295::1::::<><>::
+Freebies_Icons_Insects.png::CompressedTexture2D::5140536191865751818::1718221295::1718221295::1::::<><>::
+Freebies_Icons_Miscellaneous.png::CompressedTexture2D::6129543322381571853::1718221295::1718221295::1::::<><>::
+Freebies_Icons_Potions.png::CompressedTexture2D::3150922336696815056::1718221295::1718221295::1::::<><>::
+Freebies_Icons_Skills.png::CompressedTexture2D::8557695133603619669::1718221295::1718221295::1::::<><>::
+Freebies_Icons_Steampunk.png::CompressedTexture2D::4061653664865357575::1718221295::1718221295::1::::<><>::
+::res://assets/Objects/::1716985896
+Basic Furniture.png::CompressedTexture2D::1656054891152842451::1716658566::1716985896::1::::<><>::
+Basic Grass Biom things 1.png::CompressedTexture2D::5594051847313428207::1716658566::1716985896::1::::<><>::
+Basic Plants.png::CompressedTexture2D::8835872284902654814::1716658566::1716985896::1::::<><>::
+Basic tools and meterials.png::CompressedTexture2D::5355796122029739430::1716658566::1716985896::1::::<><>::
+Chest.png::CompressedTexture2D::3483248025541770157::1716658566::1716985896::1::::<><>::
+Egg item.png::CompressedTexture2D::6304307255220297625::1716658566::1716985896::1::::<><>::
+Free_Chicken_House.png::CompressedTexture2D::5583181212416144823::1716658566::1716985896::1::::<><>::
+Paths.png::CompressedTexture2D::2207634731952776263::1716658566::1716985896::1::::<><>::
+Simple Milk and grass item.png::CompressedTexture2D::3923993549237333036::1716658566::1716985896::1::::<><>::
+Wood Bridge.png::CompressedTexture2D::6045079406342271905::1716658566::1716985896::1::::<><>::
+::res://model/::1718225745
+craft.gd::GDScript::-1::1718224439::0::1::::Craft_Item<>Item<>::
+equipment.gd::GDScript::-1::1718221333::0::1::::Equipment<>Resource<>::
+items.gd::GDScript::-1::1718224385::0::1::::Item<>Resource<>::
+recipe.gd::GDScript::-1::1718225745::0::1::::Recipe<>Resource<>::
+upgrades.gd::GDScript::-1::1717441294::0::1::::Upgrades<>Resource<>::
+::res://resources/::1718220927
+::res://resources/equipment/::1718223916
+sword.tres::Resource/Resource::1898156728734469032::1718223916::0::1::::<><>::res://model/equipment.gd
+::res://resources/items/::1718224765
+apple.tres::Resource/Resource::4323817060939109662::1718224059::0::1::::<><>::uid://brkm6a76j0o0j::::res://assets/Food/Apple.png<>res://model/items.gd<>uid://blsd5npgqaeas::::res://scenes/objects/items/collectable/apple.tscn
+applepie.tres::Resource/Resource::6923076196053723788::1717952335::0::1::::<><>::res://model/items.gd<>uid://bwhbx88icl6n::::res://assets/Food/PieApple.png<>uid://c2gq6fq5b2fhj::::res://scenes/objects/items/collectable/pie_apple.tscn
+can_be_used_for_craft.tres::Resource/Resource::1702055320003357699::1718224726::0::1::::<><>::res://model/craft.gd<>uid://brkm6a76j0o0j::::res://assets/Food/Apple.png<>uid://blsd5npgqaeas::::res://scenes/objects/items/collectable/apple.tscn
+can_not_be_used_for_craft.tres::Resource/Resource::6377048378299354491::1718224765::0::1::::<><>::uid://dddyhn10ra820::::res://assets/Food/AppleWorm.png<>uid://fxertob7ej2u::::res://scenes/objects/items/static/bed.tscn<>res://model/items.gd
+Jam.tres::Resource/Resource::7400615225162695558::1717951873::0::1::::<><>::res://model/items.gd<>uid://crgdlfqooehes::::res://assets/Food/Jam.png<>uid://72fwsmbiil2s::::res://scenes/objects/items/collectable/jam.tscn
+milk.tres::Resource/Resource::9036585957523062302::1717527651::0::1::::<><>::uid://jdywirb88mht::::res://scenes/objects/items/collectable/milk.tscn<>uid://bv52uoehmtnuy::::res://assets/Objects/Simple Milk and grass item.png<>res://model/items.gd
+::res://resources/recipes/::1718225765
+all_recipes.tres::Resource/ResourceGroup::9072202283151374763::1718225765::0::1::::<><>::res://addons/godot_resource_groups/resource_group.gd
+Apple_pie.tres::Resource/Recipe::4301993626962869241::1718225764::0::1::::<><>::res://model/recipe.gd<>uid://yiquqotxwc48::::res://resources/items/can_be_used_for_craft.tres
+::res://resources/upgrades/::1717533426
+damage.tres::Resource/Resource::7421347246971332205::1717533426::0::1::::<><>::res://scripts/characters/player/upgrades/attack_damage.gd
+speed.tres::Resource/Resource::5825136971263963286::1717533426::0::1::::<><>::res://scripts/characters/player/upgrades/attack_speed.gd
+::res://scenes/::1717527965
+::res://scenes/characters/::1717527601
+::res://scenes/characters/enemy/::1717875420
+slime.tscn::PackedScene::5817147943783763981::1717875420::0::1::::<><>::res://scripts/characters/enemy/slime.gd<>uid://tj48dwb8a24p::::res://assets/Characters/slime.png<>uid://dul7fy1qumumw::::res://scripts/components/health_component.tscn<>uid://d2sgg15q4s84b::::res://scripts/components/hit_box_component.tscn<>uid://4u5v0umn6svl::::res://scenes/ui/progress_bar/progress_bar.tscn<>res://scripts/state/Finite State Machine.gd<>res://scripts/characters/enemy/state/EnemyAttack.gd<>res://scripts/characters/enemy/state/EnemyIdle.gd<>res://scripts/characters/enemy/state/EnemyWalk.gd<>res://scripts/characters/enemy/state/EnemyChase.gd<>uid://31o5an10jxkr::::res://scripts/helper/state_debugger.tscn
+::res://scenes/characters/npc/::1717527601
+::res://scenes/characters/player/::1717875420
+player.tscn::PackedScene::1796605840619000568::1717875420::0::1::::<><>::res://scripts/characters/player/player.gd<>uid://ddl1uoften65p::::res://assets/Characters/Basic Charakter Actions.png<>uid://cnm4a4in7h5ob::::res://assets/Characters/Basic Charakter Spritesheet.png<>res://scripts/state/Finite State Machine.gd<>res://scripts/characters/player/state/playerMove.gd<>res://scripts/characters/player/state/playerIdle.gd<>res://scripts/characters/player/state/playerAttack.gd<>res://scripts/characters/player/state/playerInteraction.gd<>uid://31o5an10jxkr::::res://scripts/helper/state_debugger.tscn<>uid://dul7fy1qumumw::::res://scripts/components/health_component.tscn<>uid://d2sgg15q4s84b::::res://scripts/components/hit_box_component.tscn<>uid://4u5v0umn6svl::::res://scenes/ui/progress_bar/progress_bar.tscn<>res://scripts/components/PlayerHitBoxComponent.gd
+::res://scenes/objects/::1717527489
+::res://scenes/objects/items/::1717527489
+::res://scenes/objects/items/collectable/::1718225620
+apple.tscn::PackedScene::3195893194349596194::1717528069::0::1::::<><>::uid://brkm6a76j0o0j::::res://assets/Food/Apple.png
+jam.tscn::PackedScene::2302125032220800052::1717837031::0::1::::<><>::uid://crgdlfqooehes::::res://assets/Food/Jam.png
+milk.tscn::PackedScene::639389667836095529::1717528069::0::1::::<><>::uid://bv52uoehmtnuy::::res://assets/Objects/Simple Milk and grass item.png
+pie_apple.tscn::PackedScene::6681353532331838003::1718225620::0::1::::<><>::uid://bwhbx88icl6n::::res://assets/Food/PieApple.png
+::res://scenes/objects/items/static/::1717837032
+bed.tscn::PackedScene::398699152660267150::1717837032::0::1::::<><>::uid://xug8nkv1yl6j::::res://assets/Objects/Basic Furniture.png<>uid://dul7fy1qumumw::::res://scripts/components/health_component.tscn<>uid://d2sgg15q4s84b::::res://scripts/components/hit_box_component.tscn<>uid://4u5v0umn6svl::::res://scenes/ui/progress_bar/progress_bar.tscn
+egg.tscn::PackedScene::1636749179945921831::1717533842::0::1::::<><>::uid://cv24awpng3we0::::res://assets/Objects/Egg item.png<>res://scripts/objects/items/static/egg.gd<>uid://btmioavxvbgm7::::res://scenes/ui/progress_bar/interaction_progress_bar.tscn<>uid://dg2hsgfqjfxhw::::res://scenes/ui/content/control.tscn
+tree.tscn::PackedScene::2031766417415003724::1717837031::0::1::::<><>::uid://clx2hmogrrdw6::::res://assets/Objects/Basic Grass Biom things 1.png<>uid://dul7fy1qumumw::::res://scripts/components/health_component.tscn<>uid://d2sgg15q4s84b::::res://scripts/components/hit_box_component.tscn<>uid://4u5v0umn6svl::::res://scenes/ui/progress_bar/progress_bar.tscn
+::res://scenes/objects/items/upgrades/::1717837031
+attack_speed.tscn::PackedScene::7425104550042656573::1717837031::0::1::::<><>::res://scripts/upgrades/damage_cookie.gd<>uid://dcmrefc15mjhm::::res://assets/Food/Cherry.png
+damage_cookie.tscn::PackedScene::2157414619944505154::1717837031::0::1::::<><>::res://scripts/upgrades/damage_cookie.gd<>uid://cv5fekr7shevt::::res://assets/Food/Cookie.png
+::res://scenes/ui/::1717533842
+::res://scenes/ui/content/::1717837032
+control.tscn::PackedScene::7636590799110104920::1717837032::0::1::::<><>::
+::res://scenes/ui/craft/::1718220343
+crafting_dialog.tscn::PackedScene::6717333159014179602::1718220343::0::1::::<><>::res://scripts/ui/craft/crafting_dialog.gd<>uid://da4splrj2c54c::::res://scenes/ui/craft/craft_grid_ingredients.tscn
+craft_grid_ingredients.tscn::PackedScene::7220249303189047284::1718220343::0::1::::<><>::res://scripts/ui/craft/craft_grid_ingredients.gd<>uid://btj2cnj1xfq30::::res://scenes/ui/craft/craft_ingredient_slot.tscn
+craft_ingredient_slot.tscn::PackedScene::3740231740913823017::1718220343::0::1::::<><>::res://scripts/ui/craft/craft_item_slot.gd<>uid://bt04c3kam3c2n::::res://assets/Food/Boar.png
+::res://scenes/ui/inventory/::1718224439
+grid_ingredients.tscn::PackedScene::434138654496932220::1718220343::0::1::::<><>::res://scripts/ui/inventory/grid_ingredients.gd<>uid://btj2cnj1xfq30::::res://scenes/ui/craft/craft_ingredient_slot.tscn
+inventory_dialog.tscn::PackedScene::8531470979730785377::1718224439::0::1::::<><>::res://scripts/ui/inventory/inventory_dialog.gd<>uid://bgvea0xn8bo55::::res://scenes/ui/inventory/item_slot.tscn<>uid://ggkg2pdk24we::::res://scenes/ui/inventory/grid_ingredients.tscn
+item_slot.tscn::PackedScene::2851149895576687818::1718220342::0::1::::<><>::res://scripts/ui/inventory/item_slot.gd<>uid://bt04c3kam3c2n::::res://assets/Food/Boar.png
+::res://scenes/ui/progress_bar/::1717837033
+interaction_progress_bar.tscn::PackedScene::3745292016435251144::1717837033::0::1::::<><>::res://scripts/ui/progress_bar/interaction_progress_bar.gd<>uid://bwq0nss68abv6::::res://assets/progress-bar-circle.png<>uid://5r380s70docu::::res://assets/progress-bar-frame.png
+progress_bar.tscn::PackedScene::2078624376582810725::1717837033::0::1::::<><>::res://scripts/ui/progress_bar/progress_bar.gd<>uid://bwq0nss68abv6::::res://assets/progress-bar-circle.png<>uid://5r380s70docu::::res://assets/progress-bar-frame.png
+::res://scripts/::1717832053
+::res://scripts/characters/::1717527774
+::res://scripts/characters/enemy/::1717527392
+slime.gd::GDScript::-1::1717348007::0::1::::<>CharacterBody2D<>::
+::res://scripts/characters/enemy/state/::1717348124
+EnemyAttack.gd::GDScript::-1::1717348124::0::1::::EnemyAttack<>State<>::
+EnemyChase.gd::GDScript::-1::1717348007::0::1::::EnemyChase<>State<>::
+EnemyIdle.gd::GDScript::-1::1717329770::0::1::::EnemyIdle<>State<>::
+EnemyWalk.gd::GDScript::-1::1717272198::0::1::::EnemyWalk<>State<>::
+::res://scripts/characters/player/::1717844352
+player.gd::GDScript::-1::1717844352::0::1::::Player<>CharacterBody2D<>::
+::res://scripts/characters/player/state/::1717348626
+playerAttack.gd::GDScript::-1::1717348626::0::1::::PlayerAttack<>State<>::
+playerIdle.gd::GDScript::-1::1716658567::0::1::::PlayerIdle<>State<>::
+playerInteraction.gd::GDScript::-1::1716831414::0::1::::playerIneraction<>State<>::
+playerMove.gd::GDScript::-1::1716658567::0::1::::PlayerMove<>State<>::
+::res://scripts/characters/player/upgrades/::1717527034
+attack_damage.gd::GDScript::-1::1717526055::0::1::::Attack_Damage<>Upgrades<>::
+attack_speed.gd::GDScript::-1::1717527034::0::1::::Attack_Speed<>Upgrades<>::
+::res://scripts/collect/::1717948571
+collect.gd::GDScript::-1::1717948571::0::1::::Collect<>Node2D<>::
+collect.tscn::PackedScene::3090495031735257210::1717935560::0::1::::<><>::res://scripts/collect/collect.gd
+::res://scripts/components/::1717348140
+HealthComponent.gd::GDScript::-1::1717340658::0::1::::HealthComponent<>Node<>::
+health_component.tscn::PackedScene::8587700253352166686::1716987956::0::1::::<><>::res://scripts/components/HealthComponent.gd
+HitBoxComponent.gd::GDScript::-1::1717344002::0::1::::<>Node<>::
+hit_box_component.tscn::PackedScene::9091896058316985023::1717348140::0::1::::<><>::res://scripts/components/HitBoxComponent.gd
+PlayerHitBoxComponent.gd::GDScript::-1::1717344060::0::1::::<>Node<>::
+player_hit_box_component.tscn::PackedScene::1354812571410604845::1717348140::0::1::::<><>::res://scripts/components/HitBoxComponent.gd
+::res://scripts/helper/::1717837032
+Attack.gd::GDScript::-1::1716658567::0::1::::Attack<>Node<>::
+state_debugger.tscn::PackedScene::2019865076483905817::1717837032::0::1::::<><>::
+::res://scripts/objects/::1717527805
+::res://scripts/objects/items/::1717527812
+::res://scripts/objects/items/static/::1717527871
+egg.gd::GDScript::-1::1716831033::0::1::::CollectableResource<>StaticBody2D<>::
+tree.gd::GDScript::-1::1716830962::0::1::::<>StaticBody2D<>::
+::res://scripts/state/::1717340700
+Finite State Machine.gd::GDScript::-1::1717340700::0::1::::FSM<>Node<>::
+State.gd::GDScript::-1::1716658566::0::1::::State<>Node<>::
+::res://scripts/ui/::1717533745
+::res://scripts/ui/craft/::1718225227
+crafting_dialog.gd::GDScript::-1::1717952144::0::1::::CraftingDialog<>PanelContainer<>::
+craft_grid_ingredients.gd::GDScript::-1::1718225227::0::1::::CraftIngredientsGrid<>GridContainer<>::
+craft_item_slot.gd::GDScript::-1::1718225176::0::1::::CraftItemSlot<>PanelContainer<>::
+::res://scripts/ui/inventory/::1718225619
+CanvasLayer.gd::GDScript::-1::1717187275::0::1::::<>CanvasLayer<>::
+grid_ingredients.gd::GDScript::-1::1718225182::0::1::::IngredientsGrid<>GridContainer<>::
+inventory.gd::GDScript::-1::1718225619::0::1::::Inventory<>RefCounted<>::
+inventory_dialog.gd::GDScript::-1::1717183945::0::1::::InventoryDialog<>PanelContainer<>::
+item_slot.gd::GDScript::-1::1717948539::0::1::::ItemSlot<>PanelContainer<>::
+::res://scripts/ui/progress_bar/::1717533782
+interaction_progress_bar.gd::GDScript::-1::1716830655::0::1::::<>Control<>::
+progress_bar.gd::GDScript::-1::1716658566::0::1::::<>Control<>::
+::res://scripts/upgrades/::1717527522
+attack_speed.gd::GDScript::-1::1717526744::0::1::::Attack_Speed_Upgrade<>Area2D<>::
+damage_cookie.gd::GDScript::-1::1717526794::0::1::::Attack_Upgrade<>Area2D<>::
+::res://singeltons/::1717182984
+game_input_events.gd::GDScript::-1::1717182984::0::1::::GameInputEvents<>Node<>::

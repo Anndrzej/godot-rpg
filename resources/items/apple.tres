@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://b2uqvum5kpa3o"]
+
+[ext_resource type="Texture2D" uid="uid://brkm6a76j0o0j" path="res://assets/Food/Apple.png" id="1_5bnjd"]
+[ext_resource type="Script" path="res://model/items.gd" id="1_b34ou"]
+[ext_resource type="PackedScene" uid="uid://blsd5npgqaeas" path="res://scenes/objects/items/collectable/apple.tscn" id="2_btn0h"]
+
+[resource]
+script = ExtResource("1_b34ou")
+name = "Apple"
+scene = ExtResource("2_btn0h")
+icon = ExtResource("1_5bnjd")
+qty = 0
+ingredients_qty = 2
+description = ""

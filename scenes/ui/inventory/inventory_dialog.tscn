@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://dtsyc0e3e2oej"]
+
+[ext_resource type="Script" path="res://scripts/ui/inventory/inventory_dialog.gd" id="1_02ay4"]
+[ext_resource type="PackedScene" uid="uid://bgvea0xn8bo55" path="res://scenes/ui/inventory/item_slot.tscn" id="2_5rpge"]
+[ext_resource type="PackedScene" uid="uid://ggkg2pdk24we" path="res://scenes/ui/inventory/grid_ingredients.tscn" id="3_olx6v"]
+
+[node name="InventoryDialog" type="PanelContainer"]
+offset_right = 1121.0
+offset_bottom = 606.0
+size_flags_horizontal = 4
+script = ExtResource("1_02ay4")
+slot_scene = ExtResource("2_5rpge")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Inventory
+"
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "close inventory"
+
+[node name="GridIngredients" parent="VBoxContainer" instance=ExtResource("3_olx6v")]
+unique_name_in_owner = true
+layout_mode = 2
+slot_scene = ExtResource("2_5rpge")
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://d10nirsa7avri"]
+
+[ext_resource type="PackedScene" uid="uid://jdywirb88mht" path="res://scenes/objects/items/collectable/milk.tscn" id="1_guv6f"]
+[ext_resource type="Texture2D" uid="uid://bv52uoehmtnuy" path="res://assets/Objects/Simple Milk and grass item.png" id="1_mblfc"]
+[ext_resource type="Script" path="res://model/items.gd" id="1_uuaig"]
+
+[resource]
+script = ExtResource("1_uuaig")
+name = "Milk"
+scene = ExtResource("1_guv6f")
+icon = ExtResource("1_mblfc")

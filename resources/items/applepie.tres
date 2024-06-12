@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://c5vub221pnjei"]
+
+[ext_resource type="Script" path="res://model/items.gd" id="1_hphr5"]
+[ext_resource type="Texture2D" uid="uid://bwhbx88icl6n" path="res://assets/Food/PieApple.png" id="1_ymtkg"]
+[ext_resource type="PackedScene" uid="uid://c2gq6fq5b2fhj" path="res://scenes/objects/items/collectable/pie_apple.tscn" id="2_s7joq"]
+
+[resource]
+script = ExtResource("1_hphr5")
+name = "Apple_pie"
+scene = ExtResource("2_s7joq")
+icon = ExtResource("1_ymtkg")
+qty = 0
+ingredients_qty = 0

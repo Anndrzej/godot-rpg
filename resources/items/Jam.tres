@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://ddo6b0s0mqihy"]
+
+[ext_resource type="Script" path="res://model/items.gd" id="1_61aa6"]
+[ext_resource type="Texture2D" uid="uid://crgdlfqooehes" path="res://assets/Food/Jam.png" id="1_e4pm2"]
+[ext_resource type="PackedScene" uid="uid://72fwsmbiil2s" path="res://scenes/objects/items/collectable/jam.tscn" id="2_4n8n4"]
+
+[resource]
+script = ExtResource("1_61aa6")
+name = "Jam"
+scene = ExtResource("2_4n8n4")
+icon = ExtResource("1_e4pm2")
+qty = 0
+ingredients_qty = 1
+description = ""

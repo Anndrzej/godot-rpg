@@ -1,0 +1,82 @@
+[gd_scene load_steps=3 format=3 uid="uid://c2x6q4bs4x515"]
+
+[ext_resource type="Script" path="res://scripts/ui/craft/crafting_dialog.gd" id="1_gdg7x"]
+[ext_resource type="PackedScene" uid="uid://da4splrj2c54c" path="res://scenes/ui/craft/craft_grid_ingredients.tscn" id="2_kaukb"]
+
+[node name="CraftingDialog" type="PanelContainer"]
+offset_right = 1121.0
+offset_bottom = 606.0
+size_flags_horizontal = 4
+script = ExtResource("1_gdg7x")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 1
+text = "Crafting
+"
+
+[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "close dialog"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer2/VBoxContainer"]
+layout_mode = 2
+text = "Recipes"
+
+[node name="RecipeList" type="ItemList" parent="VBoxContainer/HBoxContainer2/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+size_flags_vertical = 3
+item_count = 2
+item_0/text = "test1"
+item_1/text = "test2"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer2/VBoxContainer2"]
+layout_mode = 2
+text = "Ingredients"
+
+[node name="GridIngredients" parent="VBoxContainer/HBoxContainer2/VBoxContainer2" instance=ExtResource("2_kaukb")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer2/VBoxContainer2"]
+layout_mode = 2
+text = "Result"
+
+[node name="GridResult" parent="VBoxContainer/HBoxContainer2/VBoxContainer2" instance=ExtResource("2_kaukb")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Control" type="Control" parent="VBoxContainer/HBoxContainer2/VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Craft" type="Button" parent="VBoxContainer/HBoxContainer2/VBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 8
+text = "Craft"
+
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="item_selected" from="VBoxContainer/HBoxContainer2/VBoxContainer/RecipeList" to="." method="_on_recipe_list_item_selected"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer2/VBoxContainer2/Craft" to="." method="_on_craft_pressed"]

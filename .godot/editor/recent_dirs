@@ -1,9 +1,11 @@
-res://ui
-res://environment
+res://resources/items
+res://model
+res://resources/equipment
+res://resources/recipes
+res://assets/Characters
+res://scripts/helper
+res://scripts/collect
 res://Scripts/components
-res://Scripts/player/state
 res://Scripts/state
 res://singeltons
 res://
-res://player
-res://Characters

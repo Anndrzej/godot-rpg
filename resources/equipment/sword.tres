@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Equipment" load_steps=2 format=3 uid="uid://2bqmm1t0pv01"]
+
+[ext_resource type="Script" path="res://model/equipment.gd" id="1_7hpj0"]
+
+[resource]
+script = ExtResource("1_7hpj0")
+type = 3
+item_name = "Sword"
+item_damage = 5
+item_defence = 0
+description = ""
