@@ -1,11 +1,21 @@
-[gd_resource type="Resource" script_class="Equipment" load_steps=2 format=3 uid="uid://2bqmm1t0pv01"]
+[gd_resource type="Resource" script_class="Item" load_steps=6 format=3 uid="uid://2bqmm1t0pv01"]
 
 [ext_resource type="Script" path="res://model/equipment.gd" id="1_7hpj0"]
+[ext_resource type="Script" path="res://model/items.gd" id="1_a0fvc"]
+[ext_resource type="Texture2D" uid="uid://bx4q3v4p8wbit" path="res://assets/Icons/Freebies_Icons_Steampunk.png" id="1_mwkbr"]
+[ext_resource type="PackedScene" uid="uid://blo86lr7shojd" path="res://scenes/objects/items/equipment/sword.tscn" id="2_jad7f"]
 
-[resource]
+[sub_resource type="Resource" id="Resource_64781"]
 script = ExtResource("1_7hpj0")
 type = 3
-item_name = "Sword"
 item_damage = 5
-item_defence = 0
-description = ""
+item_defence = 2
+
+[resource]
+script = ExtResource("1_a0fvc")
+name = "Sword"
+scene = ExtResource("2_jad7f")
+icon = ExtResource("1_mwkbr")
+qty = 0
+description = "simple sword"
+type = SubResource("Resource_64781")

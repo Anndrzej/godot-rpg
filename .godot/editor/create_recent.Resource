@@ -1,9 +1,8 @@
-Craft_Item
 Item
-Equipment
+Recipe
 Resource
+Craft_Item
 Attack_Speed
 Attack_Damage
 Upgrades
 ResourceGroup
-Recipe

@@ -27,56 +27,64 @@ layout_mode = 2
 size_flags_horizontal = 10
 text = "close dialog"
 
+[node name="RecipeCategoryContainer" type="HBoxContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="RecipeCategoryList" type="ItemList" parent="VBoxContainer/RecipeCategoryContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+max_columns = 5
+
 [node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer2"]
+[node name="RecipesContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer2"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer2/VBoxContainer"]
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer2/RecipesContainer"]
 layout_mode = 2
 text = "Recipes"
 
-[node name="RecipeList" type="ItemList" parent="VBoxContainer/HBoxContainer2/VBoxContainer"]
+[node name="RecipeList" type="ItemList" parent="VBoxContainer/HBoxContainer2/RecipesContainer"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(250, 0)
 layout_mode = 2
 size_flags_vertical = 3
-item_count = 2
-item_0/text = "test1"
-item_1/text = "test2"
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="VBoxContainer/HBoxContainer2"]
+[node name="IngredientsContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer2/VBoxContainer2"]
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer2/IngredientsContainer"]
 layout_mode = 2
 text = "Ingredients"
 
-[node name="GridIngredients" parent="VBoxContainer/HBoxContainer2/VBoxContainer2" instance=ExtResource("2_kaukb")]
+[node name="GridIngredients" parent="VBoxContainer/HBoxContainer2/IngredientsContainer" instance=ExtResource("2_kaukb")]
 unique_name_in_owner = true
 layout_mode = 2
 
-[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer2/VBoxContainer2"]
+[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer2/IngredientsContainer"]
 layout_mode = 2
-text = "Result"
 
-[node name="GridResult" parent="VBoxContainer/HBoxContainer2/VBoxContainer2" instance=ExtResource("2_kaukb")]
+[node name="GridResult" parent="VBoxContainer/HBoxContainer2/IngredientsContainer" instance=ExtResource("2_kaukb")]
 unique_name_in_owner = true
 layout_mode = 2
 
-[node name="Control" type="Control" parent="VBoxContainer/HBoxContainer2/VBoxContainer2"]
+[node name="Control" type="Control" parent="VBoxContainer/HBoxContainer2/IngredientsContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Craft" type="Button" parent="VBoxContainer/HBoxContainer2/VBoxContainer2"]
+[node name="Craft" type="Button" parent="VBoxContainer/HBoxContainer2/IngredientsContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 8
 text = "Craft"
 
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/Button" to="." method="_on_button_pressed"]
-[connection signal="item_selected" from="VBoxContainer/HBoxContainer2/VBoxContainer/RecipeList" to="." method="_on_recipe_list_item_selected"]
-[connection signal="pressed" from="VBoxContainer/HBoxContainer2/VBoxContainer2/Craft" to="." method="_on_craft_pressed"]
+[connection signal="item_selected" from="VBoxContainer/RecipeCategoryContainer/RecipeCategoryList" to="." method="_on_recipe_type_list_item_selected"]
+[connection signal="item_selected" from="VBoxContainer/HBoxContainer2/RecipesContainer/RecipeList" to="." method="_on_recipe_list_item_selected"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer2/IngredientsContainer/Craft" to="." method="_on_craft_pressed"]

@@ -9,9 +9,7 @@ func Enter() -> void:
 	interaction_area.disabled = false 
 
 func Update(_delta) -> void:
-	var interract = GameInputEvents.interract_input()
-	
-	if !interract:
+	if !Input.is_action_just_pressed("attack"):
 		interaction_area.disabled = true 
 		transition.emit(self, "playerIdle")
 

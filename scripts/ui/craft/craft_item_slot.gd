@@ -8,17 +8,15 @@ class_name CraftItemSlot
 
 func display(item: Item) -> void:
 	var grid_results_name = get_parent()
-	
 	have_label.text = str(item.qty)
 	
-	if item.ingredients_qty > 0:
-		needed_label.text = str(item.ingredients_qty)
-	
+	if item.type.ingredients_qty > 0:
+		needed_label.text = str(item.type.ingredients_qty)
 	if item.qty <= 0 || grid_results_name.name == "GridResult":
 		needed_label.hide()
 		have_label.hide()
 	
-	if item.qty >= item.ingredients_qty:
+	if item.type && item.qty >= item.type.ingredients_qty:
 		needed_label.set("theme_override_colors/font_color", Color(0,0,255))
 		have_label.set("theme_override_colors/font_color", Color(0,0,255))
 		

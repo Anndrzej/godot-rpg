@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://blo86lr7shojd"]
+
+[ext_resource type="Texture2D" uid="uid://bx4q3v4p8wbit" path="res://assets/Icons/Freebies_Icons_Steampunk.png" id="1_slj6l"]
+
+[node name="Node2D" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-7.62939e-06, 0)
+scale = Vector2(0.1625, 0.14375)
+texture = ExtResource("1_slj6l")

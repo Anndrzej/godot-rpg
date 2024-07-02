@@ -9,17 +9,15 @@ func Enter() -> void:
 
 func Update(_delta) -> void:
 	var direction = GameInputEvents.movement_input()
-	var attack = GameInputEvents.attack_input()
-	var interract = GameInputEvents.interract_input()
 	
 	idle_animation(direction)
 	if direction != Vector2.ZERO:
 		transition.emit(self, "playerMove")
 		
-	if attack:
+	if Input.is_action_just_pressed("attack"):
 		transition.emit(self, "playerAttack")
 		
-	if interract:
+	if Input.is_action_just_pressed("interract"):
 		transition.emit(self, "playerInteract")
 
 func idle_animation(direction: Vector2) -> void:

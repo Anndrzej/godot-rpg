@@ -5,48 +5,63 @@ class_name CraftingDialog
 @onready var grid_result: GridContainer = %GridResult
 @onready var grid_ingredients: GridContainer = %GridIngredients
 @onready var recipe_list: ItemList = %RecipeList
+@onready var recipe_type_list = %RecipeCategoryList
 @onready var craft: Button = %Craft
 
-var _inventory: Inventory
 var _selected_recipe: Recipe
+var recipe_categories: Dictionary = {}
 
-func open(recipes: Array[Recipe], inventory: Inventory) -> void:
-	_inventory = inventory
-	
-	show()
+func _ready():
+	craft.disabled = true
+
+func open(recipes: Array[Recipe]) -> void:
+	if recipes.size() > 0:
+		recipe_type_list.clear()
+		for recipe in recipes:
+			# add recipe by categories
+			var recipe_category = recipe.category
+			
+			if recipe_category in recipe_categories:
+				recipe_categories[recipe_category].append(recipe)
+			else: 
+				recipe_categories[recipe_category] = [recipe]
+			
+		for cat in recipe_categories:
+			var category_index = recipe_type_list.add_item(cat)
+			recipe_type_list.set_item_metadata(category_index, recipe_categories[cat])
+			
+		_on_recipe_type_list_item_selected(0)
+		
+
+func _on_recipe_type_list_item_selected(index):
+	var selected_category = recipe_type_list.get_item_metadata(index)
 	
 	recipe_list.clear()
-
-	for recipe in recipes:
-		var index = recipe_list.add_item(recipe.name)
-		recipe_list.set_item_metadata(index, recipe)
-		
-	recipe_list.select(0)
+	
+	var item_index = recipe_list.add_item(selected_category[0].name)
+	recipe_list.set_item_metadata(item_index, selected_category[0])
 	
 	_on_recipe_list_item_selected(0)
+	recipe_list.select(0)
+	
 	
 func _on_recipe_list_item_selected(index):
 	_selected_recipe = recipe_list.get_item_metadata(index)
 	grid_ingredients.displayIngredients(_selected_recipe.ingredients)
 	grid_result.displayIngredients(_selected_recipe.results)
-	craft.disabled = not _inventory.has_all(_selected_recipe.ingredients)
+	craft.disabled = not Inv.has_all(_selected_recipe.ingredients)
 
 func _on_button_pressed():
 	hide()
 
 func _on_craft_pressed():
 	for item in _selected_recipe.ingredients:
-		_inventory.craft_item(item)
-	#update ingredients quantity in craft dialog
+		Inv.craft_item(item)
 	grid_ingredients.displayIngredients(_selected_recipe.ingredients)
 	
 	for item in _selected_recipe.results:
-		if _inventory._collection.has(item):
-			#check if item has qty
-			if item.qty == 0:
-				item.qty = 1
-			item.qty += 1
-			
-		_inventory.add_item(item)
+		Inv.add_craft_item(item)
 		
-	craft.disabled = not _inventory.has_all(_selected_recipe.ingredients)
+	craft.disabled = not Inv.has_all(_selected_recipe.ingredients)
+
+

@@ -9,7 +9,6 @@ func Enter() -> void:
 
 func Update(_delta) -> void:
 	var direction = GameInputEvents.movement_input()
-	var attack = GameInputEvents.attack_input()
 	
 	player.velocity = direction * speed
 	
@@ -20,7 +19,7 @@ func Update(_delta) -> void:
 	if player.velocity == Vector2.ZERO:
 		transition.emit(self, "playerIdle")
 	
-	if attack:
+	if Input.is_action_just_pressed("attack"):
 		transition.emit(self, "playerAttack")
 
 func move_animation(direction: Vector2) -> void:

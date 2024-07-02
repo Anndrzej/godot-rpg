@@ -1,12 +1,59 @@
-[gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://b2j6hayswsjiv"]
+[gd_resource type="Resource" script_class="Recipe" load_steps=16 format=3 uid="uid://b2j6hayswsjiv"]
 
 [ext_resource type="Script" path="res://model/recipe.gd" id="1_6mqe1"]
-[ext_resource type="Resource" uid="uid://b2uqvum5kpa3o" path="res://resources/items/apple.tres" id="1_nu03o"]
-[ext_resource type="Resource" uid="uid://ddo6b0s0mqihy" path="res://resources/items/Jam.tres" id="2_gg844"]
-[ext_resource type="Resource" uid="uid://c5vub221pnjei" path="res://resources/items/applepie.tres" id="2_mvobn"]
+[ext_resource type="Texture2D" uid="uid://brkm6a76j0o0j" path="res://assets/Food/Apple.png" id="1_u34a5"]
+[ext_resource type="PackedScene" uid="uid://dwbrbg04xbsnm" path="res://scenes/objects/items/collectable/apple.tscn" id="2_jam82"]
+[ext_resource type="Script" path="res://model/items.gd" id="3_ltk6p"]
+[ext_resource type="Script" path="res://model/craft.gd" id="4_8fdg6"]
+[ext_resource type="Texture2D" uid="uid://crgdlfqooehes" path="res://assets/Food/Jam.png" id="5_xlfgg"]
+[ext_resource type="PackedScene" uid="uid://72fwsmbiil2s" path="res://scenes/objects/items/collectable/jam.tscn" id="6_ex3rn"]
+[ext_resource type="Texture2D" uid="uid://bwhbx88icl6n" path="res://assets/Food/PieApple.png" id="7_hg8c4"]
+[ext_resource type="PackedScene" uid="uid://c2gq6fq5b2fhj" path="res://scenes/objects/items/collectable/pie_apple.tscn" id="8_ssu81"]
+
+[sub_resource type="Resource" id="Resource_kim50"]
+script = ExtResource("4_8fdg6")
+ingredients_qty = 2
+
+[sub_resource type="Resource" id="Resource_vo4jq"]
+script = ExtResource("3_ltk6p")
+name = "Apple"
+scene = ExtResource("2_jam82")
+icon = ExtResource("1_u34a5")
+qty = 0
+description = ""
+type = SubResource("Resource_kim50")
+
+[sub_resource type="Resource" id="Resource_gwlp4"]
+script = ExtResource("4_8fdg6")
+ingredients_qty = 2
+
+[sub_resource type="Resource" id="Resource_b5l7d"]
+script = ExtResource("3_ltk6p")
+name = "Jam"
+scene = ExtResource("6_ex3rn")
+icon = ExtResource("5_xlfgg")
+qty = 0
+description = ""
+type = SubResource("Resource_gwlp4")
+
+[sub_resource type="Resource" id="Resource_tasqg"]
+script = ExtResource("4_8fdg6")
+ingredients_qty = 3
+
+[sub_resource type="Resource" id="Resource_e87ef"]
+script = ExtResource("3_ltk6p")
+name = "Apple_pie"
+scene = ExtResource("8_ssu81")
+icon = ExtResource("7_hg8c4")
+qty = 1
+description = ""
+type = SubResource("Resource_tasqg")
 
 [resource]
 script = ExtResource("1_6mqe1")
 name = "Apple pie"
-ingredients = Array[Resource("res://model/items.gd")]([ExtResource("1_nu03o"), ExtResource("2_gg844")])
-results = Array[Resource("res://model/items.gd")]([ExtResource("2_mvobn")])
+ingredients = Array[ExtResource("3_ltk6p")]([SubResource("Resource_vo4jq"), SubResource("Resource_b5l7d")])
+results = Array[ExtResource("3_ltk6p")]([SubResource("Resource_e87ef")])
+scene = ExtResource("8_ssu81")
+icon = ExtResource("7_hg8c4")
+category = "Consumables"

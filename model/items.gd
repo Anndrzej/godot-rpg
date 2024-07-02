@@ -6,5 +6,6 @@ class_name Item
 @export var scene: PackedScene
 @export var icon: Texture2D
 @export var qty: int
-@export var ingredients_qty: int
+@export var effect: Resource
 @export_multiline var description: String
+@export var type: Resource
