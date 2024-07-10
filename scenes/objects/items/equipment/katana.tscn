@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bigrfh4s8cpq6"]
+
+[ext_resource type="Texture2D" uid="uid://cocol4eo8pq5l" path="res://assets/32 Free Weapon Icons/32 Free Weapon Icons/Icons/Iicon_32_19.png" id="1_2l2y4"]
+
+[node name="Node2D" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-7.62939e-06, 0)
+scale = Vector2(0.1625, 0.14375)
+texture = ExtResource("1_2l2y4")

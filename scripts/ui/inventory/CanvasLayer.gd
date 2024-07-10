@@ -5,7 +5,7 @@ extends CanvasLayer
 @onready var player: CharacterBody2D = %Player
 @onready var inventory_dialog: InventoryDialog = $InventoryDialog
 @onready var crafting_dialog: CraftingDialog = %CraftingDialog
-#
+
 var _all_recipes: Array[Recipe] = [] # залишити на випадок якщо потрібно буде показати всі рецепти які є, а ті які в мене є підсвічувати
 func _ready():
 	all_recipes.load_all_into(_all_recipes)

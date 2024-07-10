@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Item" load_steps=6 format=3 uid="uid://ciyp2a7hjk1oa"]
+
+[ext_resource type="Texture2D" uid="uid://cocol4eo8pq5l" path="res://assets/32 Free Weapon Icons/32 Free Weapon Icons/Icons/Iicon_32_19.png" id="1_lguwi"]
+[ext_resource type="Script" path="res://model/equipment.gd" id="1_lnuds"]
+[ext_resource type="PackedScene" uid="uid://bigrfh4s8cpq6" path="res://scenes/objects/items/equipment/katana.tscn" id="2_j6rb0"]
+[ext_resource type="Script" path="res://model/items.gd" id="3_1ruvk"]
+
+[sub_resource type="Resource" id="Resource_p3v3w"]
+script = ExtResource("1_lnuds")
+equipment_type = 4
+item_damage = 1
+item_defence = 2
+
+[resource]
+script = ExtResource("3_1ruvk")
+name = "katana"
+scene = ExtResource("2_j6rb0")
+icon = ExtResource("1_lguwi")
+qty = 0
+description = "katana"
+type = SubResource("Resource_p3v3w")

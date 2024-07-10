@@ -1,3 +1,5 @@
+res://resources/equipment
+res://scenes/ui/inventory/Player
 res://resources/items
 res://resources/recipes
 res://scripts/ui/modals
@@ -8,7 +10,6 @@ res://scenes/ui/hotbar
 res://model
 res://singeltons
 res://scenes/objects/items/equipment
-res://resources/equipment
 res://assets/Characters
 res://scripts/helper
 res://scripts/collect

@@ -1,7 +1,7 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1719938717
+::res://::1720642092
 icon.svg::CompressedTexture2D::8184442486536108973::1716658559::1716658559::1::::<><>::
-world.tscn::PackedScene::5098299122653503885::1719767390::0::1::::<><>::uid://0uj3ocwe8x5y::::res://scenes/characters/player/player.tscn<>uid://37g5p3l6lmk7::::res://scenes/objects/items/static/tree.tscn<>uid://fxertob7ej2u::::res://scenes/objects/items/static/bed.tscn<>uid://xk4aw7v4ail8::::res://scenes/objects/items/static/egg.tscn<>uid://bkbcab5xhj4sk::::res://scripts/collect/collect.tscn<>uid://d10nirsa7avri::::res://resources/items/milk.tres<>uid://dtsyc0e3e2oej::::res://scenes/ui/inventory/inventory_dialog.tscn<>uid://b2uqvum5kpa3o::::res://resources/items/apple.tres<>res://scripts/ui/inventory/CanvasLayer.gd<>res://model/item_effects.gd<>uid://brkm6a76j0o0j::::res://assets/Food/Apple.png<>uid://dwbrbg04xbsnm::::res://scenes/objects/items/collectable/apple.tscn<>res://model/items.gd<>uid://d2iv31eu5eh12::::res://resources/recipes/all_recipes.tres<>uid://c2x6q4bs4x515::::res://scenes/ui/craft/crafting_dialog.tscn<>res://model/craft.gd<>uid://crgdlfqooehes::::res://assets/Food/Jam.png<>uid://co44tuyd8gd4h::::res://scenes/characters/enemy/slime.tscn<>uid://72fwsmbiil2s::::res://scenes/objects/items/collectable/jam.tscn<>uid://50ckk7h6s3k5::::res://scenes/objects/items/upgrades/damage_cookie.tscn<>uid://ddy7rfwaj3kgj::::res://resources/upgrades/damage.tres<>uid://dd11nfrjryedx::::res://scenes/objects/items/upgrades/attack_speed.tscn<>uid://co80fjamm6p2m::::res://resources/upgrades/speed.tres<>uid://d0dh33xynhe7j::::res://scenes/ui/modals/RecipeFound.tscn<>uid://cpgl86neujmlb::::res://scenes/ui/hotbar/Inventory_Hotbar.tscn<>uid://dpq3qc88sekg2::::res://scripts/collect/collect_recipe.tscn<>uid://b2j6hayswsjiv::::res://resources/recipes/Apple_pie.tres
+world.tscn::PackedScene::5098299122653503885::1720616487::0::1::::<><>::uid://0uj3ocwe8x5y::::res://scenes/characters/player/player.tscn<>uid://37g5p3l6lmk7::::res://scenes/objects/items/static/tree.tscn<>uid://fxertob7ej2u::::res://scenes/objects/items/static/bed.tscn<>uid://xk4aw7v4ail8::::res://scenes/objects/items/static/egg.tscn<>uid://bkbcab5xhj4sk::::res://scripts/collect/collect.tscn<>uid://d10nirsa7avri::::res://resources/items/milk.tres<>uid://dtsyc0e3e2oej::::res://scenes/ui/inventory/inventory_dialog.tscn<>uid://b2uqvum5kpa3o::::res://resources/items/apple.tres<>res://scripts/ui/inventory/CanvasLayer.gd<>res://model/item_effects.gd<>uid://brkm6a76j0o0j::::res://assets/Food/Apple.png<>uid://dwbrbg04xbsnm::::res://scenes/objects/items/collectable/apple.tscn<>res://model/items.gd<>uid://d2iv31eu5eh12::::res://resources/recipes/all_recipes.tres<>uid://c2x6q4bs4x515::::res://scenes/ui/craft/crafting_dialog.tscn<>res://model/craft.gd<>uid://crgdlfqooehes::::res://assets/Food/Jam.png<>uid://co44tuyd8gd4h::::res://scenes/characters/enemy/slime.tscn<>uid://72fwsmbiil2s::::res://scenes/objects/items/collectable/jam.tscn<>uid://50ckk7h6s3k5::::res://scenes/objects/items/upgrades/damage_cookie.tscn<>uid://ddy7rfwaj3kgj::::res://resources/upgrades/damage.tres<>uid://dd11nfrjryedx::::res://scenes/objects/items/upgrades/attack_speed.tscn<>uid://co80fjamm6p2m::::res://resources/upgrades/speed.tres<>uid://d0dh33xynhe7j::::res://scenes/ui/modals/RecipeFound.tscn<>uid://cpgl86neujmlb::::res://scenes/ui/hotbar/Inventory_Hotbar.tscn<>uid://dpq3qc88sekg2::::res://scripts/collect/collect_recipe.tscn<>uid://b2j6hayswsjiv::::res://resources/recipes/Apple_pie.tres<>uid://2bqmm1t0pv01::::res://resources/equipment/sword.tres<>uid://bmdoowgpbu1c4::::res://resources/recipes/Sushi.tres<>uid://ciyp2a7hjk1oa::::res://resources/equipment/katana.tres
 ::res://addons/::1717186942
 ::res://addons/godot_resource_groups/::1717534007
 godot_resource_groups.gd::GDScript::-1::1717186942::0::1::::<>EditorPlugin<>::
@@ -13,9 +13,53 @@ resource_group_background_loader.gd::GDScript::-1::1717186943::0::1::::ResourceG
 resource_group_scanner.gd::GDScript::-1::1717186943::0::1::::<>RefCounted<>::
 resource_scanner.gd::GDScript::-1::1717186943::0::1::::<>RefCounted<>::
 ::res://addons/godot_resource_groups/csharp/::1717186942
-::res://assets/::1718221295
+::res://assets/::1720384109
 progress-bar-circle.png::CompressedTexture2D::3965147402614076381::1716658566::1716985765::1::::<><>::
 progress-bar-frame.png::CompressedTexture2D::2142520080334019512::1716658566::1716985765::1::::<><>::
+::res://assets/32 Free Weapon Icons/::1720384099
+::res://assets/32 Free Weapon Icons/32 Free Weapon Icons/::1720384099
+::res://assets/32 Free Weapon Icons/32 Free Weapon Icons/Icons/::1720384109
+Iicon_32_01.png::CompressedTexture2D::5947162530468597881::1720384099::1720384109::1::::<><>::
+Iicon_32_02.png::CompressedTexture2D::3914121597210087017::1720384099::1720384109::1::::<><>::
+Iicon_32_03.png::CompressedTexture2D::5329465625252646745::1720384099::1720384109::1::::<><>::
+Iicon_32_04.png::CompressedTexture2D::4557247132059307027::1720384099::1720384109::1::::<><>::
+Iicon_32_05.png::CompressedTexture2D::4562086508565611035::1720384099::1720384109::1::::<><>::
+Iicon_32_06.png::CompressedTexture2D::4719742386575101219::1720384099::1720384109::1::::<><>::
+Iicon_32_07.png::CompressedTexture2D::7134389347982854647::1720384099::1720384109::1::::<><>::
+Iicon_32_08.png::CompressedTexture2D::9176041246832876437::1720384099::1720384109::1::::<><>::
+Iicon_32_09.png::CompressedTexture2D::3245545277947220607::1720384099::1720384109::1::::<><>::
+Iicon_32_10.png::CompressedTexture2D::8631403112782995234::1720384099::1720384109::1::::<><>::
+Iicon_32_11.png::CompressedTexture2D::8705481052669212280::1720384099::1720384109::1::::<><>::
+Iicon_32_12.png::CompressedTexture2D::4022819737878804441::1720384099::1720384109::1::::<><>::
+Iicon_32_13.png::CompressedTexture2D::5315444845145327070::1720384099::1720384109::1::::<><>::
+Iicon_32_14.png::CompressedTexture2D::208319941972945341::1720384099::1720384109::1::::<><>::
+Iicon_32_15.png::CompressedTexture2D::1896825550120041033::1720384099::1720384109::1::::<><>::
+Iicon_32_16.png::CompressedTexture2D::7104423955460017914::1720384099::1720384109::1::::<><>::
+Iicon_32_17.png::CompressedTexture2D::6729026838771915075::1720384099::1720384109::1::::<><>::
+Iicon_32_18.png::CompressedTexture2D::4459629503029975111::1720384099::1720384109::1::::<><>::
+Iicon_32_19.png::CompressedTexture2D::5760485145495635343::1720384099::1720384109::1::::<><>::
+Iicon_32_20.png::CompressedTexture2D::3506759308713446486::1720384099::1720384109::1::::<><>::
+Iicon_32_21.png::CompressedTexture2D::7641282876650712907::1720384099::1720384109::1::::<><>::
+Iicon_32_22.png::CompressedTexture2D::7462541410070131212::1720384099::1720384109::1::::<><>::
+Iicon_32_23.png::CompressedTexture2D::5663508108224196305::1720384099::1720384109::1::::<><>::
+Iicon_32_24.png::CompressedTexture2D::116253922433484419::1720384099::1720384109::1::::<><>::
+Iicon_32_25.png::CompressedTexture2D::2181779297652508323::1720384099::1720384109::1::::<><>::
+Iicon_32_26.png::CompressedTexture2D::7456909002303599905::1720384099::1720384109::1::::<><>::
+Iicon_32_27.png::CompressedTexture2D::2341069323338066694::1720384099::1720384109::1::::<><>::
+Iicon_32_28.png::CompressedTexture2D::6173631711304085081::1720384099::1720384109::1::::<><>::
+Iicon_32_29.png::CompressedTexture2D::6826023002095622985::1720384099::1720384109::1::::<><>::
+Iicon_32_30.png::CompressedTexture2D::5690488111029856867::1720384099::1720384109::1::::<><>::
+Iicon_32_31.png::CompressedTexture2D::6483310232866793479::1720384099::1720384109::1::::<><>::
+Iicon_32_32.png::CompressedTexture2D::996739571872751271::1720384099::1720384109::1::::<><>::
+Iicon_32_33.png::CompressedTexture2D::6842917651055339108::1720384099::1720384109::1::::<><>::
+Iicon_32_34.png::CompressedTexture2D::8494117169414231025::1720384099::1720384109::1::::<><>::
+Iicon_32_35.png::CompressedTexture2D::4476043483969108099::1720384099::1720384109::1::::<><>::
+Iicon_32_36.png::CompressedTexture2D::1397305254922560902::1720384099::1720384109::1::::<><>::
+Iicon_32_37.png::CompressedTexture2D::4075922740268620999::1720384099::1720384109::1::::<><>::
+Iicon_32_38.png::CompressedTexture2D::6585986422402893559::1720384099::1720384109::1::::<><>::
+Iicon_32_39.png::CompressedTexture2D::7448565694815512528::1720384099::1720384109::1::::<><>::
+Iicon_32_40.png::CompressedTexture2D::7923853333264401386::1720384099::1720384109::1::::<><>::
+::res://assets/32 Free Weapon Icons/32 Free Weapon Icons/PSD/::1720384099
 ::res://assets/Characters/::1717266962
 Basic Charakter Actions.png::CompressedTexture2D::7394151838898174159::1716658564::1716985779::1::::<><>::
 Basic Charakter Spritesheet.png::CompressedTexture2D::5711831196688890925::1716658564::1716985779::1::::<><>::
@@ -89,7 +133,7 @@ Turnip.png::CompressedTexture2D::3578712224342656475::1717081899::1717081902::1:
 Waffles.png::CompressedTexture2D::5616317919074550152::1717081899::1717081902::1::::<><>::
 Whiskey.png::CompressedTexture2D::89032534505618378::1717081899::1717081902::1::::<><>::
 Wine.png::CompressedTexture2D::697412672438331006::1717081899::1717081902::1::::<><>::
-::res://assets/Icons/::1718221295
+::res://assets/Icons/::1720384109
 Freebies_Full_Icons.png::CompressedTexture2D::4082230730513627267::1718221295::1718221295::1::::<><>::
 Freebies_Icons_Armory.png::CompressedTexture2D::7920118988290538660::1718221295::1718221295::1::::<><>::
 Freebies_Icons_Botany.png::CompressedTexture2D::1352489080260472965::1718221295::1718221295::1::::<><>::
@@ -113,24 +157,27 @@ Free_Chicken_House.png::CompressedTexture2D::5583181212416144823::1716658566::17
 Paths.png::CompressedTexture2D::2207634731952776263::1716658566::1716985896::1::::<><>::
 Simple Milk and grass item.png::CompressedTexture2D::3923993549237333036::1716658566::1716985896::1::::<><>::
 Wood Bridge.png::CompressedTexture2D::6045079406342271905::1716658566::1716985896::1::::<><>::
-::res://model/::1719767171
+::res://model/::1720386564
 craft.gd::GDScript::-1::1718385990::0::1::::Craft_Item<>Resource<>::
-equipment.gd::GDScript::-1::1718631674::0::1::::Equipment_Item<>Resource<>::
+equipment.gd::GDScript::-1::1720386564::0::1::::Equipment_Item<>Resource<>::
 items.gd::GDScript::-1::1719736040::0::1::::Item<>Resource<>::
 item_effects.gd::GDScript::-1::1719323911::0::1::::Item_Effects<>Resource<>::
-recipe.gd::GDScript::-1::1719767171::0::1::::Recipe<>Resource<>::
+recipe.gd::GDScript::-1::1719938890::0::1::::Recipe<>Resource<>::
 upgrades.gd::GDScript::-1::1719739386::0::1::::Upgrades<>Resource<>::
 ::res://resources/::1718220927
-::res://resources/equipment/::1719739446
-sword.tres::Resource/Resource::1898156728734469032::1719739446::0::1::::<><>::res://model/equipment.gd<>res://model/items.gd<>uid://bx4q3v4p8wbit::::res://assets/Icons/Freebies_Icons_Steampunk.png<>uid://blo86lr7shojd::::res://scenes/objects/items/equipment/sword.tscn
-::res://resources/items/::1719767171
-apple.tres::Resource/Item::4323817060939109662::1719760398::0::1::::<><>::uid://brkm6a76j0o0j::::res://assets/Food/Apple.png<>res://model/items.gd<>res://model/item_effects.gd<>uid://dwbrbg04xbsnm::::res://scenes/objects/items/collectable/apple.tscn<>res://model/craft.gd
-applepie.tres::Resource/Item::6923076196053723788::1719767171::0::1::::<><>::res://model/items.gd<>uid://bwhbx88icl6n::::res://assets/Food/PieApple.png<>uid://c2gq6fq5b2fhj::::res://scenes/objects/items/collectable/pie_apple.tscn<>res://model/craft.gd
+::res://resources/equipment/::1720615118
+katana.tres::Resource/Item::5384856203679064836::1720614496::0::1::::<><>::uid://cocol4eo8pq5l::::res://assets/32 Free Weapon Icons/32 Free Weapon Icons/Icons/Iicon_32_19.png<>res://model/equipment.gd<>uid://bigrfh4s8cpq6::::res://scenes/objects/items/equipment/katana.tscn<>res://model/items.gd
+sword.tres::Resource/Item::1898156728734469032::1720615118::0::1::::<><>::res://model/equipment.gd<>res://model/items.gd<>uid://cqy35scol3x3v::::res://assets/32 Free Weapon Icons/32 Free Weapon Icons/Icons/Iicon_32_01.png<>uid://blo86lr7shojd::::res://scenes/objects/items/equipment/sword.tscn
+::res://resources/items/::1720614496
+apple.tres::Resource/Item::4323817060939109662::1720614496::0::1::::<><>::uid://brkm6a76j0o0j::::res://assets/Food/Apple.png<>res://model/items.gd<>res://model/item_effects.gd<>uid://dwbrbg04xbsnm::::res://scenes/objects/items/collectable/apple.tscn<>res://model/craft.gd
+applepie.tres::Resource/Resource::6923076196053723788::1719939129::0::1::::<><>::res://model/items.gd<>uid://bwhbx88icl6n::::res://assets/Food/PieApple.png<>uid://c2gq6fq5b2fhj::::res://scenes/objects/items/collectable/pie_apple.tscn<>res://model/craft.gd
 Jam.tres::Resource/Resource::7400615225162695558::1719736274::0::1::::<><>::res://model/items.gd<>uid://crgdlfqooehes::::res://assets/Food/Jam.png<>uid://72fwsmbiil2s::::res://scenes/objects/items/collectable/jam.tscn<>res://model/craft.gd
-milk.tres::Resource/Item::9036585957523062302::1719760398::0::1::::<><>::uid://jdywirb88mht::::res://scenes/objects/items/collectable/milk.tscn<>uid://bv52uoehmtnuy::::res://assets/Objects/Simple Milk and grass item.png<>res://model/items.gd<>res://model/craft.gd
-::res://resources/recipes/::1719767411
-all_recipes.tres::Resource/ResourceGroup::9072202283151374763::1719767411::0::1::::<><>::res://addons/godot_resource_groups/resource_group.gd
-Apple_pie.tres::Resource/Recipe::4301993626962869241::1719767274::0::1::::<><>::res://model/recipe.gd<>uid://brkm6a76j0o0j::::res://assets/Food/Apple.png<>uid://dwbrbg04xbsnm::::res://scenes/objects/items/collectable/apple.tscn<>res://model/items.gd<>res://model/craft.gd<>uid://crgdlfqooehes::::res://assets/Food/Jam.png<>uid://72fwsmbiil2s::::res://scenes/objects/items/collectable/jam.tscn<>uid://bwhbx88icl6n::::res://assets/Food/PieApple.png<>uid://c2gq6fq5b2fhj::::res://scenes/objects/items/collectable/pie_apple.tscn
+milk.tres::Resource/Item::9036585957523062302::1720614496::0::1::::<><>::uid://jdywirb88mht::::res://scenes/objects/items/collectable/milk.tscn<>uid://bv52uoehmtnuy::::res://assets/Objects/Simple Milk and grass item.png<>res://model/items.gd<>res://model/craft.gd
+Sushi.tres::Resource/Resource::7421791068459689960::1719940025::0::1::::<><>::res://model/items.gd<>res://model/item_effects.gd<>uid://dl485f1lc0c28::::res://assets/Food/Sushi.png<>uid://duyl5e7d2d1m8::::res://scenes/objects/items/collectable/sushi.tscn<>res://model/craft.gd
+::res://resources/recipes/::1720616533
+all_recipes.tres::Resource/ResourceGroup::9072202283151374763::1720616533::0::1::::<><>::res://addons/godot_resource_groups/resource_group.gd
+Apple_pie.tres::Resource/Recipe::4301993626962869241::1720614496::0::1::::<><>::res://model/recipe.gd<>uid://brkm6a76j0o0j::::res://assets/Food/Apple.png<>uid://dwbrbg04xbsnm::::res://scenes/objects/items/collectable/apple.tscn<>res://model/items.gd<>res://model/craft.gd<>uid://crgdlfqooehes::::res://assets/Food/Jam.png<>uid://72fwsmbiil2s::::res://scenes/objects/items/collectable/jam.tscn<>uid://bwhbx88icl6n::::res://assets/Food/PieApple.png<>uid://c2gq6fq5b2fhj::::res://scenes/objects/items/collectable/pie_apple.tscn
+Sushi.tres::Resource/Recipe::3235756145091281625::1720614496::0::1::::<><>::uid://b0ivmj8e8pcul::::res://assets/Food/Roll.png<>res://model/recipe.gd<>uid://bv52uoehmtnuy::::res://assets/Objects/Simple Milk and grass item.png<>uid://jdywirb88mht::::res://scenes/objects/items/collectable/milk.tscn<>res://model/items.gd<>res://model/craft.gd<>res://model/item_effects.gd<>uid://brkm6a76j0o0j::::res://assets/Food/Apple.png<>uid://dwbrbg04xbsnm::::res://scenes/objects/items/collectable/apple.tscn<>uid://dl485f1lc0c28::::res://assets/Food/Sushi.png<>uid://duyl5e7d2d1m8::::res://scenes/objects/items/collectable/sushi.tscn
 test.tres::Resource/Resource::6982733846740944219::1719736274::0::1::::<><>::res://model/recipe.gd<>uid://brkm6a76j0o0j::::res://assets/Food/Apple.png<>uid://dwbrbg04xbsnm::::res://scenes/objects/items/collectable/apple.tscn<>res://model/items.gd<>res://model/craft.gd<>uid://bwhbx88icl6n::::res://assets/Food/PieApple.png<>uid://c2gq6fq5b2fhj::::res://scenes/objects/items/collectable/pie_apple.tscn<>uid://d10nirsa7avri::::res://resources/items/milk.tres
 ::res://resources/upgrades/::1717533426
 damage.tres::Resource/Resource::7421347246971332205::1717533426::0::1::::<><>::res://scripts/characters/player/upgrades/attack_damage.gd
@@ -140,20 +187,22 @@ speed.tres::Resource/Resource::5825136971263963286::1717533426::0::1::::<><>::re
 ::res://scenes/characters/enemy/::1717875420
 slime.tscn::PackedScene::5817147943783763981::1717875420::0::1::::<><>::res://scripts/characters/enemy/slime.gd<>uid://tj48dwb8a24p::::res://assets/Characters/slime.png<>uid://dul7fy1qumumw::::res://scripts/components/health_component.tscn<>uid://d2sgg15q4s84b::::res://scripts/components/hit_box_component.tscn<>uid://4u5v0umn6svl::::res://scenes/ui/progress_bar/progress_bar.tscn<>res://scripts/state/Finite State Machine.gd<>res://scripts/characters/enemy/state/EnemyAttack.gd<>res://scripts/characters/enemy/state/EnemyIdle.gd<>res://scripts/characters/enemy/state/EnemyWalk.gd<>res://scripts/characters/enemy/state/EnemyChase.gd<>uid://31o5an10jxkr::::res://scripts/helper/state_debugger.tscn
 ::res://scenes/characters/npc/::1717527601
-::res://scenes/characters/player/::1719741535
-player.tscn::PackedScene::1796605840619000568::1719741535::0::1::::<><>::res://scripts/characters/player/player.gd<>uid://ddl1uoften65p::::res://assets/Characters/Basic Charakter Actions.png<>uid://cnm4a4in7h5ob::::res://assets/Characters/Basic Charakter Spritesheet.png<>res://scripts/state/Finite State Machine.gd<>res://scripts/characters/player/state/playerMove.gd<>res://scripts/characters/player/state/playerIdle.gd<>res://scripts/characters/player/state/playerAttack.gd<>res://scripts/characters/player/state/playerInteraction.gd<>uid://31o5an10jxkr::::res://scripts/helper/state_debugger.tscn<>uid://dul7fy1qumumw::::res://scripts/components/health_component.tscn<>uid://d2sgg15q4s84b::::res://scripts/components/hit_box_component.tscn<>uid://4u5v0umn6svl::::res://scenes/ui/progress_bar/progress_bar.tscn<>res://scripts/components/PlayerHitBoxComponent.gd
+::res://scenes/characters/player/::1720616488
+player.tscn::PackedScene::1796605840619000568::1720616488::0::1::::<><>::res://scripts/characters/player/player.gd<>uid://ddl1uoften65p::::res://assets/Characters/Basic Charakter Actions.png<>uid://cnm4a4in7h5ob::::res://assets/Characters/Basic Charakter Spritesheet.png<>res://scripts/state/Finite State Machine.gd<>res://scripts/characters/player/state/playerMove.gd<>res://scripts/characters/player/state/playerIdle.gd<>res://scripts/characters/player/state/playerAttack.gd<>res://scripts/characters/player/state/playerInteraction.gd<>uid://31o5an10jxkr::::res://scripts/helper/state_debugger.tscn<>uid://dul7fy1qumumw::::res://scripts/components/health_component.tscn<>uid://d2sgg15q4s84b::::res://scripts/components/hit_box_component.tscn<>uid://4u5v0umn6svl::::res://scenes/ui/progress_bar/progress_bar.tscn<>res://scripts/components/PlayerHitBoxComponent.gd
 ::res://scenes/objects/::1717527489
 ::res://scenes/objects/items/::1719735617
-::res://scenes/objects/items/collectable/::1719767390
+::res://scenes/objects/items/collectable/::1720616487
 apple.tscn::PackedScene::8706515318649645030::1719741535::0::1::::<><>::uid://brkm6a76j0o0j::::res://assets/Food/Apple.png
 jam.tscn::PackedScene::2302125032220800052::1719324800::0::1::::<><>::uid://crgdlfqooehes::::res://assets/Food/Jam.png
 milk.tscn::PackedScene::639389667836095529::1718630095::0::1::::<><>::uid://bv52uoehmtnuy::::res://assets/Objects/Simple Milk and grass item.png
-pie_apple.tscn::PackedScene::6681353532331838003::1719767390::0::1::::<><>::uid://bwhbx88icl6n::::res://assets/Food/PieApple.png
+pie_apple.tscn::PackedScene::6681353532331838003::1720616487::0::1::::<><>::uid://bwhbx88icl6n::::res://assets/Food/PieApple.png
+sushi.tscn::PackedScene::8613305710374641097::1720261791::0::1::::<><>::uid://b0ivmj8e8pcul::::res://assets/Food/Roll.png
 test.tscn::PackedScene::2323075070364188442::1718630095::0::1::::<><>::
-::res://scenes/objects/items/equipment/::1719739468
-sword.tscn::PackedScene::3189458878137445125::1719739468::0::1::::<><>::uid://bx4q3v4p8wbit::::res://assets/Icons/Freebies_Icons_Steampunk.png
-::res://scenes/objects/items/recipes/::1719767390
-sushi_recipe.tscn::PackedScene::1778002768726605004::1719767390::0::1::::<><>::uid://dl485f1lc0c28::::res://assets/Food/Sushi.png
+::res://scenes/objects/items/equipment/::1720616488
+katana.tscn::PackedScene::2961359230493085467::1720542937::0::1::::<><>::uid://cocol4eo8pq5l::::res://assets/32 Free Weapon Icons/32 Free Weapon Icons/Icons/Iicon_32_19.png
+sword.tscn::PackedScene::3189458878137445125::1720616488::0::1::::<><>::uid://cqy35scol3x3v::::res://assets/32 Free Weapon Icons/32 Free Weapon Icons/Icons/Iicon_32_01.png
+::res://scenes/objects/items/recipes/::1719939457
+sushi_recipe.tscn::PackedScene::1778002768726605004::1719939457::0::1::::<><>::uid://dl485f1lc0c28::::res://assets/Food/Sushi.png
 ::res://scenes/objects/items/static/::1718281890
 bed.tscn::PackedScene::398699152660267150::1717837032::0::1::::<><>::uid://xug8nkv1yl6j::::res://assets/Objects/Basic Furniture.png<>uid://dul7fy1qumumw::::res://scripts/components/health_component.tscn<>uid://d2sgg15q4s84b::::res://scripts/components/hit_box_component.tscn<>uid://4u5v0umn6svl::::res://scenes/ui/progress_bar/progress_bar.tscn
 egg.tscn::PackedScene::1636749179945921831::1717533842::0::1::::<><>::uid://cv24awpng3we0::::res://assets/Objects/Egg item.png<>res://scripts/objects/items/static/egg.gd<>uid://btmioavxvbgm7::::res://scenes/ui/progress_bar/interaction_progress_bar.tscn<>uid://dg2hsgfqjfxhw::::res://scenes/ui/content/control.tscn
@@ -164,18 +213,20 @@ damage_cookie.tscn::PackedScene::2157414619944505154::1717837031::0::1::::<><>::
 ::res://scenes/ui/::1719764769
 ::res://scenes/ui/content/::1717837032
 control.tscn::PackedScene::7636590799110104920::1717837032::0::1::::<><>::
-::res://scenes/ui/craft/::1719764175
-crafting_dialog.tscn::PackedScene::6717333159014179602::1719764175::0::1::::<><>::res://scripts/ui/craft/crafting_dialog.gd<>uid://da4splrj2c54c::::res://scenes/ui/craft/craft_grid_ingredients.tscn
-craft_grid_ingredients.tscn::PackedScene::7220249303189047284::1719764175::0::1::::<><>::res://scripts/ui/craft/craft_grid_ingredients.gd<>uid://btj2cnj1xfq30::::res://scenes/ui/craft/craft_ingredient_slot.tscn
+::res://scenes/ui/craft/::1720256487
+crafting_dialog.tscn::PackedScene::6717333159014179602::1720256487::0::1::::<><>::res://scripts/ui/craft/crafting_dialog.gd<>uid://da4splrj2c54c::::res://scenes/ui/craft/craft_grid_ingredients.tscn
+craft_grid_ingredients.tscn::PackedScene::7220249303189047284::1720256487::0::1::::<><>::res://scripts/ui/craft/craft_grid_ingredients.gd<>uid://btj2cnj1xfq30::::res://scenes/ui/craft/craft_ingredient_slot.tscn
 craft_ingredient_slot.tscn::PackedScene::3740231740913823017::1719764175::0::1::::<><>::res://scripts/ui/craft/craft_item_slot.gd<>uid://bt04c3kam3c2n::::res://assets/Food/Boar.png
-::res://scenes/ui/hotbar/::1719664869
-Inventory_Hotbar.tscn::PackedScene::5838788755115487471::1719664869::0::1::::<><>::res://scripts/ui/hotbar/Inventory_Hotbar.gd
-::res://scenes/ui/inventory/::1719764174
-grid_inventory.tscn::PackedScene::434138654496932220::1719764174::0::1::::<><>::
-inventory_dialog.tscn::PackedScene::8531470979730785377::1719764174::0::1::::<><>::res://scripts/ui/inventory/inventory_dialog.gd<>uid://bgvea0xn8bo55::::res://scenes/ui/inventory/item_slot.tscn<>uid://ggkg2pdk24we::::res://scenes/ui/inventory/grid_inventory.tscn
-item_slot.tscn::PackedScene::2851149895576687818::1719764174::0::1::::<><>::res://scripts/ui/inventory/item_slot.gd<>uid://bt04c3kam3c2n::::res://assets/Food/Boar.png
-::res://scenes/ui/modals/::1719767391
-RecipeFound.tscn::PackedScene::8920652803763403425::1719767391::0::1::::<><>::res://scripts/ui/modals/RecipeFound.gd
+::res://scenes/ui/hotbar/::1720542936
+Inventory_Hotbar.tscn::PackedScene::5838788755115487471::1720542936::0::1::::<><>::res://scripts/ui/hotbar/Inventory_Hotbar.gd
+::res://scenes/ui/inventory/::1720616532
+grid_inventory.tscn::PackedScene::434138654496932220::1720361683::0::1::::<><>::
+inventory_dialog.tscn::PackedScene::8531470979730785377::1720616532::0::1::::<><>::res://scripts/ui/inventory/inventory_dialog.gd<>uid://ba7wnv3q2egis::::res://scenes/ui/inventory/Player/player_equipment_control.tscn<>uid://ggkg2pdk24we::::res://scenes/ui/inventory/grid_inventory.tscn
+item_slot.tscn::PackedScene::2851149895576687818::1720542937::0::1::::<><>::res://scripts/ui/inventory/item_slot.gd<>uid://bt04c3kam3c2n::::res://assets/Food/Boar.png
+::res://scenes/ui/inventory/Player/::1720616487
+player_equipment_control.tscn::PackedScene::2453840907992728714::1720616487::0::1::::<><>::uid://bgvea0xn8bo55::::res://scenes/ui/inventory/item_slot.tscn
+::res://scenes/ui/modals/::1720256486
+RecipeFound.tscn::PackedScene::8920652803763403425::1720256486::0::1::::<><>::res://scripts/ui/modals/RecipeFound.gd
 ::res://scenes/ui/progress_bar/::1717837033
 interaction_progress_bar.tscn::PackedScene::3745292016435251144::1717837033::0::1::::<><>::res://scripts/ui/progress_bar/interaction_progress_bar.gd<>uid://bwq0nss68abv6::::res://assets/progress-bar-circle.png<>uid://5r380s70docu::::res://assets/progress-bar-frame.png
 progress_bar.tscn::PackedScene::2078624376582810725::1717837033::0::1::::<><>::res://scripts/ui/progress_bar/progress_bar.gd<>uid://bwq0nss68abv6::::res://assets/progress-bar-circle.png<>uid://5r380s70docu::::res://assets/progress-bar-frame.png
@@ -198,11 +249,11 @@ playerMove.gd::GDScript::-1::1718892091::0::1::::PlayerMove<>State<>::
 ::res://scripts/characters/player/upgrades/::1717527034
 attack_damage.gd::GDScript::-1::1717526055::0::1::::Attack_Damage<>Upgrades<>::
 attack_speed.gd::GDScript::-1::1717527034::0::1::::Attack_Speed<>Upgrades<>::
-::res://scripts/collect/::1719767390
-collect.gd::GDScript::-1::1719741023::0::1::::Collect<>Node2D<>::
-collect.tscn::PackedScene::3090495031735257210::1719741535::0::1::::<><>::res://scripts/collect/collect.gd
+::res://scripts/collect/::1720616488
+collect.gd::GDScript::-1::1720384995::0::1::::Collect<>Node2D<>::
+collect.tscn::PackedScene::3090495031735257210::1720616488::0::1::::<><>::res://scripts/collect/collect.gd
 collect_recipe.gd::GDScript::-1::1719742520::0::1::::CollectRecipe<>Node2D<>::
-collect_recipe.tscn::PackedScene::8246853555763522735::1719767390::0::1::::<><>::res://scripts/collect/collect_recipe.gd
+collect_recipe.tscn::PackedScene::8246853555763522735::1719939458::0::1::::<><>::res://scripts/collect/collect_recipe.gd
 ::res://scripts/components/::1717348140
 HealthComponent.gd::GDScript::-1::1717340658::0::1::::HealthComponent<>Node<>::
 health_component.tscn::PackedScene::8587700253352166686::1716987956::0::1::::<><>::res://scripts/components/HealthComponent.gd
@@ -222,24 +273,24 @@ tree.gd::GDScript::-1::1716830962::0::1::::<>StaticBody2D<>::
 Finite State Machine.gd::GDScript::-1::1717340700::0::1::::FSM<>Node<>::
 State.gd::GDScript::-1::1716658566::0::1::::State<>Node<>::
 ::res://scripts/ui/::1719765042
-::res://scripts/ui/craft/::1719763424
-crafting_dialog.gd::GDScript::-1::1719763424::0::1::::CraftingDialog<>PanelContainer<>::
+::res://scripts/ui/craft/::1720614496
+crafting_dialog.gd::GDScript::-1::1719944508::0::1::::CraftingDialog<>PanelContainer<>::
 craft_grid_ingredients.gd::GDScript::-1::1719322893::0::1::::CraftIngredientsGrid<>GridContainer<>::
-craft_item_slot.gd::GDScript::-1::1719760398::0::1::::CraftItemSlot<>PanelContainer<>::
+craft_item_slot.gd::GDScript::-1::1720614496::0::1::::CraftItemSlot<>PanelContainer<>::
 ::res://scripts/ui/hotbar/::1719583371
 Inventory_Hotbar.gd::GDScript::-1::1719583371::0::1::::<>Control<>::
-::res://scripts/ui/inventory/::1719763415
-CanvasLayer.gd::GDScript::-1::1719742604::0::1::::<>CanvasLayer<>::
-inventory_dialog.gd::GDScript::-1::1719763415::0::1::::InventoryDialog<>PanelContainer<>::
-item_slot.gd::GDScript::-1::1719675207::0::1::::ItemSlot<>Control<>::
-::res://scripts/ui/modals/::1719767345
-RecipeFound.gd::GDScript::-1::1719767345::0::1::::<>Control<>::
+::res://scripts/ui/inventory/::1720616433
+CanvasLayer.gd::GDScript::-1::1720364032::0::1::::<>CanvasLayer<>::
+inventory_dialog.gd::GDScript::-1::1720616433::0::1::::InventoryDialog<>Control<>::
+item_slot.gd::GDScript::-1::1720464025::0::1::::ItemSlot<>Control<>::
+::res://scripts/ui/modals/::1719939481
+RecipeFound.gd::GDScript::-1::1719939481::0::1::::<>Control<>::
 ::res://scripts/ui/progress_bar/::1717533782
 interaction_progress_bar.gd::GDScript::-1::1716830655::0::1::::<>Control<>::
 progress_bar.gd::GDScript::-1::1716658566::0::1::::<>Control<>::
 ::res://scripts/upgrades/::1717527522
 attack_speed.gd::GDScript::-1::1717526744::0::1::::Attack_Speed_Upgrade<>Area2D<>::
 damage_cookie.gd::GDScript::-1::1717526794::0::1::::Attack_Upgrade<>Area2D<>::
-::res://singeltons/::1719764092
+::res://singeltons/::1720616532
 game_input_events.gd::GDScript::-1::1718892095::0::1::::GameInputEvents<>Node<>::
-inventory.gd::GDScript::-1::1719764092::0::1::::<>Node<>::
+inventory.gd::GDScript::-1::1720616532::0::1::::<>Node<>::

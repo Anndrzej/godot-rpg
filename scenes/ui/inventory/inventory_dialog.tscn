@@ -1,18 +1,47 @@
-[gd_scene load_steps=4 format=3 uid="uid://dtsyc0e3e2oej"]
+[gd_scene load_steps=7 format=3 uid="uid://dtsyc0e3e2oej"]
 
 [ext_resource type="Script" path="res://scripts/ui/inventory/inventory_dialog.gd" id="1_02ay4"]
-[ext_resource type="PackedScene" uid="uid://bgvea0xn8bo55" path="res://scenes/ui/inventory/item_slot.tscn" id="2_5rpge"]
+[ext_resource type="PackedScene" uid="uid://ba7wnv3q2egis" path="res://scenes/ui/inventory/Player/player_equipment_control.tscn" id="3_mp2if"]
 [ext_resource type="PackedScene" uid="uid://ggkg2pdk24we" path="res://scenes/ui/inventory/grid_inventory.tscn" id="3_x4ncc"]
 
-[node name="InventoryDialog" type="PanelContainer"]
-offset_right = 1121.0
-offset_bottom = 606.0
-size_flags_horizontal = 4
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rfqcg"]
+bg_color = Color(1.2514e-06, 0.687448, 0.680885, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ql5ft"]
+
+[sub_resource type="Theme" id="Theme_xlujx"]
+Control/styles/bg = SubResource("StyleBoxFlat_rfqcg")
+CustomType/base_type = &"PanelContainer"
+CustomType/styles/panel = SubResource("StyleBoxFlat_ql5ft")
+
+[node name="Inventory" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 3
+theme = SubResource("Theme_xlujx")
 script = ExtResource("1_02ay4")
-slot_scene = ExtResource("2_5rpge")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 2
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 58.0
+grow_horizontal = 2
+size_flags_horizontal = 3
 size_flags_vertical = 0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
@@ -27,10 +56,90 @@ text = "Inventory
 layout_mode = 2
 text = "close inventory"
 
-[node name="GridInventory" parent="VBoxContainer" instance=ExtResource("3_x4ncc")]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(0, 300)
+[node name="HInventoryContainer" type="HBoxContainer" parent="."]
 layout_mode = 2
+offset_top = 62.0
+offset_right = 574.0
+offset_bottom = 649.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.5
+theme_override_constants/separation = 0
+
+[node name="GridInventory" parent="HInventoryContainer" instance=ExtResource("3_x4ncc")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+theme_override_constants/v_separation = 1
+
+[node name="HPlayerItemsContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 760.0
+offset_top = 168.0
+offset_right = 760.0
+offset_bottom = 168.0
+size_flags_horizontal = 3
 size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
+
+[node name="PlayerEquipmentControl" parent="HPlayerItemsContainer" instance=ExtResource("3_mp2if")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="PlayerStatsContainer" type="HBoxContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 656.0
+offset_top = 472.0
+offset_right = 1096.0
+offset_bottom = 632.0
+
+[node name="GridContainer" type="GridContainer" parent="PlayerStatsContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PlayerStatsContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+alignment = 1
+
+[node name="PlayerStats" type="Label" parent="PlayerStatsContainer/GridContainer/VBoxContainer"]
+layout_mode = 2
+text = "Stats
+"
+horizontal_alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="PlayerStatsContainer/GridContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PlayerStatsContainer/GridContainer/VBoxContainer2"]
+layout_mode = 2
+
+[node name="AttackSpeed" type="Label" parent="PlayerStatsContainer/GridContainer/VBoxContainer2/HBoxContainer"]
+layout_mode = 2
+text = "Attack Speed:
+"
+
+[node name="SpeedNumber" type="Label" parent="PlayerStatsContainer/GridContainer/VBoxContainer2/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "10
+"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="PlayerStatsContainer/GridContainer/VBoxContainer2"]
+layout_mode = 2
+
+[node name="AttackPower" type="Label" parent="PlayerStatsContainer/GridContainer/VBoxContainer2/HBoxContainer2"]
+layout_mode = 2
+text = "Attack Power:
+"
+
+[node name="PowerNumber" type="Label" parent="PlayerStatsContainer/GridContainer/VBoxContainer2/HBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "10
+"
 
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]

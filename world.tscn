@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://cevwihm7yr7w0"]
+[gd_scene load_steps=37 format=3 uid="uid://cevwihm7yr7w0"]
 
 [ext_resource type="PackedScene" uid="uid://0uj3ocwe8x5y" path="res://scenes/characters/player/player.tscn" id="1_uw7dq"]
 [ext_resource type="PackedScene" uid="uid://37g5p3l6lmk7" path="res://scenes/objects/items/static/tree.tscn" id="2_cbrax"]
@@ -27,7 +27,9 @@
 [ext_resource type="PackedScene" uid="uid://cpgl86neujmlb" path="res://scenes/ui/hotbar/Inventory_Hotbar.tscn" id="25_aijn2"]
 [ext_resource type="PackedScene" uid="uid://dpq3qc88sekg2" path="res://scripts/collect/collect_recipe.tscn" id="25_xq5ha"]
 [ext_resource type="Resource" uid="uid://b2j6hayswsjiv" path="res://resources/recipes/Apple_pie.tres" id="26_0ie02"]
+[ext_resource type="Resource" uid="uid://2bqmm1t0pv01" path="res://resources/equipment/sword.tres" id="29_amu8b"]
 [ext_resource type="Resource" uid="uid://bmdoowgpbu1c4" path="res://resources/recipes/Sushi.tres" id="29_bvstd"]
+[ext_resource type="Resource" uid="uid://ciyp2a7hjk1oa" path="res://resources/equipment/katana.tres" id="30_hurt0"]
 
 [sub_resource type="Resource" id="Resource_6xihx"]
 script = ExtResource("8_36yay")
@@ -145,3 +147,11 @@ recipe = ExtResource("26_0ie02")
 [node name="Collect_Recipe2" parent="." instance=ExtResource("25_xq5ha")]
 position = Vector2(54, 81)
 recipe = ExtResource("29_bvstd")
+
+[node name="Collect" parent="." instance=ExtResource("5_1mhyx")]
+position = Vector2(82, 120)
+item = ExtResource("29_amu8b")
+
+[node name="Collect2" parent="." instance=ExtResource("5_1mhyx")]
+position = Vector2(121, 124)
+item = ExtResource("30_hurt0")

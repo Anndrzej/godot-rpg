@@ -1,4 +1,5 @@
 Item
+Equipment_Item
 Recipe
 Resource
 Craft_Item
