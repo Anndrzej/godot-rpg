@@ -1,12 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://bgvea0xn8bo55"]
+[gd_scene load_steps=2 format=3 uid="uid://bgvea0xn8bo55"]
 
 [ext_resource type="Script" path="res://scripts/ui/inventory/item_slot.gd" id="1_7ss3q"]
-[ext_resource type="Texture2D" uid="uid://bt04c3kam3c2n" path="res://assets/Food/Boar.png" id="2_81qg6"]
 
 [node name="ItemSlot" type="Control"]
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 3
 anchors_preset = 0
+offset_left = 2.0
+offset_top = -2.0
+offset_right = 2.0
+offset_bottom = -2.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_7ss3q")
@@ -59,65 +62,12 @@ theme_override_font_sizes/font_size = 8
 text = "Description
 "
 
-[node name="UsagePanel" type="ColorRect" parent="."]
-unique_name_in_owner = true
+[node name="ActiveItem" type="ColorRect" parent="."]
 visible = false
-z_index = 5
 layout_mode = 0
-offset_left = 32.0
-offset_top = -28.0
-offset_right = 132.0
-offset_bottom = 52.0
-color = Color(1, 0, 1, 1)
-
-[node name="UseButton" type="Button" parent="UsagePanel"]
-unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_bottom = 20.0
-grow_horizontal = 2
-theme_override_font_sizes/font_size = 8
-text = "use"
-
-[node name="DropButton" type="Button" parent="UsagePanel"]
-unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = -20.0
-grow_horizontal = 2
-grow_vertical = 0
-theme_override_font_sizes/font_size = 8
-text = "Drop"
-
-[node name="AssignButton" type="Button" parent="UsagePanel"]
-unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = 14
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_top = -4.0
-offset_bottom = 20.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 8
-text = "assign"
-
-[node name="EquipButton" type="Button" parent="UsagePanel"]
-unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_top = 20.0
+offset_right = 40.0
 offset_bottom = 40.0
-grow_horizontal = 2
-theme_override_font_sizes/font_size = 8
-text = "equip
-"
+color = Color(1, 1, 0, 1)
 
 [node name="TextureRect" type="TextureRect" parent="."]
 unique_name_in_owner = true
@@ -125,8 +75,7 @@ custom_minimum_size = Vector2(32, 32)
 layout_mode = 0
 offset_right = 32.0
 offset_bottom = 32.0
-texture = ExtResource("2_81qg6")
-expand_mode = 1
+expand_mode = 3
 stretch_mode = 5
 
 [node name="ItemQty" type="Label" parent="."]
@@ -139,14 +88,77 @@ text = "
 "
 
 [node name="ItemButton" type="Button" parent="."]
+unique_name_in_owner = true
 layout_mode = 2
-offset_right = 32.0
-offset_bottom = 32.0
+offset_right = 40.0
+offset_bottom = 40.0
 
-[connection signal="pressed" from="UsagePanel/UseButton" to="." method="_on_use_button_pressed"]
-[connection signal="pressed" from="UsagePanel/AssignButton" to="." method="_on_assign_button_pressed"]
-[connection signal="pressed" from="UsagePanel/EquipButton" to="." method="_on_equip_button_pressed"]
+[node name="UsagePanel" type="ColorRect" parent="."]
+unique_name_in_owner = true
+process_priority = 5
+process_physics_priority = 5
+visible = false
+top_level = true
+z_index = 5
+use_parent_material = true
+layout_mode = 0
+offset_left = 42.0
+offset_top = 22.0
+offset_right = 142.0
+offset_bottom = 22.0
+size_flags_vertical = 3
+color = Color(1, 0.210987, 0.881037, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UsagePanel"]
+process_priority = 5
+process_physics_priority = 5
+z_index = 5
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -23.0
+offset_bottom = 57.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="EquipButton" type="Button" parent="UsagePanel/VBoxContainer"]
+unique_name_in_owner = true
+z_index = 5
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+text = "equip
+"
+
+[node name="DropButton" type="Button" parent="UsagePanel/VBoxContainer"]
+unique_name_in_owner = true
+z_index = 5
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+text = "Drop"
+
+[node name="UseButton" type="Button" parent="UsagePanel/VBoxContainer"]
+unique_name_in_owner = true
+z_index = 5
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+text = "use"
+
+[node name="AssignButton" type="Button" parent="UsagePanel/VBoxContainer"]
+unique_name_in_owner = true
+z_index = 5
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+text = "assign"
+
 [connection signal="gui_input" from="ItemButton" to="." method="_on_item_button_gui_input"]
 [connection signal="mouse_entered" from="ItemButton" to="." method="_on_item_button_mouse_entered"]
 [connection signal="mouse_exited" from="ItemButton" to="." method="_on_item_button_mouse_exited"]
-[connection signal="pressed" from="ItemButton" to="." method="_on_item_button_pressed"]
+[connection signal="pressed" from="UsagePanel/VBoxContainer/EquipButton" to="." method="_on_equip_button_pressed"]
+[connection signal="pressed" from="UsagePanel/VBoxContainer/UseButton" to="." method="_on_use_button_pressed"]
+[connection signal="pressed" from="UsagePanel/VBoxContainer/AssignButton" to="." method="_on_assign_button_pressed"]

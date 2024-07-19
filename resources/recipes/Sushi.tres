@@ -1,19 +1,18 @@
-[gd_resource type="Resource" script_class="Recipe" load_steps=20 format=3 uid="uid://bmdoowgpbu1c4"]
+[gd_resource type="Resource" script_class="Recipe" load_steps=17 format=3 uid="uid://bmdoowgpbu1c4"]
 
-[ext_resource type="Texture2D" uid="uid://b0ivmj8e8pcul" path="res://assets/Food/Roll.png" id="1_3eqr0"]
 [ext_resource type="Script" path="res://model/recipe.gd" id="1_r8tvp"]
 [ext_resource type="Texture2D" uid="uid://bv52uoehmtnuy" path="res://assets/Objects/Simple Milk and grass item.png" id="2_0grpf"]
 [ext_resource type="PackedScene" uid="uid://jdywirb88mht" path="res://scenes/objects/items/collectable/milk.tscn" id="3_53blo"]
 [ext_resource type="Script" path="res://model/items.gd" id="4_qrstp"]
-[ext_resource type="Script" path="res://model/craft.gd" id="5_qeexx"]
-[ext_resource type="Script" path="res://model/item_effects.gd" id="6_bxhr7"]
+[ext_resource type="Script" path="res://model/consumable.gd" id="5_yshf1"]
 [ext_resource type="Texture2D" uid="uid://brkm6a76j0o0j" path="res://assets/Food/Apple.png" id="7_iou03"]
 [ext_resource type="PackedScene" uid="uid://dwbrbg04xbsnm" path="res://scenes/objects/items/collectable/apple.tscn" id="8_d4gni"]
 [ext_resource type="Texture2D" uid="uid://dl485f1lc0c28" path="res://assets/Food/Sushi.png" id="9_2sxg3"]
+[ext_resource type="PackedScene" uid="uid://0ljpfm7v7hc3" path="res://scenes/objects/items/recipes/recipe.tscn" id="9_u4j8m"]
 [ext_resource type="PackedScene" uid="uid://duyl5e7d2d1m8" path="res://scenes/objects/items/collectable/sushi.tscn" id="10_rhblh"]
 
-[sub_resource type="Resource" id="Resource_lqsjw"]
-script = ExtResource("5_qeexx")
+[sub_resource type="Resource" id="Resource_pwmbs"]
+script = ExtResource("5_yshf1")
 ingredients_qty = 1
 
 [sub_resource type="Resource" id="Resource_g76sj"]
@@ -23,16 +22,10 @@ scene = ExtResource("3_53blo")
 icon = ExtResource("2_0grpf")
 qty = 0
 description = ""
-type = SubResource("Resource_lqsjw")
+type = SubResource("Resource_pwmbs")
 
-[sub_resource type="Resource" id="Resource_0aqcs"]
-script = ExtResource("6_bxhr7")
-damage = 5
-attack_speed = 0.0
-health = 0
-
-[sub_resource type="Resource" id="Resource_aimil"]
-script = ExtResource("5_qeexx")
+[sub_resource type="Resource" id="Resource_fbha2"]
+script = ExtResource("5_yshf1")
 ingredients_qty = 1
 
 [sub_resource type="Resource" id="Resource_7f6bg"]
@@ -41,18 +34,11 @@ name = "Apple"
 scene = ExtResource("8_d4gni")
 icon = ExtResource("7_iou03")
 qty = 0
-effect = SubResource("Resource_0aqcs")
 description = ""
-type = SubResource("Resource_aimil")
+type = SubResource("Resource_fbha2")
 
-[sub_resource type="Resource" id="Resource_e4gqj"]
-script = ExtResource("6_bxhr7")
-damage = 0
-attack_speed = 0.0
-health = 5
-
-[sub_resource type="Resource" id="Resource_02pbk"]
-script = ExtResource("5_qeexx")
+[sub_resource type="Resource" id="Resource_blf15"]
+script = ExtResource("5_yshf1")
 ingredients_qty = 1
 
 [sub_resource type="Resource" id="Resource_v26lu"]
@@ -61,15 +47,14 @@ name = "Sushi"
 scene = ExtResource("10_rhblh")
 icon = ExtResource("9_2sxg3")
 qty = 0
-effect = SubResource("Resource_e4gqj")
 description = "Tasty sushi"
-type = SubResource("Resource_02pbk")
+type = SubResource("Resource_blf15")
 
 [resource]
 script = ExtResource("1_r8tvp")
 name = "Sushi"
 ingredients = Array[ExtResource("4_qrstp")]([SubResource("Resource_g76sj"), SubResource("Resource_7f6bg")])
 results = Array[ExtResource("4_qrstp")]([SubResource("Resource_v26lu")])
-scene = ExtResource("10_rhblh")
-icon = ExtResource("1_3eqr0")
-category = "Equipment"
+scene = ExtResource("9_u4j8m")
+icon = ExtResource("9_2sxg3")
+category = "Consumables"

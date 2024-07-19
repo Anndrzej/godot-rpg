@@ -1,0 +1,75 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=18 format=3 uid="uid://c827wwxn2q1fq"]
+
+[ext_resource type="Script" path="res://model/recipe.gd" id="1_7eoj5"]
+[ext_resource type="Texture2D" uid="uid://b1r2qb2pfph45" path="res://assets/Gear/row-1-column-1.png" id="1_xd7lt"]
+[ext_resource type="Texture2D" uid="uid://bgchup2loj4fv" path="res://assets/recipes/wood.png" id="2_3dvlo"]
+[ext_resource type="Script" path="res://model/items.gd" id="3_0ugxq"]
+[ext_resource type="PackedScene" uid="uid://b6osncbovkkda" path="res://scenes/objects/items/collectable/wood.tscn" id="3_jrnfv"]
+[ext_resource type="Script" path="res://model/consumable.gd" id="4_id1vk"]
+[ext_resource type="Texture2D" uid="uid://dtyhmomkcxiw6" path="res://assets/recipes/iron.png" id="6_h2oet"]
+[ext_resource type="PackedScene" uid="uid://blo86lr7shojd" path="res://scenes/objects/items/equipment/sword.tscn" id="7_qc2ya"]
+[ext_resource type="Script" path="res://model/equipment.gd" id="7_x5bab"]
+[ext_resource type="PackedScene" uid="uid://0ljpfm7v7hc3" path="res://scenes/objects/items/recipes/recipe.tscn" id="8_ea4uu"]
+
+[sub_resource type="Resource" id="Resource_xx015"]
+script = ExtResource("4_id1vk")
+ingredients_qty = 1
+
+[sub_resource type="Resource" id="Resource_88k16"]
+script = ExtResource("3_0ugxq")
+name = "Wood"
+scene = ExtResource("3_jrnfv")
+icon = ExtResource("2_3dvlo")
+qty = 1
+description = "Wood for crafting"
+type = SubResource("Resource_xx015")
+
+[sub_resource type="PackedScene" id="PackedScene_wexcd"]
+_bundled = {
+"conn_count": 0,
+"conns": PackedInt32Array(),
+"editable_instances": [],
+"names": PackedStringArray("Iron", "StaticBody2D", "Sprite2D", "texture"),
+"node_count": 2,
+"node_paths": [],
+"nodes": PackedInt32Array(-1, -1, 1, 0, -1, 0, 0, 0, 0, 2, 2, -1, 1, 3, 0, 0),
+"variants": [ExtResource("6_h2oet")],
+"version": 3
+}
+
+[sub_resource type="Resource" id="Resource_75lyn"]
+script = ExtResource("4_id1vk")
+ingredients_qty = 1
+
+[sub_resource type="Resource" id="Resource_dgmry"]
+script = ExtResource("3_0ugxq")
+name = "Iron"
+scene = SubResource("PackedScene_wexcd")
+icon = ExtResource("6_h2oet")
+qty = 1
+description = "iron for crafting"
+type = SubResource("Resource_75lyn")
+
+[sub_resource type="Resource" id="Resource_64781"]
+script = ExtResource("7_x5bab")
+equipment_type = 5
+item_damage = 100
+item_defence = 2
+
+[sub_resource type="Resource" id="Resource_qtkyo"]
+script = ExtResource("3_0ugxq")
+name = "Sword"
+scene = ExtResource("7_qc2ya")
+icon = ExtResource("1_xd7lt")
+qty = 1
+description = "simple sword"
+type = SubResource("Resource_64781")
+
+[resource]
+script = ExtResource("1_7eoj5")
+name = "Sword"
+ingredients = Array[ExtResource("3_0ugxq")]([SubResource("Resource_88k16"), SubResource("Resource_dgmry")])
+results = Array[ExtResource("3_0ugxq")]([SubResource("Resource_qtkyo")])
+scene = ExtResource("8_ea4uu")
+icon = ExtResource("1_xd7lt")
+category = "Equipment"

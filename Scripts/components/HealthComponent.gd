@@ -15,8 +15,6 @@ func damage(attack: Attack) -> void:
 	var healthbar_progress = (health / max_health) * 100
 	if progress_bar:
 		progress_bar.set_value(healthbar_progress)
-	if health <=0:
+	if health <= 0:
 		get_parent().queue_free()
 
-func harvest() -> void:
-	print('health')

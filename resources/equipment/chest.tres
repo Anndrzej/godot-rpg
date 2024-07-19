@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Item" load_steps=6 format=3 uid="uid://s8p6yy1ivhx4"]
+
+[ext_resource type="Texture2D" uid="uid://d0u7a6mpkdfag" path="res://assets/Gear/row-1-column-15.png" id="1_qtsrs"]
+[ext_resource type="PackedScene" uid="uid://bsdmmxt3gjo6p" path="res://scenes/objects/items/equipment/chest.tscn" id="2_45vbt"]
+[ext_resource type="Script" path="res://model/items.gd" id="3_mgend"]
+[ext_resource type="Script" path="res://model/equipment.gd" id="4_4choj"]
+
+[sub_resource type="Resource" id="Resource_mvscv"]
+script = ExtResource("4_4choj")
+equipment_type = 1
+item_damage = 10
+item_defence = 10
+
+[resource]
+script = ExtResource("3_mgend")
+name = "Chest"
+scene = ExtResource("2_45vbt")
+icon = ExtResource("1_qtsrs")
+qty = 0
+description = "Chest"
+type = SubResource("Resource_mvscv")

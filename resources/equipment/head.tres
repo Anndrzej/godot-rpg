@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Item" load_steps=6 format=3 uid="uid://k6gd6fja7mal"]
+
+[ext_resource type="Texture2D" uid="uid://byhvelx1lhnip" path="res://assets/Gear/row-1-column-14.png" id="1_4rkci"]
+[ext_resource type="PackedScene" uid="uid://dpcxbowoiddj3" path="res://scenes/objects/items/equipment/head.tscn" id="2_1kksg"]
+[ext_resource type="Script" path="res://model/items.gd" id="3_viftr"]
+[ext_resource type="Script" path="res://model/equipment.gd" id="4_gkr40"]
+
+[sub_resource type="Resource" id="Resource_mvscv"]
+script = ExtResource("4_gkr40")
+equipment_type = 0
+item_damage = 6
+item_defence = 8
+
+[resource]
+script = ExtResource("3_viftr")
+name = "Head"
+scene = ExtResource("2_1kksg")
+icon = ExtResource("1_4rkci")
+qty = 0
+description = "Head"
+type = SubResource("Resource_mvscv")

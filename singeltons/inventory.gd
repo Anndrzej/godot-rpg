@@ -41,24 +41,26 @@ func add_item(item: Item, to_hotbar = false):
 		added_to_hotbar = add_to_hotbar(item)
 		inventory_updated.emit()
 	if not added_to_hotbar:
-		for i in range(inventory.size()):
-			if inventory[i] != null and inventory[i].name == item.name:
-				inventory[i].qty += item.qty
-				inventory_updated.emit()
-				return true
+		for i in range(len(inventory)):
+			if inventory[i] and inventory[i].name == item.name:
+				if inventory[i].name == item.name:
+					inventory[i].qty += item.qty
+					
+					inventory_updated.emit()
+					return true
 				
-			elif inventory[i] == null:
+		for i in range(len(inventory)):
+			if inventory[i] == null:
 				inventory[i] = item
 				
 				inventory_updated.emit()
 				
 				return true
-				
-		return false
+	return false
 	
 func remove_item(item: Item) -> bool:
 	for i in range(inventory.size()):
-		if inventory[i] != null and inventory[i].name == item.name and inventory[i].effect == item.effect:
+		if inventory[i] != null and inventory[i].name == item.name and inventory[i].type.effect == item.type.effect:
 			inventory[i].qty -= 1
 			if inventory[i].qty <= 0:
 				inventory[i] = null
@@ -92,6 +94,8 @@ func equip_item(item: Item):
 		if equipment_control_parent[i].slot_type == equipment_name and item.type is Equipment_Item:
 			equipment_slots[i] = item
 			increase_player_stats(equipment_slots[i].type)
+			
+			
 	inventory_updated.emit()
 	equipment_updated.emit()
 	stats_updated.emit()
@@ -173,13 +177,21 @@ func swap_equipment_items(target_slot, dragged_slot, dragged_slot_index, target_
 func add_craft_item(item: Item) -> bool:
 	for i in range(inventory.size()):
 		if inventory[i] != null and inventory[i].name == item.name:
-			inventory[i].qty += item.type.ingredients_qty
+			if item.type is Consumable_Item:
+				inventory[i].qty += item.type.ingredients_qty
+			else:
+				inventory[i].qty += 1
+				
 			inventory_updated.emit()
 			return true
-			
-		elif inventory[i] == null:
+	for i in range(inventory.size()):
+		if inventory[i] == null:
 			inventory[i] = item
-			inventory[i].qty = item.type.ingredients_qty
+			if item.type is Consumable_Item:
+				inventory[i].qty = item.type.ingredients_qty
+			else: 
+				inventory[i].qty = item.qty
+				
 			inventory_updated.emit()
 			
 			return true
@@ -187,19 +199,19 @@ func add_craft_item(item: Item) -> bool:
 	return false
 	
 func craft_item(item: Item):
-	if item.type is Craft_Item:
-		for i in range(inventory.size()):
-			if inventory[i] != null and inventory[i].name == item.name:
-				inventory[i].qty -= item.type.ingredients_qty
-				inventory_updated.emit()
-				return true
-				
-			elif inventory[i] == null:
-				inventory[i] = item
-				
-				inventory_updated.emit()
-				
-				return true
+	for i in range(inventory.size()):
+		if inventory[i] != null and inventory[i].name == item.name:
+			inventory[i].qty -= item.type.ingredients_qty
+			inventory_updated.emit()
+			return true
+			
+	for i in range(inventory.size()):
+		if inventory[i] == null:
+			inventory[i] = item
+			
+			inventory_updated.emit()
+			
+			return true
 	
 	
 func has_all(items: Array[Item]) -> bool:
@@ -244,13 +256,13 @@ func remove_hotbar_item(item: Item):
 				return true
 		return false
 		
-func unassign_hotbar_item(item: Item):
+func unassign_hotbar_item(item: Item) -> bool:
 	for i in range(hotbar_inventory.size()):
 		if hotbar_inventory[i] != null and hotbar_inventory[i].name == item.name:
 				hotbar_inventory[i] = null
 				inventory_updated.emit()
 				return true
-		return false
+	return false
 		
 func check_if_item_is_assigned(item):
 	return item in hotbar_inventory;

@@ -5,6 +5,9 @@ class_name Player
 @export var isAttacking: bool = false
 @export var attack_power: int = 10
 @export var attack_speed := 1.5
+
+@onready var health_component = %HealthComponent
+
 var my_recipes: Array[Recipe] = []
 
 signal open_modal
@@ -33,12 +36,21 @@ func collect_recipe(recipe: Recipe) -> void:
 	open_modal.emit(recipe)
 
 func apply_item_effect(item: Item) -> void:
-	if item.effect.damage:
-		attack_power += item.effect.damage
+	if item.type.effect.damage:
+		attack_power += item.type.effect.damage
 		print('damage increased to ', attack_power)
-	elif item.effect.attack_speed:
-		attack_speed += item.effect.attack_speed
+	if item.type.effect.attack_speed:
+		attack_speed += item.type.effect.attack_speed
 		print('attack speed increased to ', attack_speed)
+	if item.type.effect.heal:
+		health_component.health += item.type.effect.heal
+		print('healed by ', item.type.effect.heal)
+		Global.increase_health.emit(item.type.effect.heal)
+	if item.type.effect.max_health:
+		health_component.max_health += item.type.effect.max_health 
+		print('max health increased by ', item.type.effect.max_health)
+		Global.increase_max_health.emit(item.type.effect.max_health)
+	Inv.stats_updated.emit()
 
 func use_hotbar_item(slot_index) -> void:
 	if slot_index < Inv.hotbar_inventory.size():

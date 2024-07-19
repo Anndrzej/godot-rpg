@@ -12,7 +12,7 @@ grow_horizontal = 2
 grow_vertical = 0
 script = ExtResource("1_0y8py")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
+[node name="HotbarContainer" type="HBoxContainer" parent="."]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(500, 0)
 layout_mode = 1

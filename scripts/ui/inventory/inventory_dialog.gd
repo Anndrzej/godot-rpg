@@ -7,16 +7,14 @@ class_name InventoryDialog
 @onready var player_equipment: Control = %PlayerEquipmentControl
 @onready var speed_number = %SpeedNumber
 @onready var power_number = %PowerNumber
-@onready var player_stats_container = %PlayerStatsContainer
+@onready var health_number = %HealthNumber
+@onready var max_health_number = %MaxHealthNumber
 
 var dragged_slot
 var player: Player
 
 func _ready() -> void:
 	player = get_tree().get_first_node_in_group("Player")
-	
-	speed_number.text = str(player.attack_speed)
-	power_number.text = str(player.attack_power)
 	
 	Inv.inventory_updated.connect(_on_inventory_updated)
 	Inv.equipment_updated.connect(_on_equipment_updated)
@@ -25,6 +23,12 @@ func _ready() -> void:
 	_on_inventory_updated()
 	_on_equipment_updated()
 	_on_stats_updated()
+	
+	
+	for btn in player_equipment.get_children(): # hide unneseccary btns from hotbar
+		btn.drop_button.visible = false
+		btn.assign_button.visible = false
+		btn.use_button.visible = false
 
 func _on_button_pressed():
 	hide()
@@ -32,6 +36,8 @@ func _on_button_pressed():
 func _on_stats_updated() -> void:
 	speed_number.text = str(player.attack_speed)
 	power_number.text = str(player.attack_power)
+	health_number.text = str(player.health_component.health)
+	max_health_number.text = str(player.health_component.max_health)
 	
 func _on_inventory_updated() -> void:
 	clear_grid_container()
@@ -46,6 +52,11 @@ func _on_inventory_updated() -> void:
 		
 		if item != null and item is Item:
 			slot.set_item(item)
+			if item.type is Equipment_Item:
+				slot.use_button.queue_free()
+				slot.assign_button.queue_free()
+			elif item.type is Consumable_Item:
+				slot.equip_button.queue_free()
 		else:
 			slot.empty_slot()
 			
@@ -65,8 +76,9 @@ func _on_equipment_updated() -> void:
 		slot.drag_end.connect(on_drag_end)
 		
 		player_equipment.add_child(slot)
-		
+		slot.item_qty.visible = false
 		slots.append(slot)
+		
 	# add item when specific slot based on Inv.equipment_slots index
 	for i in range(len(slots)):
 		Inv.define_slots_parent(slots)
@@ -77,6 +89,12 @@ func _on_equipment_updated() -> void:
 		else:
 			slots[i].empty_slot()
 		
+	# hide unneseccary btns from equipment
+	for btn in player_equipment.get_children(): 
+		btn.drop_button.visible = false
+		btn.assign_button.visible = false
+		btn.use_button.visible = false
+		btn.active_item.visible = false
 		
 func clear_grid_container():
 	while grid_container.get_child_count() > 0:
@@ -114,7 +132,7 @@ func get_slot_under_mouse() -> Control:
 		if slot_rect.has_point(mouse_position):
 			return slot
 	return null
-	
+
 func get_slot_index(slot: Control) -> int: 
 	for i in range(grid_container.get_child_count()):
 		# return valid slot

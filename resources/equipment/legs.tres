@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Item" load_steps=6 format=3 uid="uid://3aalw7k4xa7m"]
+
+[ext_resource type="Texture2D" uid="uid://bxubvarb1up4v" path="res://assets/Gear/row-1-column-16.png" id="1_uyokb"]
+[ext_resource type="PackedScene" uid="uid://dyvmp6jm2v0uk" path="res://scenes/objects/items/equipment/legs.tscn" id="2_8y236"]
+[ext_resource type="Script" path="res://model/items.gd" id="3_fnphc"]
+[ext_resource type="Script" path="res://model/equipment.gd" id="4_yb8ej"]
+
+[sub_resource type="Resource" id="Resource_mvscv"]
+script = ExtResource("4_yb8ej")
+equipment_type = 2
+item_damage = 7
+item_defence = 7
+
+[resource]
+script = ExtResource("3_fnphc")
+name = "Legs"
+scene = ExtResource("2_8y236")
+icon = ExtResource("1_uyokb")
+qty = 0
+description = "Legs"
+type = SubResource("Resource_mvscv")

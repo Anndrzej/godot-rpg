@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://0ljpfm7v7hc3"]
-
-[ext_resource type="Texture2D" uid="uid://dl485f1lc0c28" path="res://assets/Food/Sushi.png" id="1_6fdqq"]
-
-[node name="Node2D" type="StaticBody2D"]
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_6fdqq")

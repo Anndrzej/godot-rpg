@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Item" load_steps=6 format=3 uid="uid://c0dmk1a0o2rd3"]
+
+[ext_resource type="Texture2D" uid="uid://b5fowsuiej02b" path="res://assets/Gear/row-1-column-19.png" id="1_b2mma"]
+[ext_resource type="Script" path="res://model/items.gd" id="1_sqyak"]
+[ext_resource type="PackedScene" uid="uid://bgyoolbilniys" path="res://scenes/objects/items/equipment/shield.tscn" id="2_lqjyv"]
+[ext_resource type="Script" path="res://model/equipment.gd" id="4_atsir"]
+
+[sub_resource type="Resource" id="Resource_mvscv"]
+script = ExtResource("4_atsir")
+equipment_type = 4
+item_damage = 1
+item_defence = 10
+
+[resource]
+script = ExtResource("1_sqyak")
+name = "Shield"
+scene = ExtResource("2_lqjyv")
+icon = ExtResource("1_b2mma")
+qty = 0
+description = "Shield"
+type = SubResource("Resource_mvscv")

@@ -1,20 +1,21 @@
 [gd_resource type="Resource" script_class="Item" load_steps=8 format=3 uid="uid://dd0f2xvqh7fbc"]
 
 [ext_resource type="Script" path="res://model/items.gd" id="1_43huc"]
-[ext_resource type="Script" path="res://model/item_effects.gd" id="1_helap"]
 [ext_resource type="Texture2D" uid="uid://dl485f1lc0c28" path="res://assets/Food/Sushi.png" id="2_opl2o"]
 [ext_resource type="PackedScene" uid="uid://duyl5e7d2d1m8" path="res://scenes/objects/items/collectable/sushi.tscn" id="3_vl7k3"]
-[ext_resource type="Script" path="res://model/craft.gd" id="5_vty7u"]
+[ext_resource type="Script" path="res://model/item_effects.gd" id="4_wxa0j"]
+[ext_resource type="Script" path="res://model/consumable.gd" id="5_56c1s"]
 
-[sub_resource type="Resource" id="Resource_e4gqj"]
-script = ExtResource("1_helap")
+[sub_resource type="Resource" id="Resource_jo57w"]
+script = ExtResource("4_wxa0j")
 damage = 0
 attack_speed = 0.0
-health = 5
+health = 0
 
-[sub_resource type="Resource" id="Resource_02pbk"]
-script = ExtResource("5_vty7u")
-ingredients_qty = 1
+[sub_resource type="Resource" id="Resource_w1bm6"]
+script = ExtResource("5_56c1s")
+effect = SubResource("Resource_jo57w")
+ingredients_qty = 0
 
 [resource]
 script = ExtResource("1_43huc")
@@ -22,6 +23,5 @@ name = "Sushi"
 scene = ExtResource("3_vl7k3")
 icon = ExtResource("2_opl2o")
 qty = 0
-effect = SubResource("Resource_e4gqj")
 description = "Tasty sushi"
-type = SubResource("Resource_02pbk")
+type = SubResource("Resource_w1bm6")

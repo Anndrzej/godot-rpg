@@ -583,6 +583,7 @@ disabled = true
 [node name="Label" parent="." instance=ExtResource("9_ou7fo")]
 
 [node name="HealthComponent" parent="." instance=ExtResource("10_3wijv")]
+unique_name_in_owner = true
 max_health = 100.0
 
 [node name="ProgressBar" parent="." instance=ExtResource("12_ggoln")]
@@ -591,9 +592,8 @@ offset_top = -48.0
 offset_right = -11.0
 offset_bottom = -48.0
 
-[node name="HitBoxComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("11_pgu0l")]
+[node name="HitBoxComponent" parent="." instance=ExtResource("11_pgu0l")]
 script = ExtResource("13_pjjvb")
-health_component = NodePath("../HealthComponent")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBoxComponent"]
 position = Vector2(0, -2)

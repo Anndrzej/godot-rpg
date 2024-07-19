@@ -18,11 +18,11 @@ func open(recipes: Array[Recipe]) -> void:
 	if recipes.size() > 0:
 		recipe_type_list.clear()
 		for recipe in recipes:
-			# add recipe by categories
 			var recipe_category = recipe.category
 			
 			if recipe_category in recipe_categories:
-				recipe_categories[recipe_category].append(recipe)
+				if not recipe_categories[recipe_category].has(recipe):
+					recipe_categories[recipe_category].append(recipe)
 			else: 
 				recipe_categories[recipe_category] = [recipe]
 			
@@ -37,16 +37,17 @@ func _on_recipe_type_list_item_selected(index):
 	var selected_category = recipe_type_list.get_item_metadata(index)
 	
 	recipe_list.clear()
-	
-	var item_index = recipe_list.add_item(selected_category[0].name)
-	recipe_list.set_item_metadata(item_index, selected_category[0])
-	
+	print(selected_category)
+	for i in selected_category:
+		var item_index = recipe_list.add_item(i.name)
+		recipe_list.set_item_metadata(item_index, i)
 	_on_recipe_list_item_selected(0)
 	recipe_list.select(0)
 	
 	
 func _on_recipe_list_item_selected(index):
 	_selected_recipe = recipe_list.get_item_metadata(index)
+	print(_selected_recipe)
 	grid_ingredients.displayIngredients(_selected_recipe.ingredients)
 	grid_result.displayIngredients(_selected_recipe.results)
 	craft.disabled = not Inv.has_all(_selected_recipe.ingredients)

@@ -3,11 +3,11 @@
 [ext_resource type="PackedScene" uid="uid://jdywirb88mht" path="res://scenes/objects/items/collectable/milk.tscn" id="1_guv6f"]
 [ext_resource type="Texture2D" uid="uid://bv52uoehmtnuy" path="res://assets/Objects/Simple Milk and grass item.png" id="1_mblfc"]
 [ext_resource type="Script" path="res://model/items.gd" id="1_uuaig"]
-[ext_resource type="Script" path="res://model/craft.gd" id="4_p3ghj"]
+[ext_resource type="Script" path="res://model/consumable.gd" id="4_2ykwo"]
 
-[sub_resource type="Resource" id="Resource_lqsjw"]
-script = ExtResource("4_p3ghj")
-ingredients_qty = 1
+[sub_resource type="Resource" id="Resource_tecdq"]
+script = ExtResource("4_2ykwo")
+ingredients_qty = 0
 
 [resource]
 script = ExtResource("1_uuaig")
@@ -16,4 +16,4 @@ scene = ExtResource("1_guv6f")
 icon = ExtResource("1_mblfc")
 qty = 1
 description = ""
-type = SubResource("Resource_lqsjw")
+type = SubResource("Resource_tecdq")

@@ -11,6 +11,10 @@ class_name ItemSlot
 @onready var usage_panel = %UsagePanel
 @onready var assign_button = %AssignButton
 @onready var equip_button = %EquipButton
+@onready var drop_button = %DropButton
+@onready var use_button = %UseButton
+@onready var active_item = $ActiveItem
+@onready var item_button = %ItemButton
 
 @export var item_data: Item
 
@@ -26,6 +30,10 @@ var t : TextureRect = TextureRect.new()
 signal drag_start(slot)
 signal drag_end()
 
+func _ready():
+	if get_parent().name == 'PlayerEquipmentControl' or get_parent().name == 'HotbarContainer':
+		usage_panel.queue_free()
+
 func empty_slot():
 	texture_rect.texture = null
 	item_qty.text = ""
@@ -39,7 +47,7 @@ func set_item(item: Item) -> void:
 	
 	if item_data.type is Equipment_Item:
 		item_type.text = str(item_data.type.equipment_type)
-	elif item_data.type is Craft_Item:
+	elif item_data.type is Consumable_Item:
 		item_type.text = str(item_data.qty)
 	texture_rect.texture = item_data.icon
 	
@@ -50,17 +58,16 @@ func set_item_index(set_index):
 	slot_index = set_index
 	
 func _on_item_button_mouse_entered():
-	if item_data != null:
+	if item_data != null and usage_panel != null:
 		usage_panel.visible = false
 		details_panel.visible = true
-		
 		
 func _on_item_button_mouse_exited():
 	details_panel.visible = false
 	
 func _on_use_button_pressed():
 	usage_panel.visible = false
-	if item_data != null and item_data.effect:
+	if item_data != null and item_data.type.effect:
 		if Inv.player_node:
 			Inv.player_node.apply_item_effect(item_data)
 			Inv.remove_item(item_data)
@@ -89,8 +96,9 @@ func _on_assign_button_pressed():
 func _process(delta):
 	if draggable:
 		make_drag_preview()
-	else:
-		t.texture = null
+	elif is_texture_created:
+		is_texture_created = false
+		remove_child(t)
 	
 func make_drag_preview():
 	if !is_texture_created or t.texture == null:
@@ -108,18 +116,30 @@ func make_drag_preview():
 func _on_item_button_gui_input(event):
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT:
+			
 			if event.is_pressed():
+				if event.is_double_click() and item_data.type is Equipment_Item:
+					if is_equipped:
+						Inv.unequip_item(item_data)
+					else:
+						Inv.equip_item(item_data)
 				draggable = true
 				drag_start.emit(self)
 			else:
 				draggable = false
 				drag_end.emit()
 		if event.button_index == MOUSE_BUTTON_RIGHT and event.is_pressed():
-			if item_data != null:
+			if item_data != null and usage_panel != null:
 				usage_panel.visible = !usage_panel.visible
+				usage_panel.position.x = position.x + 50
+				usage_panel.position.y = position.y + 100
+				
+		var evLocal = make_input_local(event)
+		if !Rect2(Vector2(0,0), size).has_point(evLocal.position):
+			item_button.release_focus()
 	
 func _on_equip_button_pressed():
-	if item_data != null:
+	if item_data != null and item_data.type is Equipment_Item:
 		if is_equipped:
 			Inv.unequip_item(item_data)
 			is_equipped = false
@@ -127,12 +147,15 @@ func _on_equip_button_pressed():
 			Inv.equip_item(item_data)
 			is_equipped = true
 		update_equipment_status()
-			
+	else:
+		return
+	
 func update_equipment_status():
 	is_equipped = Inv.check_if_item_is_equipped(item_data)
-	
 	if is_equipped:
 		equip_button.text = "Unequip"
+		active_item.visible = true
 	else:
 		equip_button.text = "Equip"
+		active_item.visible = false
 		

@@ -2,26 +2,27 @@
 
 [ext_resource type="Texture2D" uid="uid://brkm6a76j0o0j" path="res://assets/Food/Apple.png" id="1_5bnjd"]
 [ext_resource type="Script" path="res://model/items.gd" id="1_b34ou"]
-[ext_resource type="Script" path="res://model/item_effects.gd" id="1_x5qie"]
 [ext_resource type="PackedScene" uid="uid://dwbrbg04xbsnm" path="res://scenes/objects/items/collectable/apple.tscn" id="2_btn0h"]
-[ext_resource type="Script" path="res://model/craft.gd" id="4_e4pr5"]
+[ext_resource type="Script" path="res://model/item_effects.gd" id="4_csp7v"]
+[ext_resource type="Script" path="res://model/consumable.gd" id="5_l67fs"]
 
-[sub_resource type="Resource" id="Resource_0aqcs"]
-script = ExtResource("1_x5qie")
-damage = 5
+[sub_resource type="Resource" id="Resource_ycryd"]
+script = ExtResource("4_csp7v")
+damage = 0
 attack_speed = 0.0
-health = 0
+heal = 10
+max_health = 0
 
-[sub_resource type="Resource" id="Resource_aimil"]
-script = ExtResource("4_e4pr5")
-ingredients_qty = 1
+[sub_resource type="Resource" id="Resource_7ofd5"]
+script = ExtResource("5_l67fs")
+effect = SubResource("Resource_ycryd")
+ingredients_qty = 0
 
 [resource]
 script = ExtResource("1_b34ou")
 name = "Apple"
 scene = ExtResource("2_btn0h")
 icon = ExtResource("1_5bnjd")
-qty = 0
-effect = SubResource("Resource_0aqcs")
+qty = 3
 description = ""
-type = SubResource("Resource_aimil")
+type = SubResource("Resource_7ofd5")

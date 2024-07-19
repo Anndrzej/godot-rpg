@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="Item" load_steps=6 format=3 uid="uid://dkpcns8g6n100"]
+
+[ext_resource type="Script" path="res://model/items.gd" id="1_do3t5"]
+[ext_resource type="Texture2D" uid="uid://dtyhmomkcxiw6" path="res://assets/recipes/iron.png" id="1_vvjtw"]
+[ext_resource type="Script" path="res://model/consumable.gd" id="4_nic36"]
+
+[sub_resource type="PackedScene" id="PackedScene_wexcd"]
+_bundled = {
+"conn_count": 0,
+"conns": PackedInt32Array(),
+"editable_instances": [],
+"names": PackedStringArray("Iron", "StaticBody2D", "Sprite2D", "texture"),
+"node_count": 2,
+"node_paths": [],
+"nodes": PackedInt32Array(-1, -1, 1, 0, -1, 0, 0, 0, 0, 2, 2, -1, 1, 3, 0, 0),
+"variants": [ExtResource("1_vvjtw")],
+"version": 3
+}
+
+[sub_resource type="Resource" id="Resource_75lyn"]
+script = ExtResource("4_nic36")
+ingredients_qty = 1
+
+[resource]
+script = ExtResource("1_do3t5")
+name = "Iron"
+scene = SubResource("PackedScene_wexcd")
+icon = ExtResource("1_vvjtw")
+qty = 1
+description = "iron for crafting"
+type = SubResource("Resource_75lyn")

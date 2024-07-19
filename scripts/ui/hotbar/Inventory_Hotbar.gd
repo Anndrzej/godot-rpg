@@ -1,6 +1,6 @@
 extends Control
 
-@onready var hotbar_container = %HBoxContainer
+@onready var hotbar_container = %HotbarContainer
 
 var dragged_slot
 
@@ -19,20 +19,20 @@ func _on_update_hotbar_ui():
 		slot.drag_end.connect(on_drag_end)
 		
 		hotbar_container.add_child(slot)
+		
 		if Inv.hotbar_inventory[i] != null:
 			slot.set_item(Inv.hotbar_inventory[i])
 		else:
 			slot.empty_slot()
 		slot.update_assignment_status()
+		
 	
 func clear_hotbar_container():
 	while hotbar_container.get_child_count() > 0:
 		var child = hotbar_container.get_child(0)
 		hotbar_container.remove_child(child)
 		child.queue_free()
-
-
-
+	
 func on_drag_start(slot_control: Control):
 	dragged_slot = slot_control
 	print("dragged started for slot ", dragged_slot)

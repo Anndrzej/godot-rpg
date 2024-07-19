@@ -1,8 +1,7 @@
 Item
-Equipment_Item
 Recipe
+Equipment_Item
 Resource
-Craft_Item
 Attack_Speed
 Attack_Damage
 Upgrades

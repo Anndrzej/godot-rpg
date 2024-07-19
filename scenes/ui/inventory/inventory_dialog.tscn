@@ -142,4 +142,28 @@ layout_mode = 2
 text = "10
 "
 
+[node name="HBoxContainer3" type="HBoxContainer" parent="PlayerStatsContainer/GridContainer/VBoxContainer2"]
+layout_mode = 2
+
+[node name="HealthLabel" type="Label" parent="PlayerStatsContainer/GridContainer/VBoxContainer2/HBoxContainer3"]
+layout_mode = 2
+text = "Health:
+"
+
+[node name="HealthNumber" type="Label" parent="PlayerStatsContainer/GridContainer/VBoxContainer2/HBoxContainer3"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "10
+"
+
+[node name="HealthSepparator" type="Label" parent="PlayerStatsContainer/GridContainer/VBoxContainer2/HBoxContainer3"]
+layout_mode = 2
+text = "/"
+
+[node name="MaxHealthNumber" type="Label" parent="PlayerStatsContainer/GridContainer/VBoxContainer2/HBoxContainer3"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "10
+"
+
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
