@@ -1,6 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://bgvea0xn8bo55"]
+[gd_scene load_steps=4 format=3 uid="uid://bgvea0xn8bo55"]
 
 [ext_resource type="Script" path="res://scripts/ui/inventory/item_slot.gd" id="1_7ss3q"]
+[ext_resource type="Texture2D" uid="uid://dtyhmomkcxiw6" path="res://assets/recipes/iron.png" id="2_a76ba"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s3qvy"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [node name="ItemSlot" type="Control"]
 custom_minimum_size = Vector2(40, 40)
@@ -71,11 +75,11 @@ color = Color(1, 1, 0, 1)
 
 [node name="TextureRect" type="TextureRect" parent="."]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(32, 32)
 layout_mode = 0
-offset_right = 32.0
-offset_bottom = 32.0
-expand_mode = 3
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_a76ba")
+expand_mode = 4
 stretch_mode = 5
 
 [node name="ItemQty" type="Label" parent="."]
@@ -92,6 +96,7 @@ unique_name_in_owner = true
 layout_mode = 2
 offset_right = 40.0
 offset_bottom = 40.0
+theme_override_styles/hover = SubResource("StyleBoxFlat_s3qvy")
 
 [node name="UsagePanel" type="ColorRect" parent="."]
 unique_name_in_owner = true

@@ -20,7 +20,7 @@ func _on_area_2d_body_exited(body: Node2D) -> void:
 		interact_text.visible = false
 
 func _process(delta):
-	if Input.is_action_pressed("interract"):
+	if Input.is_action_pressed("interact"):
 		interact(interact_speed, body)
 
 func interact(speed: float, interactedBody) -> void:

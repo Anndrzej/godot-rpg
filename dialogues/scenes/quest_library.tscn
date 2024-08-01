@@ -1,0 +1,177 @@
+[gd_scene load_steps=34 format=3 uid="uid://bhwcs8pqnd5p"]
+
+[ext_resource type="Script" path="res://dialogues/scripts/quest_library.gd" id="1_xlicx"]
+[ext_resource type="PackedScene" uid="uid://cxe4rhatnrsde" path="res://dialogues/scenes/quest.tscn" id="2_tle0p"]
+[ext_resource type="Texture2D" uid="uid://brkm6a76j0o0j" path="res://assets/Food/Apple.png" id="3_5544s"]
+[ext_resource type="PackedScene" uid="uid://d28pqjf1vx6qn" path="res://dialogues/scenes/quest_step.tscn" id="3_ki8re"]
+[ext_resource type="Texture2D" uid="uid://d0u7a6mpkdfag" path="res://assets/Gear/row-1-column-15.png" id="3_qxb6i"]
+[ext_resource type="PackedScene" uid="uid://bsdmmxt3gjo6p" path="res://scenes/objects/items/equipment/chest.tscn" id="4_7xdos"]
+[ext_resource type="PackedScene" uid="uid://dwbrbg04xbsnm" path="res://scenes/objects/items/collectable/apple.tscn" id="4_gymra"]
+[ext_resource type="Script" path="res://model/items.gd" id="5_b3suk"]
+[ext_resource type="Script" path="res://model/item_effects.gd" id="6_4denj"]
+[ext_resource type="Script" path="res://model/equipment.gd" id="6_xm63d"]
+[ext_resource type="Script" path="res://model/consumable.gd" id="7_o1lb5"]
+[ext_resource type="Texture2D" uid="uid://bv52uoehmtnuy" path="res://assets/Objects/Simple Milk and grass item.png" id="12_x6k5l"]
+[ext_resource type="PackedScene" uid="uid://jdywirb88mht" path="res://scenes/objects/items/collectable/milk.tscn" id="13_r1kow"]
+[ext_resource type="Resource" uid="uid://cy2c66ge5sk5q" path="res://resources/enemy/slime.tres" id="14_ldrds"]
+[ext_resource type="Resource" uid="uid://0bghydh0qa55" path="res://resources/equipment/foot.tres" id="15_bv3qv"]
+[ext_resource type="Texture2D" uid="uid://bwhbx88icl6n" path="res://assets/Food/PieApple.png" id="16_ipn40"]
+[ext_resource type="PackedScene" uid="uid://c2gq6fq5b2fhj" path="res://scenes/objects/items/collectable/pie_apple.tscn" id="17_e8dh3"]
+[ext_resource type="Resource" uid="uid://c0dmk1a0o2rd3" path="res://resources/equipment/shield.tres" id="18_qi7uj"]
+
+[sub_resource type="Resource" id="Resource_mvscv"]
+script = ExtResource("6_xm63d")
+equipment_type = 1
+item_damage = 10
+item_defence = 10
+
+[sub_resource type="Resource" id="Resource_gefw7"]
+script = ExtResource("5_b3suk")
+name = "Chest"
+scene = ExtResource("4_7xdos")
+icon = ExtResource("3_qxb6i")
+qty = 0
+description = "Chest"
+type = SubResource("Resource_mvscv")
+
+[sub_resource type="Resource" id="Resource_ycryd"]
+script = ExtResource("6_4denj")
+damage = 0
+attack_speed = 0.0
+heal = 10
+max_health = 0
+
+[sub_resource type="Resource" id="Resource_7ofd5"]
+script = ExtResource("7_o1lb5")
+effect = SubResource("Resource_ycryd")
+ingredients_qty = 0
+
+[sub_resource type="Resource" id="Resource_6xd8q"]
+script = ExtResource("5_b3suk")
+name = "Apple"
+scene = ExtResource("4_gymra")
+icon = ExtResource("3_5544s")
+qty = 1
+description = ""
+type = SubResource("Resource_7ofd5")
+
+[sub_resource type="Resource" id="Resource_tecdq"]
+script = ExtResource("7_o1lb5")
+ingredients_qty = 0
+
+[sub_resource type="Resource" id="Resource_pcyhy"]
+script = ExtResource("5_b3suk")
+name = "Milk"
+scene = ExtResource("13_r1kow")
+icon = ExtResource("12_x6k5l")
+qty = 1
+description = ""
+type = SubResource("Resource_tecdq")
+
+[sub_resource type="Resource" id="Resource_d14ch"]
+script = ExtResource("6_4denj")
+damage = 0
+attack_speed = 0.0
+heal = 10
+max_health = 0
+
+[sub_resource type="Resource" id="Resource_xhcsm"]
+script = ExtResource("7_o1lb5")
+effect = SubResource("Resource_d14ch")
+ingredients_qty = 0
+
+[sub_resource type="Resource" id="Resource_m2yxc"]
+script = ExtResource("5_b3suk")
+name = "Apple"
+scene = ExtResource("4_gymra")
+icon = ExtResource("3_5544s")
+qty = 100
+description = ""
+type = SubResource("Resource_xhcsm")
+
+[sub_resource type="Resource" id="Resource_ayw7j"]
+script = ExtResource("6_xm63d")
+equipment_type = 1
+item_damage = 10
+item_defence = 10
+
+[sub_resource type="Resource" id="Resource_3vsa1"]
+script = ExtResource("5_b3suk")
+name = "Chest"
+scene = ExtResource("4_7xdos")
+icon = ExtResource("3_qxb6i")
+qty = 0
+description = "Chest"
+type = SubResource("Resource_ayw7j")
+
+[sub_resource type="Resource" id="Resource_fdunv"]
+script = ExtResource("6_4denj")
+damage = 0
+attack_speed = 0.0
+heal = 0
+max_health = 50
+
+[sub_resource type="Resource" id="Resource_qaoi6"]
+script = ExtResource("7_o1lb5")
+effect = SubResource("Resource_fdunv")
+ingredients_qty = 0
+
+[sub_resource type="Resource" id="Resource_m87lh"]
+script = ExtResource("5_b3suk")
+name = "Apple_pie"
+scene = ExtResource("17_e8dh3")
+icon = ExtResource("16_ipn40")
+qty = 1
+description = ""
+type = SubResource("Resource_qaoi6")
+
+[node name="QuestLibrary" type="Node"]
+script = ExtResource("1_xlicx")
+
+[node name="AllQuests" type="Node" parent="."]
+
+[node name="Quest1" parent="AllQuests" instance=ExtResource("2_tle0p")]
+quest_name = "Secret of apple"
+quest_id = "00-apple-secret"
+reward = Array[ExtResource("5_b3suk")]([SubResource("Resource_gefw7")])
+
+[node name="01-give-apple" parent="AllQuests/Quest1" instance=ExtResource("3_ki8re")]
+id = "start"
+next_step_id = "02-kill-slime"
+step_name = "Nasty apples"
+step_description = "get those apples from the floor"
+items_needed = Array[ExtResource("5_b3suk")]([SubResource("Resource_6xd8q")])
+step_rewards = Array[ExtResource("5_b3suk")]([SubResource("Resource_pcyhy"), SubResource("Resource_m2yxc")])
+
+[node name="02-kill-slime" parent="AllQuests/Quest1" instance=ExtResource("3_ki8re")]
+id = "02-kill-slime"
+next_step_id = "end"
+step_name = "Slicky stuff"
+step_description = "You can find slimes in the field"
+items_needed = Array[ExtResource("5_b3suk")]([SubResource("Resource_6xd8q")])
+step_killing = Array[Resource("res://model/enemy/enemy_base.gd")]([ExtResource("14_ldrds"), ExtResource("14_ldrds"), ExtResource("14_ldrds")])
+
+[node name="Quest2" parent="AllQuests" instance=ExtResource("2_tle0p")]
+quest_name = "Armor of Black Dragon"
+quest_id = "00-armor-of-black-dragon"
+reward = Array[ExtResource("5_b3suk")]([ExtResource("15_bv3qv")])
+
+[node name="01-find-chest" parent="AllQuests/Quest2" instance=ExtResource("3_ki8re")]
+id = "start"
+next_step_id = "02-bring-pieapple"
+step_name = "Chest seeker"
+step_description = "Get the chest"
+items_needed = Array[ExtResource("5_b3suk")]([SubResource("Resource_3vsa1")])
+step_rewards = Array[ExtResource("5_b3suk")]([null])
+
+[node name="02-bring-pieapple" parent="AllQuests/Quest2" instance=ExtResource("3_ki8re")]
+id = "02-bring-pieapple"
+next_step_id = "end"
+step_name = "Bring pieapple"
+step_description = "Craft fucking pieapple"
+items_needed = Array[ExtResource("5_b3suk")]([SubResource("Resource_m87lh")])
+step_rewards = Array[ExtResource("5_b3suk")]([ExtResource("18_qi7uj")])
+
+[node name="ActiveQuests" type="Node" parent="."]
+
+[node name="CompletedQuests" type="Node" parent="."]

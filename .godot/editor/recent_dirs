@@ -1,7 +1,12 @@
+res://dialogues
+res://assets/Characters
+res://scenes/ui/quests
+res://
+res://resources/enemy
+res://dialogues/scenes
+res://dialogues/scripts
 res://singeltons
 res://scenes/characters/npc
-res://assets/Characters
-res://
 res://scenes/ui/health_bar
 res://scripts/ui/health_bar
 res://resources/items
@@ -15,7 +20,3 @@ res://scripts/ui/hotbar
 res://scenes/ui/hotbar
 res://model
 res://scenes/objects/items/equipment
-res://scripts/helper
-res://scripts/collect
-res://Scripts/components
-res://Scripts/state

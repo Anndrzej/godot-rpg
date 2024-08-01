@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=3 uid="uid://cevwihm7yr7w0"]
+[gd_scene load_steps=58 format=3 uid="uid://cevwihm7yr7w0"]
 
 [ext_resource type="PackedScene" uid="uid://0uj3ocwe8x5y" path="res://scenes/characters/player/player.tscn" id="1_uw7dq"]
 [ext_resource type="PackedScene" uid="uid://37g5p3l6lmk7" path="res://scenes/objects/items/static/tree.tscn" id="2_cbrax"]
@@ -13,10 +13,11 @@
 [ext_resource type="PackedScene" uid="uid://dwbrbg04xbsnm" path="res://scenes/objects/items/collectable/apple.tscn" id="9_78rih"]
 [ext_resource type="Script" path="res://model/items.gd" id="10_4y7ft"]
 [ext_resource type="Resource" uid="uid://d2iv31eu5eh12" path="res://resources/recipes/all_recipes.tres" id="10_v2lto"]
+[ext_resource type="PackedScene" uid="uid://omv8nfv8rawj" path="res://scenes/ui/quests/quests_journal.tscn" id="10_yh31o"]
 [ext_resource type="Script" path="res://model/consumable.gd" id="11_4qofe"]
 [ext_resource type="PackedScene" uid="uid://c2x6q4bs4x515" path="res://scenes/ui/craft/crafting_dialog.tscn" id="11_kr3fh"]
 [ext_resource type="Texture2D" uid="uid://crgdlfqooehes" path="res://assets/Food/Jam.png" id="12_o74nt"]
-[ext_resource type="PackedScene" uid="uid://co44tuyd8gd4h" path="res://scenes/characters/enemy/slime.tscn" id="13_18857"]
+[ext_resource type="PackedScene" uid="uid://co44tuyd8gd4h" path="res://scenes/characters/enemy/Slime.tscn" id="13_18857"]
 [ext_resource type="PackedScene" uid="uid://72fwsmbiil2s" path="res://scenes/objects/items/collectable/jam.tscn" id="13_y5kvc"]
 [ext_resource type="PackedScene" uid="uid://50ckk7h6s3k5" path="res://scenes/objects/items/upgrades/damage_cookie.tscn" id="14_akrw6"]
 [ext_resource type="Resource" uid="uid://ddy7rfwaj3kgj" path="res://resources/upgrades/damage.tres" id="15_lf6i7"]
@@ -39,6 +40,9 @@
 [ext_resource type="Resource" uid="uid://3aalw7k4xa7m" path="res://resources/equipment/legs.tres" id="34_ecptj"]
 [ext_resource type="PackedScene" uid="uid://cuwbv62y3p1t8" path="res://scenes/ui/health_bar/player_health_bar.tscn" id="38_ihu7c"]
 [ext_resource type="PackedScene" uid="uid://s6pcgk4v4bga" path="res://scenes/characters/npc/chicken.tscn" id="39_5bh72"]
+[ext_resource type="Resource" uid="uid://cy2c66ge5sk5q" path="res://resources/enemy/slime.tres" id="39_cxlpj"]
+[ext_resource type="PackedScene" uid="uid://bhwcs8pqnd5p" path="res://dialogues/scenes/quest_library.tscn" id="40_nesgh"]
+[ext_resource type="PackedScene" uid="uid://dswd0xrtxyptr" path="res://scenes/characters/npc/cow.tscn" id="42_dyv1t"]
 
 [sub_resource type="Resource" id="Resource_gaiww"]
 script = ExtResource("8_36yay")
@@ -146,7 +150,7 @@ type = SubResource("Resource_75lyn")
 
 [node name="Player" parent="." instance=ExtResource("1_uw7dq")]
 unique_name_in_owner = true
-position = Vector2(97, 82)
+position = Vector2(109, 81)
 
 [node name="Tree" parent="." instance=ExtResource("2_cbrax")]
 position = Vector2(660, 164)
@@ -157,24 +161,27 @@ position = Vector2(646, 222)
 [node name="Egg" parent="." instance=ExtResource("4_3xa78")]
 position = Vector2(765, 127)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="DialogsLayer" type="CanvasLayer" parent="."]
 script = ExtResource("7_phxcv")
 all_recipes = ExtResource("10_v2lto")
 
-[node name="RecipeFound" parent="CanvasLayer" instance=ExtResource("18_57jn8")]
+[node name="RecipeFound" parent="DialogsLayer" instance=ExtResource("18_57jn8")]
 
-[node name="InventoryDialog" parent="CanvasLayer" instance=ExtResource("7_5d225")]
+[node name="InventoryDialog" parent="DialogsLayer" instance=ExtResource("7_5d225")]
 unique_name_in_owner = true
 visible = false
 size_flags_vertical = 4
 
-[node name="CraftingDialog" parent="CanvasLayer" instance=ExtResource("11_kr3fh")]
+[node name="CraftingDialog" parent="DialogsLayer" instance=ExtResource("11_kr3fh")]
 unique_name_in_owner = true
 visible = false
 
-[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+[node name="QuestsJournal" parent="DialogsLayer" instance=ExtResource("10_yh31o")]
+visible = false
 
-[node name="Inventory_Hotbar" parent="CanvasLayer2" instance=ExtResource("25_aijn2")]
+[node name="HotbarLayer" type="CanvasLayer" parent="."]
+
+[node name="Inventory_Hotbar" parent="HotbarLayer" instance=ExtResource("25_aijn2")]
 
 [node name="Equipment" type="Node" parent="."]
 
@@ -231,15 +238,15 @@ item = SubResource("Resource_1orby")
 [node name="Recipes" type="Node" parent="."]
 
 [node name="Apple pie" parent="Recipes" instance=ExtResource("25_xq5ha")]
-position = Vector2(153, 23)
+position = Vector2(113, 165)
 recipe = ExtResource("26_0ie02")
 
 [node name="Sushi" parent="Recipes" instance=ExtResource("25_xq5ha")]
-position = Vector2(173, 22)
+position = Vector2(127, 168)
 recipe = ExtResource("29_bvstd")
 
 [node name="Collect_Recipe" parent="Recipes" instance=ExtResource("25_xq5ha")]
-position = Vector2(128, 24)
+position = Vector2(148, 171)
 recipe = ExtResource("34_2q717")
 
 [node name="Upgrades" type="Node" parent="."]
@@ -264,9 +271,23 @@ grow_vertical = 1
 [node name="Enemies" type="Node" parent="."]
 
 [node name="Slime" parent="Enemies" instance=ExtResource("13_18857")]
-position = Vector2(476, 111)
+position = Vector2(251, 180)
+base = ExtResource("39_cxlpj")
 
-[node name="Node" type="Node" parent="."]
+[node name="Slime2" parent="Enemies" instance=ExtResource("13_18857")]
+position = Vector2(325, 243)
+base = ExtResource("39_cxlpj")
 
-[node name="Chicken" parent="Node" instance=ExtResource("39_5bh72")]
+[node name="Slime3" parent="Enemies" instance=ExtResource("13_18857")]
+position = Vector2(419, 180)
+base = ExtResource("39_cxlpj")
+
+[node name="NPC" type="Node" parent="."]
+
+[node name="Chicken" parent="NPC" instance=ExtResource("39_5bh72")]
 position = Vector2(64, 76)
+
+[node name="Cow" parent="NPC" instance=ExtResource("42_dyv1t")]
+position = Vector2(63, 95)
+
+[node name="QuestLibrary" parent="." instance=ExtResource("40_nesgh")]

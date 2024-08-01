@@ -18,10 +18,10 @@ func Update(_delta) -> void:
 	#change attack speed animation
 	attack_animation.speed_scale = attack_speed
 	
-	enemy.isAttacking = true
+	enemy.base.isAttacking = true
 	attack_animation.play("attack")
 	await attack_animation.animation_finished
-	enemy.isAttacking = false
+	enemy.base.isAttacking = false
 	
 	chase_state_transition()
 

@@ -4,8 +4,11 @@
 [ext_resource type="PackedScene" uid="uid://da4splrj2c54c" path="res://scenes/ui/craft/craft_grid_ingredients.tscn" id="2_kaukb"]
 
 [node name="CraftingDialog" type="PanelContainer"]
-offset_right = 1121.0
-offset_bottom = 606.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 size_flags_horizontal = 4
 script = ExtResource("1_gdg7x")
 

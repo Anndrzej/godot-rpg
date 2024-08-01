@@ -1,0 +1,49 @@
+~ start
+
+Chick: [[Hi|Hello|Howdy]], how it's going?
+- Good
+	if QuestManager.is_quest_active('00-apple-secret') == false
+		I'm a little bit hungry.
+		Can u bring me 3 apples? 
+		- Sure
+			do QuestManager.start_quest('00-apple-secret')
+		- Maybe later
+	else 
+		Lenusik: I'm starving
+	=> END
+
+
+- Coming back to the apples ... [if QuestManager.is_quest_active('00-apple-secret') and QuestManager.get_active_step('00-apple-secret') == '01-give-apple']
+	=> first_step
+
+- SLIMEEEEE ... [if QuestManager.is_quest_active('00-apple-secret') and QuestManager.get_active_step('00-apple-secret') == '02-kill-slime']
+	=> second_step
+
+~ first_step
+Where is my apples?
+if QuestManager.is_requirements_completed('00-apple-secret') == true
+	- Here you go
+		do QuestManager.complete_step('00-apple-secret')
+		=> second_step
+else
+	still looking for them
+
+=> END
+
+~ second_step
+if  QuestManager.get_active_step('00-apple-secret') == '02-kill-slime'
+	So how it is going?
+	- I did it
+		if QuestManager.is_requirements_completed('00-apple-secret') == true
+			Thank you so much
+			do QuestManager.complete_quest('00-apple-secret')
+		else
+			No u did not
+else
+	Can u do one more thing for me ? 
+	- Yes
+		Kill this slime
+		- No problem
+			do QuestManager.start_next_step('00-apple-secret')
+	- No
+		Fuck you!

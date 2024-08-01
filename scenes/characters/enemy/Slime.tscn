@@ -1,6 +1,6 @@
 [gd_scene load_steps=42 format=3 uid="uid://co44tuyd8gd4h"]
 
-[ext_resource type="Script" path="res://scripts/characters/enemy/slime.gd" id="1_2vlsd"]
+[ext_resource type="Script" path="res://scripts/characters/enemy/state/Enemy.gd" id="1_84tn6"]
 [ext_resource type="Texture2D" uid="uid://tj48dwb8a24p" path="res://assets/Characters/slime.png" id="1_uh1xk"]
 [ext_resource type="PackedScene" uid="uid://dul7fy1qumumw" path="res://scripts/components/health_component.tscn" id="2_hyikm"]
 [ext_resource type="PackedScene" uid="uid://d2sgg15q4s84b" path="res://scripts/components/hit_box_component.tscn" id="3_e4p7o"]
@@ -283,7 +283,7 @@ radius = 52.0865
 radius = 11.0
 
 [node name="Slime" type="CharacterBody2D"]
-script = ExtResource("1_2vlsd")
+script = ExtResource("1_84tn6")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true

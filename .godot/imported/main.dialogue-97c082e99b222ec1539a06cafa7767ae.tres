@@ -1,0 +1,720 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_ycsbt"]
+
+[resource]
+script = ExtResource("1_ycsbt")
+using_states = PackedStringArray()
+titles = {
+"first_step": "23",
+"second_step": "34",
+"start": "3"
+}
+character_names = PackedStringArray("Chick", "Lenusik")
+first_title = "3"
+lines = {
+"1": {
+"id": "1",
+"next_id": "3",
+"text": "start",
+"type": &"title"
+},
+"10": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "10",
+"next_id": "13",
+"next_id_after": "13",
+"notes": "",
+"parent_id": "5",
+"tags": PackedStringArray(),
+"text": "Maybe later",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Maybe later",
+"type": &"response"
+},
+"11": {
+"id": "11",
+"next_conditional_id": "13",
+"next_id": "12",
+"next_id_after": "13",
+"parent_id": "4",
+"type": &"condition"
+},
+"12": {
+"character": "Lenusik",
+"character_replacements": Array[Dictionary]([]),
+"id": "12",
+"next_id": "13",
+"notes": "",
+"parent_id": "11",
+"tags": PackedStringArray(),
+"text": "I'm starving",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I'm starving",
+"type": &"dialogue"
+},
+"13": {
+"id": "13",
+"is_snippet": false,
+"next_id": "end",
+"parent_id": "4",
+"type": &"goto"
+},
+"16": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "QuestManager"
+}, {
+"type": "dot"
+}, {
+"function": "is_quest_active",
+"type": &"function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "string",
+"value": "00-apple-secret"
+}])])
+}, {
+"type": "and_or",
+"value": "and"
+}, {
+"type": "variable",
+"value": "QuestManager"
+}, {
+"type": "dot"
+}, {
+"function": "get_active_step",
+"type": &"function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "string",
+"value": "00-apple-secret"
+}])])
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "string",
+"value": "01-give-apple"
+}])
+},
+"id": "16",
+"next_id": "17",
+"next_id_after": "23",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Coming back to the apples ...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Coming back to the apples ...",
+"type": &"response"
+},
+"17": {
+"id": "17",
+"is_snippet": false,
+"next_id": "23",
+"parent_id": "16",
+"type": &"goto"
+},
+"19": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "QuestManager"
+}, {
+"type": "dot"
+}, {
+"function": "is_quest_active",
+"type": &"function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "string",
+"value": "00-apple-secret"
+}])])
+}, {
+"type": "and_or",
+"value": "and"
+}, {
+"type": "variable",
+"value": "QuestManager"
+}, {
+"type": "dot"
+}, {
+"function": "get_active_step",
+"type": &"function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "string",
+"value": "00-apple-secret"
+}])])
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "string",
+"value": "02-kill-slime"
+}])
+},
+"id": "19",
+"next_id": "20",
+"next_id_after": "23",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "SLIMEEEEE ...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "SLIMEEEEE ...",
+"type": &"response"
+},
+"20": {
+"id": "20",
+"is_snippet": false,
+"next_id": "34",
+"parent_id": "19",
+"type": &"goto"
+},
+"22": {
+"id": "22",
+"next_id": "23",
+"text": "first_step",
+"type": &"title"
+},
+"23": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "23",
+"next_id": "24",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Where is my apples?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Where is my apples?",
+"type": &"dialogue"
+},
+"24": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "QuestManager"
+}, {
+"type": "dot"
+}, {
+"function": "is_requirements_completed",
+"type": &"function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "string",
+"value": "00-apple-secret"
+}])])
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "variable",
+"value": "true"
+}])
+},
+"id": "24",
+"next_conditional_id": "28",
+"next_id": "25",
+"next_id_after": "31",
+"type": &"condition"
+},
+"25": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "25",
+"next_id": "26",
+"next_id_after": "31",
+"notes": "",
+"parent_id": "24",
+"responses": PackedStringArray("25"),
+"tags": PackedStringArray(),
+"text": "Here you go",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Here you go",
+"type": &"response"
+},
+"26": {
+"id": "26",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "QuestManager"
+}, {
+"type": "dot"
+}, {
+"function": "complete_step",
+"type": &"function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "string",
+"value": "00-apple-secret"
+}])])
+}]),
+"is_blocking": true
+},
+"next_id": "27",
+"parent_id": "25",
+"type": &"mutation"
+},
+"27": {
+"id": "27",
+"is_snippet": false,
+"next_id": "34",
+"parent_id": "25",
+"type": &"goto"
+},
+"28": {
+"id": "28",
+"next_conditional_id": "31",
+"next_id": "29",
+"next_id_after": "31",
+"type": &"condition"
+},
+"29": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "29",
+"next_id": "31",
+"notes": "",
+"parent_id": "28",
+"tags": PackedStringArray(),
+"text": "still looking for them",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "still looking for them",
+"type": &"dialogue"
+},
+"3": {
+"character": "Chick",
+"character_replacements": Array[Dictionary]([]),
+"id": "3",
+"next_id": "4",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "[[Hi|Hello|Howdy]], how it's going?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[[Hi|Hello|Howdy]], how it's going?",
+"type": &"dialogue"
+},
+"31": {
+"id": "31",
+"is_snippet": false,
+"next_id": "end",
+"type": &"goto"
+},
+"33": {
+"id": "33",
+"next_id": "34",
+"text": "second_step",
+"type": &"title"
+},
+"34": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "QuestManager"
+}, {
+"type": "dot"
+}, {
+"function": "get_active_step",
+"type": &"function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "string",
+"value": "00-apple-secret"
+}])])
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "string",
+"value": "02-kill-slime"
+}])
+},
+"id": "34",
+"next_conditional_id": "42",
+"next_id": "35",
+"next_id_after": "end!",
+"type": &"condition"
+},
+"35": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "35",
+"next_id": "36",
+"notes": "",
+"parent_id": "34",
+"tags": PackedStringArray(),
+"text": "So how it is going?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "So how it is going?",
+"type": &"dialogue"
+},
+"36": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "36",
+"next_id": "37",
+"next_id_after": "end!",
+"notes": "",
+"parent_id": "34",
+"responses": PackedStringArray("36"),
+"tags": PackedStringArray(),
+"text": "I did it",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I did it",
+"type": &"response"
+},
+"37": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "QuestManager"
+}, {
+"type": "dot"
+}, {
+"function": "is_requirements_completed",
+"type": &"function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "string",
+"value": "00-apple-secret"
+}])])
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "variable",
+"value": "true"
+}])
+},
+"id": "37",
+"next_conditional_id": "40",
+"next_id": "38",
+"next_id_after": "end!",
+"parent_id": "36",
+"type": &"condition"
+},
+"38": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "38",
+"next_id": "39",
+"notes": "",
+"parent_id": "37",
+"tags": PackedStringArray(),
+"text": "Thank you so much",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Thank you so much",
+"type": &"dialogue"
+},
+"39": {
+"id": "39",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "QuestManager"
+}, {
+"type": "dot"
+}, {
+"function": "complete_quest",
+"type": &"function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "string",
+"value": "00-apple-secret"
+}])])
+}]),
+"is_blocking": true
+},
+"next_id": "end!",
+"parent_id": "37",
+"type": &"mutation"
+},
+"4": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "4",
+"next_id": "5",
+"next_id_after": "23",
+"notes": "",
+"responses": PackedStringArray("4", "16", "19"),
+"tags": PackedStringArray(),
+"text": "Good",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Good",
+"type": &"response"
+},
+"40": {
+"id": "40",
+"next_conditional_id": "end!",
+"next_id": "41",
+"next_id_after": "end!",
+"parent_id": "36",
+"type": &"condition"
+},
+"41": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "41",
+"next_id": "end!",
+"notes": "",
+"parent_id": "40",
+"tags": PackedStringArray(),
+"text": "No u did not",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "No u did not",
+"type": &"dialogue"
+},
+"42": {
+"id": "42",
+"next_conditional_id": "end!",
+"next_id": "43",
+"next_id_after": "end!",
+"type": &"condition"
+},
+"43": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "43",
+"next_id": "44",
+"notes": "",
+"parent_id": "42",
+"tags": PackedStringArray(),
+"text": "Can u do one more thing for me ?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Can u do one more thing for me ?",
+"type": &"dialogue"
+},
+"44": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "44",
+"next_id": "45",
+"next_id_after": "end",
+"notes": "",
+"parent_id": "42",
+"responses": PackedStringArray("44", "48"),
+"tags": PackedStringArray(),
+"text": "Yes",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Yes",
+"type": &"response"
+},
+"45": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "45",
+"next_id": "46",
+"notes": "",
+"parent_id": "44",
+"tags": PackedStringArray(),
+"text": "Kill this slime",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Kill this slime",
+"type": &"dialogue"
+},
+"46": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "46",
+"next_id": "47",
+"next_id_after": "end",
+"notes": "",
+"parent_id": "44",
+"responses": PackedStringArray("46"),
+"tags": PackedStringArray(),
+"text": "No problem",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "No problem",
+"type": &"response"
+},
+"47": {
+"id": "47",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "QuestManager"
+}, {
+"type": "dot"
+}, {
+"function": "start_next_step",
+"type": &"function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "string",
+"value": "00-apple-secret"
+}])])
+}]),
+"is_blocking": true
+},
+"next_id": "end",
+"parent_id": "46",
+"type": &"mutation"
+},
+"48": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "48",
+"next_id": "49",
+"next_id_after": "end",
+"notes": "",
+"parent_id": "42",
+"tags": PackedStringArray(),
+"text": "No",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "No",
+"type": &"response"
+},
+"49": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "49",
+"next_id": "end",
+"notes": "",
+"parent_id": "48",
+"tags": PackedStringArray(),
+"text": "Fuck you!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Fuck you!",
+"type": &"dialogue"
+},
+"5": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "QuestManager"
+}, {
+"type": "dot"
+}, {
+"function": "is_quest_active",
+"type": &"function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "string",
+"value": "00-apple-secret"
+}])])
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "variable",
+"value": "false"
+}])
+},
+"id": "5",
+"next_conditional_id": "11",
+"next_id": "6",
+"next_id_after": "13",
+"parent_id": "4",
+"type": &"condition"
+},
+"6": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "6",
+"next_id": "7",
+"notes": "",
+"parent_id": "5",
+"tags": PackedStringArray(),
+"text": "I'm a little bit hungry.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I'm a little bit hungry.",
+"type": &"dialogue"
+},
+"7": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "7",
+"next_id": "8",
+"notes": "",
+"parent_id": "5",
+"tags": PackedStringArray(),
+"text": "Can u bring me 3 apples?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Can u bring me 3 apples?",
+"type": &"dialogue"
+},
+"8": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "8",
+"next_id": "9",
+"next_id_after": "13",
+"notes": "",
+"parent_id": "5",
+"responses": PackedStringArray("8", "10"),
+"tags": PackedStringArray(),
+"text": "Sure",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Sure",
+"type": &"response"
+},
+"9": {
+"id": "9",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "QuestManager"
+}, {
+"type": "dot"
+}, {
+"function": "start_quest",
+"type": &"function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "string",
+"value": "00-apple-secret"
+}])])
+}]),
+"is_blocking": true
+},
+"next_id": "13",
+"parent_id": "8",
+"type": &"mutation"
+}
+}
+raw_text = "~ start
+
+Chick: [[Hi|Hello|Howdy]], how it's going?
+- Good
+	if QuestManager.is_quest_active('00-apple-secret') == false
+		I'm a little bit hungry.
+		Can u bring me 3 apples? 
+		- Sure
+			do QuestManager.start_quest('00-apple-secret')
+		- Maybe later
+	else 
+		Lenusik: I'm starving
+	=> END
+
+
+- Coming back to the apples ... [if QuestManager.is_quest_active('00-apple-secret') and QuestManager.get_active_step('00-apple-secret') == '01-give-apple']
+	=> first_step
+
+- SLIMEEEEE ... [if QuestManager.is_quest_active('00-apple-secret') and QuestManager.get_active_step('00-apple-secret') == '02-kill-slime']
+	=> second_step
+
+~ first_step
+Where is my apples?
+if QuestManager.is_requirements_completed('00-apple-secret') == true
+	- Here you go
+		do QuestManager.complete_step('00-apple-secret')
+		=> second_step
+else
+	still looking for them
+
+=> END
+
+~ second_step
+if  QuestManager.get_active_step('00-apple-secret') == '02-kill-slime'
+	So how it is going?
+	- I did it
+		if QuestManager.is_requirements_completed('00-apple-secret') == true
+			Thank you so much
+			do QuestManager.complete_quest('00-apple-secret')
+		else
+			No u did not
+else
+	Can u do one more thing for me ? 
+	- Yes
+		Kill this slime
+		- No problem
+			do QuestManager.start_next_step('00-apple-secret')
+	- No
+		Fuck you!
+"
+metadata/dialogue_manager_version = "2.41.1"

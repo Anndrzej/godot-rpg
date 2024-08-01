@@ -409,7 +409,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_a0scb")
 }],
-"loop": false,
+"loop": true,
 "name": &"attack_right",
 "speed": 5.0
 }, {
@@ -517,13 +517,13 @@ animations = [{
 radius = 6.0
 height = 14.0
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xv4h2"]
-radius = 5.0
-height = 10.0
-
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xr2v2"]
 radius = 7.0
 height = 14.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xv4h2"]
+radius = 5.0
+height = 10.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nku4k"]
 radius = 7.0
@@ -566,18 +566,24 @@ animation = NodePath("../../AnimationPlayer")
 [node name="playerInteract" type="Node" parent="FSM"]
 script = ExtResource("8_qswfj")
 
+[node name="Direction" type="Marker2D" parent="."]
+position = Vector2(0, 4)
+
+[node name="InteractionArea" type="Area2D" parent="Direction"]
+position = Vector2(0, -3)
+collision_layer = 0
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Direction/InteractionArea"]
+unique_name_in_owner = true
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_xr2v2")
+
 [node name="WeaponHitBox" type="Area2D" parent="." groups=["Player"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WeaponHitBox"]
 position = Vector2(0, -14)
 shape = SubResource("CapsuleShape2D_xv4h2")
-disabled = true
-
-[node name="InteractionArea" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
-rotation = 1.5708
-shape = SubResource("CapsuleShape2D_xr2v2")
 disabled = true
 
 [node name="Label" parent="." instance=ExtResource("9_ou7fo")]
@@ -599,5 +605,5 @@ script = ExtResource("13_pjjvb")
 position = Vector2(0, -2)
 shape = SubResource("CapsuleShape2D_nku4k")
 
+[connection signal="body_entered" from="Direction/InteractionArea" to="FSM/playerInteract" method="_on_area_2d_body_entered"]
 [connection signal="area_entered" from="WeaponHitBox" to="FSM/playerAttack" method="_on_weapon_hit_box_area_entered"]
-[connection signal="body_entered" from="InteractionArea" to="FSM/playerInteract" method="_on_area_2d_body_entered"]

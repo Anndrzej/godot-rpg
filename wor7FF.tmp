@@ -1,0 +1,289 @@
+[gd_scene load_steps=57 format=3 uid="uid://cevwihm7yr7w0"]
+
+[ext_resource type="PackedScene" uid="uid://0uj3ocwe8x5y" path="res://scenes/characters/player/player.tscn" id="1_uw7dq"]
+[ext_resource type="PackedScene" uid="uid://37g5p3l6lmk7" path="res://scenes/objects/items/static/tree.tscn" id="2_cbrax"]
+[ext_resource type="PackedScene" uid="uid://fxertob7ej2u" path="res://scenes/objects/items/static/bed.tscn" id="3_pfptf"]
+[ext_resource type="PackedScene" uid="uid://xk4aw7v4ail8" path="res://scenes/objects/items/static/egg.tscn" id="4_3xa78"]
+[ext_resource type="PackedScene" uid="uid://bkbcab5xhj4sk" path="res://scripts/collect/collect.tscn" id="5_1mhyx"]
+[ext_resource type="Resource" uid="uid://d10nirsa7avri" path="res://resources/items/milk.tres" id="6_d5q5a"]
+[ext_resource type="PackedScene" uid="uid://dtsyc0e3e2oej" path="res://scenes/ui/inventory/inventory_dialog.tscn" id="7_5d225"]
+[ext_resource type="Script" path="res://scripts/ui/inventory/CanvasLayer.gd" id="7_phxcv"]
+[ext_resource type="Script" path="res://model/item_effects.gd" id="8_36yay"]
+[ext_resource type="Texture2D" uid="uid://brkm6a76j0o0j" path="res://assets/Food/Apple.png" id="8_s4e3g"]
+[ext_resource type="PackedScene" uid="uid://dwbrbg04xbsnm" path="res://scenes/objects/items/collectable/apple.tscn" id="9_78rih"]
+[ext_resource type="Script" path="res://model/items.gd" id="10_4y7ft"]
+[ext_resource type="Resource" uid="uid://d2iv31eu5eh12" path="res://resources/recipes/all_recipes.tres" id="10_v2lto"]
+[ext_resource type="PackedScene" uid="uid://omv8nfv8rawj" path="res://scenes/ui/quests/quests_journal.tscn" id="10_yh31o"]
+[ext_resource type="Script" path="res://model/consumable.gd" id="11_4qofe"]
+[ext_resource type="PackedScene" uid="uid://c2x6q4bs4x515" path="res://scenes/ui/craft/crafting_dialog.tscn" id="11_kr3fh"]
+[ext_resource type="Texture2D" uid="uid://crgdlfqooehes" path="res://assets/Food/Jam.png" id="12_o74nt"]
+[ext_resource type="PackedScene" uid="uid://co44tuyd8gd4h" path="res://scenes/characters/enemy/Slime.tscn" id="13_18857"]
+[ext_resource type="PackedScene" uid="uid://72fwsmbiil2s" path="res://scenes/objects/items/collectable/jam.tscn" id="13_y5kvc"]
+[ext_resource type="PackedScene" uid="uid://50ckk7h6s3k5" path="res://scenes/objects/items/upgrades/damage_cookie.tscn" id="14_akrw6"]
+[ext_resource type="Resource" uid="uid://ddy7rfwaj3kgj" path="res://resources/upgrades/damage.tres" id="15_lf6i7"]
+[ext_resource type="PackedScene" uid="uid://dd11nfrjryedx" path="res://scenes/objects/items/upgrades/attack_speed.tscn" id="16_0c8g2"]
+[ext_resource type="Resource" uid="uid://co80fjamm6p2m" path="res://resources/upgrades/speed.tres" id="17_a35jl"]
+[ext_resource type="PackedScene" uid="uid://d0dh33xynhe7j" path="res://scenes/ui/modals/RecipeFound.tscn" id="18_57jn8"]
+[ext_resource type="PackedScene" uid="uid://cpgl86neujmlb" path="res://scenes/ui/hotbar/Inventory_Hotbar.tscn" id="25_aijn2"]
+[ext_resource type="PackedScene" uid="uid://dpq3qc88sekg2" path="res://scripts/collect/collect_recipe.tscn" id="25_xq5ha"]
+[ext_resource type="Resource" uid="uid://b2j6hayswsjiv" path="res://resources/recipes/Apple_pie.tres" id="26_0ie02"]
+[ext_resource type="Texture2D" uid="uid://bgchup2loj4fv" path="res://assets/recipes/wood.png" id="27_ovfyy"]
+[ext_resource type="PackedScene" uid="uid://b6osncbovkkda" path="res://scenes/objects/items/collectable/wood.tscn" id="28_vw27h"]
+[ext_resource type="Resource" uid="uid://2bqmm1t0pv01" path="res://resources/equipment/sword.tres" id="29_amu8b"]
+[ext_resource type="Texture2D" uid="uid://dtyhmomkcxiw6" path="res://assets/recipes/iron.png" id="29_b4sop"]
+[ext_resource type="Resource" uid="uid://bmdoowgpbu1c4" path="res://resources/recipes/Sushi.tres" id="29_bvstd"]
+[ext_resource type="Resource" uid="uid://c0dmk1a0o2rd3" path="res://resources/equipment/shield.tres" id="30_laspu"]
+[ext_resource type="Resource" uid="uid://0bghydh0qa55" path="res://resources/equipment/foot.tres" id="31_7olpa"]
+[ext_resource type="Resource" uid="uid://s8p6yy1ivhx4" path="res://resources/equipment/chest.tres" id="32_sc2ig"]
+[ext_resource type="Resource" uid="uid://k6gd6fja7mal" path="res://resources/equipment/head.tres" id="33_0p6ln"]
+[ext_resource type="Resource" uid="uid://c827wwxn2q1fq" path="res://resources/recipes/Sword.tres" id="34_2q717"]
+[ext_resource type="Resource" uid="uid://3aalw7k4xa7m" path="res://resources/equipment/legs.tres" id="34_ecptj"]
+[ext_resource type="PackedScene" uid="uid://cuwbv62y3p1t8" path="res://scenes/ui/health_bar/player_health_bar.tscn" id="38_ihu7c"]
+[ext_resource type="PackedScene" uid="uid://s6pcgk4v4bga" path="res://scenes/characters/npc/chicken.tscn" id="39_5bh72"]
+[ext_resource type="Resource" uid="uid://cy2c66ge5sk5q" path="res://resources/enemy/slime.tres" id="39_cxlpj"]
+[ext_resource type="PackedScene" uid="uid://bhwcs8pqnd5p" path="res://dialogues/scenes/quest_library.tscn" id="40_nesgh"]
+
+[sub_resource type="Resource" id="Resource_gaiww"]
+script = ExtResource("8_36yay")
+damage = 100
+attack_speed = 0.0
+heal = 10
+max_health = 0
+
+[sub_resource type="Resource" id="Resource_okt0e"]
+script = ExtResource("11_4qofe")
+effect = SubResource("Resource_gaiww")
+ingredients_qty = 0
+
+[sub_resource type="Resource" id="Resource_rt51t"]
+script = ExtResource("10_4y7ft")
+name = "Apple"
+scene = ExtResource("9_78rih")
+icon = ExtResource("8_s4e3g")
+qty = 7
+description = ""
+type = SubResource("Resource_okt0e")
+
+[sub_resource type="Resource" id="Resource_w7g31"]
+script = ExtResource("8_36yay")
+damage = 0
+attack_speed = 0.0
+heal = 0
+max_health = 50
+
+[sub_resource type="Resource" id="Resource_3m6dj"]
+script = ExtResource("11_4qofe")
+effect = SubResource("Resource_w7g31")
+ingredients_qty = 0
+
+[sub_resource type="Resource" id="Resource_xnm0i"]
+script = ExtResource("10_4y7ft")
+name = "Jam"
+scene = ExtResource("13_y5kvc")
+icon = ExtResource("12_o74nt")
+qty = 7
+description = ""
+type = SubResource("Resource_3m6dj")
+
+[sub_resource type="Resource" id="Resource_ycryd"]
+script = ExtResource("8_36yay")
+damage = 0
+attack_speed = 0.0
+heal = 20
+max_health = 0
+
+[sub_resource type="Resource" id="Resource_7ofd5"]
+script = ExtResource("11_4qofe")
+effect = SubResource("Resource_ycryd")
+ingredients_qty = 0
+
+[sub_resource type="Resource" id="Resource_6pbjk"]
+script = ExtResource("10_4y7ft")
+name = "Apple"
+scene = ExtResource("9_78rih")
+icon = ExtResource("8_s4e3g")
+qty = 6
+description = ""
+type = SubResource("Resource_7ofd5")
+
+[sub_resource type="Resource" id="Resource_xx015"]
+script = ExtResource("11_4qofe")
+ingredients_qty = 1
+
+[sub_resource type="Resource" id="Resource_1ujdp"]
+script = ExtResource("10_4y7ft")
+name = "Wood"
+scene = ExtResource("28_vw27h")
+icon = ExtResource("27_ovfyy")
+qty = 5
+description = "Wood for crafting"
+type = SubResource("Resource_xx015")
+
+[sub_resource type="PackedScene" id="PackedScene_wexcd"]
+_bundled = {
+"conn_count": 0,
+"conns": PackedInt32Array(),
+"editable_instances": [],
+"names": PackedStringArray("Iron", "StaticBody2D", "Sprite2D", "texture"),
+"node_count": 2,
+"node_paths": [],
+"nodes": PackedInt32Array(-1, -1, 1, 0, -1, 0, 0, 0, 0, 2, 2, -1, 1, 3, 0, 0),
+"variants": [ExtResource("29_b4sop")],
+"version": 3
+}
+
+[sub_resource type="Resource" id="Resource_75lyn"]
+script = ExtResource("11_4qofe")
+ingredients_qty = 1
+
+[sub_resource type="Resource" id="Resource_1orby"]
+script = ExtResource("10_4y7ft")
+name = "Iron"
+scene = SubResource("PackedScene_wexcd")
+icon = ExtResource("29_b4sop")
+qty = 5
+description = "iron for crafting"
+type = SubResource("Resource_75lyn")
+
+[node name="world" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_uw7dq")]
+unique_name_in_owner = true
+position = Vector2(97, 82)
+
+[node name="Tree" parent="." instance=ExtResource("2_cbrax")]
+position = Vector2(660, 164)
+
+[node name="Bed" parent="." instance=ExtResource("3_pfptf")]
+position = Vector2(646, 222)
+
+[node name="Egg" parent="." instance=ExtResource("4_3xa78")]
+position = Vector2(765, 127)
+
+[node name="DialogsLayer" type="CanvasLayer" parent="."]
+script = ExtResource("7_phxcv")
+all_recipes = ExtResource("10_v2lto")
+
+[node name="RecipeFound" parent="DialogsLayer" instance=ExtResource("18_57jn8")]
+
+[node name="InventoryDialog" parent="DialogsLayer" instance=ExtResource("7_5d225")]
+unique_name_in_owner = true
+visible = false
+size_flags_vertical = 4
+
+[node name="CraftingDialog" parent="DialogsLayer" instance=ExtResource("11_kr3fh")]
+unique_name_in_owner = true
+visible = false
+
+[node name="QuestsJournal" parent="DialogsLayer" instance=ExtResource("10_yh31o")]
+visible = false
+
+[node name="HotbarLayer" type="CanvasLayer" parent="."]
+
+[node name="Inventory_Hotbar" parent="HotbarLayer" instance=ExtResource("25_aijn2")]
+
+[node name="Equipment" type="Node" parent="."]
+
+[node name="Sword" parent="Equipment" instance=ExtResource("5_1mhyx")]
+position = Vector2(53, 140)
+item = ExtResource("29_amu8b")
+
+[node name="Shield" parent="Equipment" instance=ExtResource("5_1mhyx")]
+position = Vector2(51, 122)
+item = ExtResource("30_laspu")
+
+[node name="Foot" parent="Equipment" instance=ExtResource("5_1mhyx")]
+position = Vector2(51, 100)
+item = ExtResource("31_7olpa")
+
+[node name="Chest" parent="Equipment" instance=ExtResource("5_1mhyx")]
+position = Vector2(55, 165)
+item = ExtResource("32_sc2ig")
+
+[node name="Head" parent="Equipment" instance=ExtResource("5_1mhyx")]
+position = Vector2(53, 186)
+item = ExtResource("33_0p6ln")
+
+[node name="Legs" parent="Equipment" instance=ExtResource("5_1mhyx")]
+position = Vector2(51, 203)
+item = ExtResource("34_ecptj")
+
+[node name="Consumable" type="Node" parent="."]
+
+[node name="milk" parent="Consumable" instance=ExtResource("5_1mhyx")]
+position = Vector2(211, 104)
+item = ExtResource("6_d5q5a")
+
+[node name="apple" parent="Consumable" instance=ExtResource("5_1mhyx")]
+position = Vector2(187, 103)
+item = SubResource("Resource_rt51t")
+
+[node name="jam" parent="Consumable" instance=ExtResource("5_1mhyx")]
+position = Vector2(167, 106)
+item = SubResource("Resource_xnm0i")
+
+[node name="Node2D" parent="Consumable" instance=ExtResource("5_1mhyx")]
+position = Vector2(145, 102)
+item = SubResource("Resource_6pbjk")
+
+[node name="wood" parent="Consumable" instance=ExtResource("5_1mhyx")]
+position = Vector2(115, 107)
+item = SubResource("Resource_1ujdp")
+
+[node name="iron" parent="Consumable" instance=ExtResource("5_1mhyx")]
+position = Vector2(87, 105)
+item = SubResource("Resource_1orby")
+
+[node name="Recipes" type="Node" parent="."]
+
+[node name="Apple pie" parent="Recipes" instance=ExtResource("25_xq5ha")]
+position = Vector2(153, 23)
+recipe = ExtResource("26_0ie02")
+
+[node name="Sushi" parent="Recipes" instance=ExtResource("25_xq5ha")]
+position = Vector2(173, 22)
+recipe = ExtResource("29_bvstd")
+
+[node name="Collect_Recipe" parent="Recipes" instance=ExtResource("25_xq5ha")]
+position = Vector2(128, 24)
+recipe = ExtResource("34_2q717")
+
+[node name="Upgrades" type="Node" parent="."]
+
+[node name="Upgrade" parent="Upgrades" instance=ExtResource("14_akrw6")]
+position = Vector2(375, 269)
+upgrade_model = ExtResource("15_lf6i7")
+
+[node name="Upgrade2" parent="Upgrades" instance=ExtResource("16_0c8g2")]
+position = Vector2(416, 264)
+upgrade_model = ExtResource("17_a35jl")
+
+[node name="Global" type="Node" parent="."]
+
+[node name="HealthBar" parent="Global" instance=ExtResource("38_ihu7c")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="Enemies" type="Node" parent="."]
+
+[node name="Slime" parent="Enemies" instance=ExtResource("13_18857")]
+position = Vector2(131, 79)
+base = ExtResource("39_cxlpj")
+
+[node name="Slime2" parent="Enemies" instance=ExtResource("13_18857")]
+position = Vector2(131, 79)
+base = ExtResource("39_cxlpj")
+
+[node name="Slime3" parent="Enemies" instance=ExtResource("13_18857")]
+position = Vector2(131, 79)
+base = ExtResource("39_cxlpj")
+
+[node name="NPC" type="Node" parent="."]
+
+[node name="Chicken" parent="NPC" instance=ExtResource("39_5bh72")]
+position = Vector2(64, 76)
+
+[node name="QuestLibrary" parent="." instance=ExtResource("40_nesgh")]

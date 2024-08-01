@@ -1,0 +1,11 @@
+~ start
+
+Cow: [[Hi|Hello|Howdy]], this is second dialogue.
+- Yo
+	Can you help me?
+	- Sure
+		Bring me Chest of Black Dragon
+		- No problemo 
+		do QuestManager.start_quest('00-armor-of-black-dragon')
+
+=> END

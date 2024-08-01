@@ -1,0 +1,114 @@
+[gd_scene load_steps=3 format=3 uid="uid://omv8nfv8rawj"]
+
+[ext_resource type="Script" path="res://scenes/ui/quests/quests_journal.gd" id="1_bnp12"]
+[ext_resource type="PackedScene" uid="uid://ctnppbyomfing" path="res://scenes/ui/quests/quest_description_container.tscn" id="2_nr4oo"]
+
+[node name="QuestsJournal" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bnp12")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 103
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/HBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+text = "Quest journal"
+
+[node name="CloseButton" type="Button" parent="PanelContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+text = "Clsoe Dialog"
+
+[node name="ButtonsContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="ActiveQuestsButton" type="Button" parent="PanelContainer/VBoxContainer/ButtonsContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 10
+text = "Active
+"
+
+[node name="ArchivedQuestsButton" type="Button" parent="PanelContainer/VBoxContainer/ButtonsContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 2
+text = "Archived"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="QuestsContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/HBoxContainer2/QuestsContainer"]
+layout_mode = 2
+text = "Quests"
+
+[node name="QuestList" type="ItemList" parent="PanelContainer/VBoxContainer/HBoxContainer2/QuestsContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+item_count = 2
+item_0/text = "First quest"
+item_1/text = "Second quest"
+
+[node name="DescriptionContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="QuestName" type="Label" parent="PanelContainer/VBoxContainer/HBoxContainer2/DescriptionContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+text = "First quest"
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/VBoxContainer/HBoxContainer2/DescriptionContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="QuestsContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer/HBoxContainer2/DescriptionContainer/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="QuestDescriptionContainer" parent="PanelContainer/VBoxContainer/HBoxContainer2/DescriptionContainer/MarginContainer/QuestsContainer" instance=ExtResource("2_nr4oo")]
+layout_mode = 2
+
+[node name="QuestDescription" type="RichTextLabel" parent="PanelContainer/VBoxContainer/HBoxContainer2/DescriptionContainer/MarginContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+text = "Lorem ipsum, lorem ipsum, Lorem ipsum, lorem ipsumLorem ipsum, lorem ipsumLorem ipsum, lorem ipsumLorem ipsum, lorem ipsumLorem ipsum, lorem ipsumLorem ipsum, lorem ipsumLorem ipsum, lorem ipsumLorem ipsum, lorem ipsumLorem ipsum, lorem ipsumLorem ipsum, lorem ipsumLorem ipsum, lorem ipsumLorem ipsum, lorem ipsumLorem ipsum, lorem ipsumLorem ipsum, lorem ipsumLorem ipsum, lorem ipsumLorem ipsum, lorem ipsumLorem ipsum, lorem ipsumLorem ipsum, lorem ipsumLorem ipsum, lorem ipsumLorem ipsum, lorem ipsumLorem ipsum, lorem ipsumLorem ipsum, lorem ipsumLorem ipsum, lorem ipsumLorem ipsum, lorem ipsumLorem ipsum, lorem ipsumLorem ipsum, lorem ipsumLorem ipsum, lorem ipsumLorem ipsum, lorem ipsumLorem ipsum, lorem ipsumLorem ipsum, lorem ipsumLorem ipsum, lorem ipsumLorem ipsum, lorem ipsumLorem ipsum, lorem ipsumLorem ipsum, lorem ipsumLorem ipsum, lorem ipsumLorem ipsum, lorem ipsumLorem ipsum, lorem ipsumLorem ipsum, lorem ipsumLorem ipsum, lorem ipsumLorem ipsum, lorem ipsumLorem ipsum, lorem ipsumLorem ipsum, lorem ipsumLorem ipsum, lorem ipsumLorem ipsum, lorem ipsumLorem ipsum, lorem ipsumLorem ipsum, lorem ipsumLorem ipsum, lorem ipsum"
+
+[connection signal="pressed" from="PanelContainer/VBoxContainer/HBoxContainer/CloseButton" to="." method="_on_close_button_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/ButtonsContainer/ActiveQuestsButton" to="." method="_on_active_quests_button_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/ButtonsContainer/ArchivedQuestsButton" to="." method="_on_archived_quests_button_pressed"]
+[connection signal="item_selected" from="PanelContainer/VBoxContainer/HBoxContainer2/QuestsContainer/QuestList" to="." method="_on_quest_list_item_selected"]

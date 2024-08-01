@@ -12,7 +12,7 @@ var player_node: Node
 
 var _all_recipes: Array[Recipe] = []
 
-var hotbar_size: int = 5
+var hotbar_size: int = 10
 var hotbar_inventory: Array = []
 
 var equipment_slots: Array = []
@@ -43,11 +43,10 @@ func add_item(item: Item, to_hotbar = false):
 	if not added_to_hotbar:
 		for i in range(len(inventory)):
 			if inventory[i] and inventory[i].name == item.name:
-				if inventory[i].name == item.name:
-					inventory[i].qty += item.qty
-					
-					inventory_updated.emit()
-					return true
+				inventory[i].qty += item.qty
+				
+				inventory_updated.emit()
+				return true
 				
 		for i in range(len(inventory)):
 			if inventory[i] == null:
@@ -59,13 +58,19 @@ func add_item(item: Item, to_hotbar = false):
 	return false
 	
 func remove_item(item: Item) -> bool:
-	for i in range(inventory.size()):
-		if inventory[i] != null and inventory[i].name == item.name and inventory[i].type.effect == item.type.effect:
+	for i in range(len(inventory)):
+		if inventory[i] and inventory[i].name == item.name:
 			inventory[i].qty -= 1
-			if inventory[i].qty <= 0:
-				inventory[i] = null
 			
 			inventory_updated.emit()
+			return true
+			
+	for i in range(len(inventory)):
+		if inventory[i].qty <= 0:
+			inventory[i] = null
+			
+			inventory_updated.emit()
+			
 			return true
 			
 	return false

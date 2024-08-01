@@ -1,6 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://s6pcgk4v4bga"]
+[gd_scene load_steps=9 format=3 uid="uid://s6pcgk4v4bga"]
 
 [ext_resource type="Texture2D" uid="uid://bijys77aoqaep" path="res://assets/Characters/Free Chicken Sprites.png" id="1_or747"]
+[ext_resource type="PackedScene" uid="uid://d10heqcwggfeu" path="res://scripts/components/interract_component.tscn" id="2_6iu44"]
+[ext_resource type="Resource" uid="uid://dydn0cxmuryk2" path="res://dialogues/main.dialogue" id="3_tobva"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4n0bl"]
 atlas = ExtResource("1_or747")
@@ -27,8 +29,8 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_rdijd"]
 radius = 6.08276
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_exjh5"]
-radius = 9.0
+[sub_resource type="CircleShape2D" id="CircleShape2D_1imi4"]
+radius = 6.0
 
 [node name="Chicken" type="CharacterBody2D"]
 
@@ -42,9 +44,9 @@ frame_progress = 0.266704
 position = Vector2(-2, 0)
 shape = SubResource("CircleShape2D_rdijd")
 
-[node name="Area2D" type="Area2D" parent="."]
-position = Vector2(19, 3)
+[node name="InterractComponent" parent="." instance=ExtResource("2_6iu44")]
+dialogue_resource = ExtResource("3_tobva")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-21, -3)
-shape = SubResource("CircleShape2D_exjh5")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InterractComponent"]
+position = Vector2(3, 0)
+shape = SubResource("CircleShape2D_1imi4")

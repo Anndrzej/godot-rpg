@@ -1,0 +1,59 @@
+[gd_scene load_steps=10 format=3 uid="uid://dswd0xrtxyptr"]
+
+[ext_resource type="Texture2D" uid="uid://jhw8v7mor8l1" path="res://assets/Characters/Free Cow Sprites.png" id="1_481c8"]
+[ext_resource type="PackedScene" uid="uid://d10heqcwggfeu" path="res://scripts/components/interract_component.tscn" id="2_sidu1"]
+[ext_resource type="Resource" uid="uid://drst5yuwwn320" path="res://dialogues/secondary.dialogue" id="3_sci1k"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_haw0k"]
+atlas = ExtResource("1_481c8")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oflb6"]
+atlas = ExtResource("1_481c8")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n382c"]
+atlas = ExtResource("1_481c8")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mbw2k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_haw0k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oflb6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n382c")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 1.97
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rdijd"]
+radius = 6.08276
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1imi4"]
+radius = 6.0
+
+[node name="Cow" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_mbw2k")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.667346
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, 0)
+shape = SubResource("CircleShape2D_rdijd")
+
+[node name="InterractComponent" parent="." instance=ExtResource("2_sidu1")]
+dialogue_resource = ExtResource("3_sci1k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InterractComponent"]
+position = Vector2(3, 0)
+shape = SubResource("CircleShape2D_1imi4")

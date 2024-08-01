@@ -1,6 +1,18 @@
-[gd_scene load_steps=2 format=3 uid="uid://cpgl86neujmlb"]
+[gd_scene load_steps=6 format=3 uid="uid://cpgl86neujmlb"]
 
 [ext_resource type="Script" path="res://scripts/ui/hotbar/Inventory_Hotbar.gd" id="1_0y8py"]
+[ext_resource type="Texture2D" uid="uid://cm8as80kijt1a" path="res://assets/hotbar.png" id="2_8ubcl"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gc03l"]
+texture = ExtResource("2_8ubcl")
+expand_margin_top = 40.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7w1so"]
+texture = ExtResource("2_8ubcl")
+expand_margin_top = 50.0
+
+[sub_resource type="Theme" id="Theme_t33lo"]
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_7w1so")
 
 [node name="Inventory_Hotbar" type="Control"]
 layout_mode = 3
@@ -12,19 +24,27 @@ grow_horizontal = 2
 grow_vertical = 0
 script = ExtResource("1_0y8py")
 
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 2
+offset_left = 326.0
+offset_top = -50.0
+offset_right = 826.0
+offset_bottom = -10.0
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxTexture_gc03l")
+
 [node name="HotbarContainer" type="HBoxContainer" parent="."]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(500, 0)
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -20.0
-offset_top = -50.0
-offset_right = 20.0
-offset_bottom = -10.0
+offset_left = -233.0
+offset_top = -67.0
+offset_right = 238.0
+offset_bottom = -27.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_constants/separation = 10
+theme = SubResource("Theme_t33lo")

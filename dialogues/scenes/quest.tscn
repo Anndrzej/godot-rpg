@@ -1,0 +1,84 @@
+[gd_scene load_steps=10 format=3 uid="uid://cxe4rhatnrsde"]
+
+[ext_resource type="Texture2D" uid="uid://brkm6a76j0o0j" path="res://assets/Food/Apple.png" id="2_rk3jg"]
+[ext_resource type="PackedScene" uid="uid://dwbrbg04xbsnm" path="res://scenes/objects/items/collectable/apple.tscn" id="3_nmsg7"]
+[ext_resource type="Script" path="res://model/items.gd" id="4_5jsuq"]
+[ext_resource type="Script" path="res://model/item_effects.gd" id="5_h8jpx"]
+[ext_resource type="Script" path="res://model/consumable.gd" id="6_yha71"]
+
+[sub_resource type="GDScript" id="GDScript_n71js"]
+script/source = "extends Node
+
+@export var quest_name: String
+@export var quest_id: String
+@export var reward: Array[Item]
+
+var steps = []
+var current_step: Node
+
+func _ready():
+	steps = get_children()
+	current_step = find_step_with_id('start')
+	
+func find_step_with_id(id: String):
+	for step in steps:
+		if step.id == id:
+			return step
+			
+func remove_needed_items():
+	var quest_items = current_step.items_needed
+	if quest_items:
+		for item in quest_items:
+			print('quest_items ', item)
+			Inv.remove_item(item)
+	
+func check_items():
+	return current_step.check_needed_items()
+	
+func apply_rewards():
+	for item in reward:
+		Inv.add_item(item)
+	
+	
+func get_current_step():
+	current_step = find_step_with_id(current_step.id)
+	current_step.activate_step()
+	print('current_step ', current_step)
+	return current_step
+	
+func get_all_quest_steps():
+	var steps = get_children()
+	return steps
+	
+func go_to_next_step():
+	current_step = find_step_with_id(current_step.next_step_id)
+	return current_step
+	
+"
+
+[sub_resource type="Resource" id="Resource_ycryd"]
+script = ExtResource("5_h8jpx")
+damage = 0
+attack_speed = 0.0
+heal = 10
+max_health = 0
+
+[sub_resource type="Resource" id="Resource_7ofd5"]
+script = ExtResource("6_yha71")
+effect = SubResource("Resource_ycryd")
+ingredients_qty = 0
+
+[sub_resource type="Resource" id="Resource_coeqi"]
+script = ExtResource("4_5jsuq")
+name = "Apple"
+scene = ExtResource("3_nmsg7")
+icon = ExtResource("2_rk3jg")
+qty = 25
+description = "Tasty apple"
+type = SubResource("Resource_7ofd5")
+
+[node name="Quest1" type="Node"]
+script = SubResource("GDScript_n71js")
+quest_name = "test quest name"
+quest_id = "00-get-the-apple"
+reward = Array[ExtResource("4_5jsuq")]([SubResource("Resource_coeqi")])

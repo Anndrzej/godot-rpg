@@ -5,6 +5,7 @@ extends CanvasLayer
 @onready var player: CharacterBody2D = %Player
 @onready var inventory_dialog: InventoryDialog = $InventoryDialog
 @onready var crafting_dialog: CraftingDialog = %CraftingDialog
+@onready var quests_journal = $QuestsJournal
 
 var _all_recipes: Array[Recipe] = [] # залишити на випадок якщо потрібно буде показати всі рецепти які є, а ті які в мене є підсвічувати
 func _ready():
@@ -13,6 +14,10 @@ func _ready():
 func _unhandled_input(event):
 	if Input.is_action_pressed("inventory"):
 		inventory_dialog.visible = !inventory_dialog.visible
+		
+	if Input.is_action_pressed("journal"):
+		quests_journal.visible = !quests_journal.visible
+		quests_journal.open_journal(QuestManager.quest_bunlde)
 		
 	if Input.is_action_pressed("crafting"):
 		crafting_dialog.visible = !crafting_dialog.visible

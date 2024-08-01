@@ -9,7 +9,7 @@ func Enter() -> void:
 
 func Update(delta) -> void:
 	var direction = player.global_position - enemy.global_position
-	enemy.velocity = direction.normalized() * enemy.move_speed
+	enemy.velocity = direction.normalized() * enemy.base.move_speed
 	enemy.move_and_slide()
 	if direction.length() < 30:
 		transition.emit(self, "EnemyAttack")

@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://ctnppbyomfing"]
+
+[ext_resource type="Script" path="res://scenes/ui/quests/quest_description_container.gd" id="1_vakys"]
+
+[node name="QuestDescriptionContainer" type="VBoxContainer"]
+offset_right = 1.0
+offset_bottom = 4.0
+size_flags_vertical = 0
+script = ExtResource("1_vakys")
+
+[node name="StepTitle" type="RichTextLabel" parent="."]
+layout_mode = 2
+size_flags_vertical = 3
+bbcode_enabled = true
+text = "test"
+fit_content = true
+
+[node name="StepDescription" type="RichTextLabel" parent="."]
+layout_mode = 2
+size_flags_vertical = 3
+bbcode_enabled = true
+text = "desc"
+fit_content = true

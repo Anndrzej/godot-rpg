@@ -6,16 +6,16 @@
 [ext_resource type="Script" path="res://model/item_effects.gd" id="4_csp7v"]
 [ext_resource type="Script" path="res://model/consumable.gd" id="5_l67fs"]
 
-[sub_resource type="Resource" id="Resource_ycryd"]
+[sub_resource type="Resource" id="Resource_d14ch"]
 script = ExtResource("4_csp7v")
 damage = 0
 attack_speed = 0.0
 heal = 10
 max_health = 0
 
-[sub_resource type="Resource" id="Resource_7ofd5"]
+[sub_resource type="Resource" id="Resource_xhcsm"]
 script = ExtResource("5_l67fs")
-effect = SubResource("Resource_ycryd")
+effect = SubResource("Resource_d14ch")
 ingredients_qty = 0
 
 [resource]
@@ -25,4 +25,4 @@ scene = ExtResource("2_btn0h")
 icon = ExtResource("1_5bnjd")
 qty = 3
 description = ""
-type = SubResource("Resource_7ofd5")
+type = SubResource("Resource_xhcsm")

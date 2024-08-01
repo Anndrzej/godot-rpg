@@ -17,7 +17,7 @@ func Update(_delta) -> void:
 	if Input.is_action_just_pressed("attack"):
 		transition.emit(self, "playerAttack")
 		
-	if Input.is_action_just_pressed("interract"):
+	if Input.is_action_just_pressed("interact"):
 		transition.emit(self, "playerInteract")
 
 func idle_animation(direction: Vector2) -> void:

@@ -1,3 +1,6 @@
+DialogueResource
+Theme
+EnemyBase
 Item
 Recipe
 Equipment_Item

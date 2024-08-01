@@ -1,12 +1,14 @@
 extends CharacterBody2D
 
 class_name Player
+
 @export var direction: String = "down"
 @export var isAttacking: bool = false
 @export var attack_power: int = 10
 @export var attack_speed := 1.5
 
 @onready var health_component = %HealthComponent
+@onready var interaction_area = $Direction/InteractionArea
 
 var my_recipes: Array[Recipe] = []
 
@@ -68,5 +70,12 @@ func _unhandled_input(event):
 	if event is InputEventKey and event.pressed:
 		for i in range(Inv.hotbar_size):
 			if Input.is_action_just_pressed("hotbar_" + str(i + 1)):
+				print(i)
 				use_hotbar_item(i)
 				break
+				
+	if Input.is_action_just_pressed('interact'):
+		var interaction = interaction_area.get_overlapping_areas()
+		if interaction.size() > 0:
+			interaction[0].action()
+			return
